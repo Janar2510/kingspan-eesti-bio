@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "solutions": "Solutions",
+    "rainwater": "Rainwater",
+    "pumping": "Pumping Station",
+    "downloads": "Downloads",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Smart wastewater & rainwater solutions for homes and businesses in Estonia",
+    "sub": "BioDisc\u00ae, BioFicient\u00ae, BioAir\u00ae and BioTec\u00ae Flo \u2013 reliable treatment, low energy, whisper\u2011quiet operation.",
+    "ctaPrimary": "Request a free consultation",
+    "ctaSecondary": "Download brochures"
+  },
+  "kpi": {
+    "a": "60+ years expertise",
+    "b": "20\u2011year tank tightness guarantee",
+    "c": "Up to 97.5% BOD5 reduction",
+    "d": "0% power for BioTec Flo"
+  },
+  "products": {
+    "biodisc_title": "BioDisc\u00ae \u2014 RBC technology",
+    "biodisc_desc": "Quiet, odour\u2011free, low\u2011maintenance. Domestic BA/BB/BC up to 18 PE; commercial up to 300 PE. EN 12566-3 & EN 12255.",
+    "bioficient_title": "BioFicient\u00ae \u2014 fluidised bed",
+    "bioficient_desc": "Dual bioreactor across four chambers, low energy, strong targets (BOD5 20 mg/l, SS 30 mg/l, NH4-N 5 mg/l).",
+    "bioair_title": "BioAir\u00ae \u2014 activated sludge",
+    "bioair_desc": "Robust PE tank, inlet invert up to 150 cm, up to 97.5% BOD5 reduction. Optional IPS pump.",
+    "biotec_title": "BioTec\u00ae Flo \u2014 off\u2011grid",
+    "biotec_desc": "Two\u2011stage filtration (synthetic + mineral). Gravity (G) or Pressure (R) version.",
+    "rainstore_title": "RainStore\u00ae \u2014 low\u2011profile tank",
+    "rainstore_desc": "Save up to 50% household water. START/BASIC/GOLD kits.",
+    "psd1_title": "PSD1 pumping station",
+    "psd1_desc": "Telescopic neck 2070\u20132470 mm, A15 hatch, Pedrollo pumps."
+  },
+  "downloads": {
+    "title": "Downloads (PDF)",
+    "note": "Place brochures under /public/downloads and update list in src/data/downloads.json"
+  },
+  "form": {
+    "title": "Request a free consultation",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "type": "Property type",
+    "type_options": {
+      "house": "House",
+      "business": "Business",
+      "seasonal": "Seasonal"
+    },
+    "pe": "Population equivalent (PE)",
+    "gw": "Groundwater",
+    "gw_options": {
+      "low": "Low",
+      "high": "High"
+    },
+    "message": "Message",
+    "consent": "I agree to be contacted and have read the privacy notice.",
+    "submit": "Send request"
+  },
+  "footer": {
+    "rights": "\u00a9 Kingspan Water & Energy \u2014 Estonia"
+  }
+}

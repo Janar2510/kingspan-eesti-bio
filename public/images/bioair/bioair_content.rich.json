@@ -1,0 +1,36 @@
+{
+  "schema": "kingspan.gallery.v1",
+  "product": "BioAir",
+  "locale": "et",
+  "brand": "Kingspan",
+  "palette": {
+    "primary": "#003A70",
+    "accent": "#C69214",
+    "navy": "#002B4A",
+    "slate": "#64748B",
+    "cloud": "#F5F7FA",
+    "white": "#FFFFFF"
+  },
+  "banner": {
+    "title": "Klargester BioAir®",
+    "subtitle": "Kodune reoveepuhasti",
+    "tagline": "Lahendused veevärustuseks ja reoveeks",
+    "badges": [
+      {
+        "title": "20 AASTAT",
+        "subtitle": "HERMEETILISUSE GARANTII*"
+      },
+      {
+        "title": "REGISTREERU TASUTA",
+        "subtitle": "KOHTUMISELE PAIGALDAJAGA"
+      }
+    ]
+  },
+  "images": [
+    {
+      "file": "Untitled design-14.png",
+      "role": "banner",
+      "alt": "Kingspan BioAir kodune reoveepuhasti – turundusbänner valge majaga"
+    }
+  ]
+}

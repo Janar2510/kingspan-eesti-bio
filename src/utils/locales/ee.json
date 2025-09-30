@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "solutions": "Lahendused",
+    "rainwater": "Vihmavesi",
+    "pumping": "Pumbajaam",
+    "downloads": "Allalaadimised",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Targad reovee ja vihmavee lahendused Eesti kodudele ja ettevõtetele",
+    "sub": "BioDisc®, BioFicient®, BioAir® ja BioTec® Flo – usaldusväärne puhastus, madal energiakulu ja vaikne töö.",
+    "ctaPrimary": "Küsi tasuta konsultatsiooni",
+    "ctaSecondary": "Laadi alla brošüürid"
+  },
+  "kpi": {
+    "a": "60+ aastat kogemust",
+    "b": "20 a paagi tiheduse garantii",
+    "c": "Kuni 97,5% BZT5 vähenemine",
+    "d": "0% elekter BioTec Flo"
+  },
+  "products": {
+    "biodisc_title": "BioDisc® — ketasbiofiltri (RBC) tehnoloogia",
+    "biodisc_desc": "Vaikne, lõhnatu ja vähe hooldust. Kodumudelid BA/BB/BC kuni 18 IE; kommerts kuni 300 IE. Vastavus EN 12566-3 ja EN 12255.",
+    "bioficient_title": "BioFicient® — keevkiht bioreaktor",
+    "bioficient_desc": "Topeltbioreaktor neljas kambris, madal energiatarve, tugevad sihttasemid (BOD5 20 mg/l, heljum 30 mg/l, NH4-N 5 mg/l).",
+    "bioair_title": "BioAir® — aktiivmuda",
+    "bioair_desc": "Robustne PE paak, sisselaske sügavus kuni 150 cm, BZT5 vähenemine kuni 97,5%. Valikuline IPS-pumpla.",
+    "biotec_title": "BioTec® Flo — elektrita",
+    "biotec_desc": "Kaheastmeline filtratsioon (sünteetiline + mineraalne), off-grid, Gravity (G) või Pressure (R) variant.",
+    "rainstore_title": "RainStore® — madalprofiilne vihmaveepaak",
+    "rainstore_desc": "Säästa kuni 50% koduses veetarbimises. START/BASIC/GOLD komplektid.",
+    "psd1_title": "PSD1 pumbajaam",
+    "psd1_desc": "Teleskoopkael 2070–2470 mm, A15 luuk, Pedrollo pumbad."
+  },
+  "downloads": {
+    "title": "Allalaadimised (PDF)",
+    "note": "Aseta brošüürid kausta /public/downloads ja uuenda nimekirja src/data/downloads.json"
+  },
+  "form": {
+    "title": "Küsi tasuta konsultatsiooni",
+    "name": "Nimi",
+    "email": "E-post",
+    "phone": "Telefon",
+    "type": "Objekti tüüp",
+    "type_options": {
+      "house": "Eramu",
+      "business": "Ettevõte",
+      "seasonal": "Suvila / hooajaline"
+    },
+    "pe": "Inimeseekvivalent (IE/PE)",
+    "gw": "Põhjavesi",
+    "gw_options": {
+      "low": "Madal",
+      "high": "Kõrge"
+    },
+    "message": "Sõnum",
+    "consent": "Nõustun, et minuga võetakse ühendust ja olen tutvunud privaatsustingimustega.",
+    "submit": "Saada päring"
+  },
+  "footer": {
+    "rights": "© Kingspan Water & Energy — Estonia"
+  }
+}

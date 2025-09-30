@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Spotlight hover for cards */
+.card-spotlight {
+  position: relative;
+  border-radius: 1rem;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  transition: box-shadow .25s ease, transform .25s ease;
+}
+.card-spotlight::before {
+  content: '';
+  position: absolute;
+  inset: -200%;
+  background: radial-gradient(200px circle at var(--pointer-x, 50%) var(--pointer-y, 50%), rgba(198,146,20,0.25), rgba(198,146,20,0) 60%);
+  pointer-events: none;
+  transition: opacity .2s ease;
+  opacity: 0;
+}
+.card-spotlight:hover::before { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .parallax { transform: none !important; }
+  .animate-shimmer { animation: none !important; }
+}
+
+/* Gold gradient border on hover */
+.card-border {
+  position: relative;
+  border-radius: 1rem;
+}
+.card-border::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(135deg, #C69214, rgba(198,146,20,0));
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+.card-border:hover::after { opacity: 1; }
