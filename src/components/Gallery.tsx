@@ -23,11 +23,12 @@ export default function Gallery({ folder, height = 220, fullWidth = false }: Gal
   if (fullWidth) {
     // Display the first image to fill the entire container
     return (
-      <div className="w-full h-full">
+      <div className="w-full h-full overflow-hidden">
         <img 
           src={`/images/${folder}/${images[0]}`} 
           alt={folder} 
           className="w-full h-full object-contain rounded-xl border bg-white/70" 
+          style={{ transform: 'translateY(-20px)' }}
         />
       </div>
     )

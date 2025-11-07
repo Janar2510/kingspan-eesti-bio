@@ -7,8 +7,10 @@ pnpm dev
 # open http://localhost:5173
 ```
 
-## Add brochures
-Put your PDF files into `public/downloads/` and update `src/data/downloads.json` if you rename files.
+## Add brochures & datasheets
+1. Place your PDF (or DOC/DOCX) files into `public/downloads/` (the folder lives in the repo so you can drop assets straight in).
+2. Regenerate the list with `pnpm gen:downloads` (or `npm run gen:downloads`). This rewrites `src/data/downloads.json` including file size and language hints.
+3. Commit the updated files. The frontend links to `/downloads/{filename}` automatically.
 
 ## Brand
 - Kingspan Blue: #003A70
@@ -22,11 +24,7 @@ Language toggle switches EE ↔ EN. Strings live in `src/utils/locales/ee.json` 
 
 
 ## Auto-generate Downloads
-Put PDFs into `public/downloads/` and run:
-```bash
-pnpm gen:downloads
-```
-This writes `src/data/downloads.json` automatically (includes file size & language guess).
+The `pnpm gen:downloads` (or `npm run gen:downloads`) script ensures the `public/downloads/` folder exists, then scans for brochure files and updates `src/data/downloads.json`. Run it any time you add, remove, or rename assets.
 
 ## Image Galleries
 Add product images to `public/images/{biodisc|bioficient|bioair|biotec|rainstore|psd1}/` and list file names in each folder's `manifest.json`.

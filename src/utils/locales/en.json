@@ -1,63 +1,93 @@
 {
-  "nav": {
-    "solutions": "Solutions",
-    "rainwater": "Rainwater",
-    "pumping": "Pumping Station",
-    "downloads": "Downloads",
-    "contact": "Contact"
-  },
   "hero": {
-    "title": "Smart wastewater & rainwater solutions for homes and businesses in Estonia",
-    "sub": "BioDisc\u00ae, BioFicient\u00ae, BioAir\u00ae and BioTec\u00ae Flo \u2013 reliable treatment, low energy, whisper\u2011quiet operation.",
-    "ctaPrimary": "Request a free consultation",
-    "ctaSecondary": "Download brochures"
+    "title": "Quality Treatment Systems in Estonia",
+    "sub": "Kingspan Eesti BIO offers innovative biological treatment systems that are quiet, energy-efficient, and environmentally friendly.",
+    "ctaPrimary": "Get in touch",
+    "ctaSecondary": "Download"
   },
   "kpi": {
-    "a": "60+ years expertise",
-    "b": "20\u2011year tank tightness guarantee",
-    "c": "Up to 97.5% BOD5 reduction",
-    "d": "0% power for BioTec Flo"
+    "a": "15+ years of experience",
+    "b": "500+ installations",
+    "c": "24/7 support",
+    "d": "Quality service"
   },
   "products": {
-    "biodisc_title": "BioDisc\u00ae \u2014 RBC technology",
-    "biodisc_desc": "Quiet, odour\u2011free, low\u2011maintenance. Domestic BA/BB/BC up to 18 PE; commercial up to 300 PE. EN 12566-3 & EN 12255.",
-    "bioficient_title": "BioFicient\u00ae \u2014 fluidised bed",
-    "bioficient_desc": "Dual bioreactor across four chambers, low energy, strong targets (BOD5 20 mg/l, SS 30 mg/l, NH4-N 5 mg/l).",
-    "bioair_title": "BioAir\u00ae \u2014 activated sludge",
-    "bioair_desc": "Robust PE tank, inlet invert up to 150 cm, up to 97.5% BOD5 reduction. Optional IPS pump.",
-    "biotec_title": "BioTec\u00ae Flo \u2014 off\u2011grid",
-    "biotec_desc": "Two\u2011stage filtration (synthetic + mineral). Gravity (G) or Pressure (R) version.",
-    "rainstore_title": "RainStore\u00ae \u2014 low\u2011profile tank",
-    "rainstore_desc": "Save up to 50% household water. START/BASIC/GOLD kits.",
-    "psd1_title": "PSD1 pumping station",
-    "psd1_desc": "Telescopic neck 2070\u20132470 mm, A15 hatch, Pedrollo pumps."
-  },
-  "downloads": {
-    "title": "Downloads (PDF)",
-    "note": "Place brochures under /public/downloads and update list in src/data/downloads.json"
+    "biodisc_title": "BioDisc",
+    "biodisc_desc": "Quiet and odour-free biological treatment system with RBC technology.",
+    "bioficient_title": "BioFicient",
+    "bioficient_desc": "Fluidised bed biological treatment system that is energy-efficient and automated.",
+    "bioair_title": "BioAir",
+    "bioair_desc": "Activated sludge technology system that ensures 97.5% BOD5 removal. Available with IPS option.",
+    "biotec_title": "BioTec Flo",
+    "biotec_desc": "Off-grid system with no electricity requirement. Works with gravity or pressure.",
+    "rainstore_title": "RainStore",
+    "rainstore_desc": "Rainwater collection system that can save up to 50% of water. Low profile and kits available.",
+    "psd1_title": "PSD1",
+    "psd1_desc": "Telescopic pumping station with A15 hatch and Pedrollo pump."
   },
   "form": {
-    "title": "Request a free consultation",
+    "title": "Get in touch",
     "name": "Name",
     "email": "Email",
     "phone": "Phone",
-    "type": "Property type",
+    "pe": "Population Equivalent (PE)",
+    "message": "Message",
+    "consent": "I agree to data processing",
+    "submit": "Submit",
     "type_options": {
       "house": "House",
       "business": "Business",
       "seasonal": "Seasonal"
     },
-    "pe": "Population equivalent (PE)",
-    "gw": "Groundwater",
     "gw_options": {
-      "low": "Low",
-      "high": "High"
-    },
-    "message": "Message",
-    "consent": "I agree to be contacted and have read the privacy notice.",
-    "submit": "Send request"
+      "low": "Low groundwater",
+      "high": "High groundwater"
+    }
+  },
+  "downloads": {
+    "title": "Downloads",
+    "note": "Download our product information sheets and brochures."
   },
   "footer": {
-    "rights": "\u00a9 Kingspan Water & Energy \u2014 Estonia"
+    "rights": "© 2024 Kingspan Eesti BIO. All rights reserved.",
+    "privacy": "Privacy Policy"
+  },
+  "navigation": {
+    "downloads": "Downloads",
+    "contact": "Contact",
+    "privacy": "Privacy Policy"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "updated": "Last updated: November 2024",
+    "intro": "This Privacy Policy explains how Kingspan Eesti BIO collects, uses, and protects personal information gathered through our website, contact forms, and related services.",
+    "back": "Back to site",
+    "sections": {
+      "overview": {
+        "title": "1. Who we are",
+        "body": "Kingspan Eesti BIO operates this website to present our wastewater solutions and collect enquiries. We are the data controller responsible for handling personal information received through this site."
+      },
+      "collection": {
+        "title": "2. Information we collect",
+        "body": "We collect contact details you submit (such as name, email, phone, organisation) as well as optional project details. We also collect limited technical data (like IP address and browser type) to secure the site and improve performance."
+      },
+      "usage": {
+        "title": "3. How we use information",
+        "body": "Submitted details are used to respond to enquiries, prepare proposals, and provide product information. Technical data helps maintain the site, troubleshoot issues, and measure aggregated traffic trends."
+      },
+      "sharing": {
+        "title": "4. When we share data",
+        "body": "We only share personal data with trusted service providers that support our operations (for example email delivery or CRM tools). These partners process data under our instructions and do not sell or reuse it."
+      },
+      "rights": {
+        "title": "5. Your rights",
+        "body": "You may request access, correction, or deletion of your personal information. You can also object to processing or ask us to restrict use of your data. Contact us via the details below to exercise these rights."
+      },
+      "contact": {
+        "title": "6. Contact",
+        "body": "If you have questions about this policy or our data practices, contact Kingspan Eesti BIO at info@example.ee or call +372 5555 5555."
+      }
+    }
   }
 }
+

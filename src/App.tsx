@@ -38,7 +38,7 @@ export default function App() {
         />
         <div className="absolute inset-0 -z-10">
           <img 
-            src="/images/hero/hero.png" 
+            src="/images/hero/hero-biological.png" 
             alt="Hero" 
             className="w-full h-full object-cover"
           />

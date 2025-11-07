@@ -1,47 +1,44 @@
 [
   {
-    "title": "BioAir \u2014 domestic (EST)",
-    "file": "KINGSPAN_BioAir_domestic_EST.pdf",
-    "lang": "EE"
+    "title": "BioFicient — brochure (EN)",
+    "file": "BIOFICIENT.pdf",
+    "lang": "EN",
+    "sizeKB": 2932
   },
   {
-    "title": "BioDisc \u2014 domestic (EST)",
-    "file": "KINGSPAN_BioDisc_domestic_EST.pdf",
-    "lang": "EE"
+    "title": "BioAir — domestic (EST)",
+    "file": "BioAir.pdf",
+    "lang": "EE",
+    "sizeKB": 2446
   },
   {
-    "title": "BioDisc \u2014 commercial (EST)",
-    "file": "KINGSPAN_BioDisc_commercial_EST.pdf",
-    "lang": "EE"
+    "title": "BioDisc — commercial (EST)",
+    "file": "Kommertsreoveepuhasti BioDisc.pdf",
+    "lang": "EE",
+    "sizeKB": 2019
   },
   {
-    "title": "BioFicient \u2014 domestic (EST)",
-    "file": "KINGSPAN_BioFicient_domestic_EST.pdf",
-    "lang": "EE"
+    "title": "BioFicient — commercial (EST)",
+    "file": "Kommertsreoveepuhasti BioFicient.pdf",
+    "lang": "EE",
+    "sizeKB": 1829
   },
   {
-    "title": "BioFicient \u2014 commercial (EST)",
-    "file": "KINGSPAN_BioFicient_commercial_EST.pdf",
-    "lang": "EE"
+    "title": "BioDisc — domestic (EST)",
+    "file": "Majapidamisreoveepuhasti BioDisc.pdf",
+    "lang": "EE",
+    "sizeKB": 3858
   },
   {
-    "title": "BioTec Flo \u2014 brochure (EN)",
-    "file": "KINGSPAN_BioTecFlo_EN.pdf",
-    "lang": "EN"
+    "title": "PSD1 — pumping station datasheet (EN)",
+    "file": "PSD1.pdf",
+    "lang": "EN",
+    "sizeKB": 948
   },
   {
-    "title": "RainStore \u2014 tanks (EN)",
-    "file": "KINGSPAN_RainStore_tanks_EN.pdf",
-    "lang": "EN"
-  },
-  {
-    "title": "RainStore Flat \u2014 brochure (EN)",
-    "file": "KINGSPAN_RainStore_Flat_EN.pdf",
-    "lang": "EN"
-  },
-  {
-    "title": "PSD1 \u2014 pumping station datasheet (EN)",
-    "file": "KINGSPAN_PSD1_datasheet_EN.pdf",
-    "lang": "EN"
+    "title": "RainStore Flat — brochure (EN)",
+    "file": "RainStoreFlat.pdf",
+    "lang": "EN",
+    "sizeKB": 1515
   }
 ]

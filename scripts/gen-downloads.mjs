@@ -1,4 +1,4 @@
-import { readdir, writeFile, stat } from 'node:fs/promises'
+import { readdir, writeFile, stat, mkdir } from 'node:fs/promises'
 import { join, extname } from 'node:path'
 
 const downloadsDir = join(process.cwd(), 'public', 'downloads')
@@ -15,6 +15,8 @@ function guessLang(filename) {
   if (f.includes('_en') || f.includes('(en)') || f.includes('eng')) return 'EN'
   return 'EN'
 }
+
+await mkdir(downloadsDir, { recursive: true })
 
 const files = (await readdir(downloadsDir)).filter(f => ['.pdf', '.doc', '.docx'].includes(extname(f).toLowerCase()))
 const list = await Promise.all(files.map(async file => {

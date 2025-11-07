@@ -10,7 +10,14 @@ export default function DownloadsGrid() {
       <p className="text-kingspan-slate mb-4">{t('downloads.note')}</p>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {list.map((item) => (
-          <a key={item.title} className="p-4 rounded-2xl bg-white/80 border hover:shadow-card flex items-center gap-3" href={`/downloads/${item.file}`}>
+          <a
+            key={item.title}
+            className="p-4 rounded-2xl bg-white/80 border hover:shadow-card flex items-center gap-3"
+            href={`/downloads/${item.file}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+          >
             <FileText className="w-5 h-5" />
             <div>
               <div className="font-medium">{item.title}</div>

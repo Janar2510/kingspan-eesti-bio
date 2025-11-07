@@ -31,19 +31,19 @@ export default function ProductSection({ id, titleKey, descKey, pills = [] }: Pr
     <section id={id} className="h-screen flex items-center mb-5">
       <div className="px-6 w-full h-full">
         <div ref={ref} className="card-spotlight card-border p-8 bg-white/70 shadow-card rounded-2xl h-full flex flex-col">
-          <div className="flex flex-col h-full">
-            <div className="flex-1">
-              <h2 className="text-2xl md:text-3xl font-bold">{t(titleKey)}</h2>
-              <p className="mt-3 text-kingspan-slate">{t(descKey)}</p>
+          <div className="flex flex-col h-full gap-4">
+            <div className="flex-shrink-0">
+              <h2 className="text-4xl md:text-5xl font-bold">{t(titleKey)}</h2>
+              <p className="mt-1 text-kingspan-slate">{t(descKey)}</p>
               {pills.length > 0 && (
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div className="mt-3 flex flex-wrap gap-2">
                   {pills.map(p => (
                     <span key={p} className="px-3 py-1 rounded-full bg-kingspan-cloud text-xs">{p}</span>
                   ))}
                 </div>
               )}
             </div>
-            <div className="w-full h-64 md:h-full mt-8 md:mt-0">
+            <div className="flex-1 min-h-0 w-full overflow-visible">
               <Gallery folder={id} fullWidth={true} />
             </div>
           </div>

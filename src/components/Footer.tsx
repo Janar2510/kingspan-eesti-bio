@@ -9,7 +9,15 @@ export default function Footer() {
           <div className="font-semibold">Kingspan Water & Energy — Estonia</div>
           <div className="">info@example.ee · +372 5555 5555</div>
         </div>
-        <div className="mt-6">{t('footer.rights')}</div>
+        <div className="mt-6 flex flex-wrap items-center gap-4">
+          <span>{t('footer.rights')}</span>
+          <a
+            href="/privacy"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border border-kingspan-cloud hover:bg-kingspan-cloud text-xs uppercase tracking-wide"
+          >
+            {t('footer.privacy')}
+          </a>
+        </div>
       </div>
     </footer>
   )
