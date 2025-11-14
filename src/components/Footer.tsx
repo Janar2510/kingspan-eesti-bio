@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 text-sm text-kingspan-slate">
         <div className="flex flex-wrap justify-between gap-6">
           <div className="font-semibold">Kingspan Water & Energy — Estonia</div>
-          <div className="">info@example.ee · +372 5555 5555</div>
+          <div className="">info@kingspanestonia.com · +372 5610 3001</div>
         </div>
         <div className="mt-6 flex flex-wrap items-center gap-4">
           <span>{t('footer.rights')}</span>
