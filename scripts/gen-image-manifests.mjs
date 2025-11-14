@@ -35,3 +35,4 @@ const counts = await Promise.all(productFolders.map(generateManifest))
 const total = counts.reduce((a, b) => a + b, 0)
 console.log(`\nDone! Found ${total} image(s) across ${productFolders.length} folder(s).`)
 
+
