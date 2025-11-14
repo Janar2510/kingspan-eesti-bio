@@ -1,5 +1,7 @@
+# Exclude static files from SPA redirect - Netlify serves these directly
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false  # Don't force redirect if file exists
 
