@@ -2,7 +2,7 @@ import { writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
 
 // Base URL - update this when deploying to production
-const BASE_URL = process.env.SITE_URL || 'https://www.kingspan-eesti-bio.ee'
+const BASE_URL = process.env.SITE_URL || 'https://kingspaneesti.com'
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"

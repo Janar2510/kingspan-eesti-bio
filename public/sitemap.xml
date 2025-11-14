@@ -4,71 +4,71 @@
   
   <!-- Homepage -->
   <url>
-    <loc>https://www.kingspan-eesti-bio.ee/</loc>
+    <loc>https://kingspaneesti.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ee" href="https://www.kingspan-eesti-bio.ee/?lang=ee"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.kingspan-eesti-bio.ee/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ee" href="https://kingspaneesti.com/?lang=ee"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kingspaneesti.com/?lang=en"/>
   </url>
 
   <!-- Product Sections -->
   <url>
-    <loc>https://www.kingspan-eesti-bio.ee/#biodisc</loc>
+    <loc>https://kingspaneesti.com/#biodisc</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://www.kingspan-eesti-bio.ee/#bioficient</loc>
+    <loc>https://kingspaneesti.com/#bioficient</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://www.kingspan-eesti-bio.ee/#bioair</loc>
+    <loc>https://kingspaneesti.com/#bioair</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://www.kingspan-eesti-bio.ee/#biotec</loc>
+    <loc>https://kingspaneesti.com/#biotec</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://www.kingspan-eesti-bio.ee/#rainstore</loc>
+    <loc>https://kingspaneesti.com/#rainstore</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://www.kingspan-eesti-bio.ee/#psd1</loc>
+    <loc>https://kingspaneesti.com/#psd1</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <!-- Downloads Section -->
   <url>
-    <loc>https://www.kingspan-eesti-bio.ee/#downloads</loc>
+    <loc>https://kingspaneesti.com/#downloads</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <!-- Contact Section -->
   <url>
-    <loc>https://www.kingspan-eesti-bio.ee/#contact</loc>
+    <loc>https://kingspaneesti.com/#contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <!-- Privacy Policy -->
   <url>
-    <loc>https://www.kingspan-eesti-bio.ee/privacy</loc>
+    <loc>https://kingspaneesti.com/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="ee" href="https://www.kingspan-eesti-bio.ee/privacy?lang=ee"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.kingspan-eesti-bio.ee/privacy?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ee" href="https://kingspaneesti.com/privacy?lang=ee"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kingspaneesti.com/privacy?lang=en"/>
   </url>
 
 </urlset>
