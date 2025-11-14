@@ -29,6 +29,23 @@ The `pnpm gen:downloads` (or `npm run gen:downloads`) script ensures the `public
 ## Image Galleries
 Add product images to `public/images/{biodisc|bioficient|bioair|biotec|rainstore|psd1}/` and list file names in each folder's `manifest.json`.
 
+## Sitemap & SEO
+The sitemap is generated automatically and includes all pages and sections. To regenerate with a custom base URL:
+
+```bash
+SITE_URL=https://your-domain.com pnpm gen:sitemap
+# or
+npm run gen:sitemap
+```
+
+The sitemap includes:
+- Homepage and language variants (EE/EN)
+- All product sections (`#biodisc`, `#bioficient`, etc.)
+- Downloads and contact sections
+- Privacy policy page
+
+The `robots.txt` file is configured to allow all crawlers and reference the sitemap.
+
 ## Lead Form API (Vercel)
 Deploy on Vercel and set env vars:
 - RESEND_API_KEY, RESEND_TO (optional email send)

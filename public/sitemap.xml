@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.kingspan-eesti-bio.ee/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ee" href="https://www.kingspan-eesti-bio.ee/?lang=ee"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kingspan-eesti-bio.ee/?lang=en"/>
+  </url>
+
+  <!-- Product Sections -->
+  <url>
+    <loc>https://www.kingspan-eesti-bio.ee/#biodisc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kingspan-eesti-bio.ee/#bioficient</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kingspan-eesti-bio.ee/#bioair</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kingspan-eesti-bio.ee/#biotec</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kingspan-eesti-bio.ee/#rainstore</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kingspan-eesti-bio.ee/#psd1</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Downloads Section -->
+  <url>
+    <loc>https://www.kingspan-eesti-bio.ee/#downloads</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Contact Section -->
+  <url>
+    <loc>https://www.kingspan-eesti-bio.ee/#contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://www.kingspan-eesti-bio.ee/privacy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ee" href="https://www.kingspan-eesti-bio.ee/privacy?lang=ee"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kingspan-eesti-bio.ee/privacy?lang=en"/>
+  </url>
+
+</urlset>
