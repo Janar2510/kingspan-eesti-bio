@@ -62,6 +62,15 @@
     <priority>0.7</priority>
   </url>
   
+  <!-- About Page -->
+  <url>
+    <loc>https://kingspaneesti.com/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ee" href="https://kingspaneesti.com/about?lang=ee"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kingspaneesti.com/about?lang=en"/>
+  </url>
+  
   <!-- Privacy Policy -->
   <url>
     <loc>https://kingspaneesti.com/privacy</loc>

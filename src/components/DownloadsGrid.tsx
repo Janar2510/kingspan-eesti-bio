@@ -16,7 +16,6 @@ export default function DownloadsGrid() {
             href={`/downloads/${item.file}`}
             target="_blank"
             rel="noopener noreferrer"
-            download
           >
             <FileText className="w-5 h-5" />
             <div>

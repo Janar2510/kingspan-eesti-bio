@@ -68,6 +68,15 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <priority>0.7</priority>
   </url>
   
+  <!-- About Page -->
+  <url>
+    <loc>${BASE_URL}/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ee" href="${BASE_URL}/about?lang=ee"/>
+    <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/about?lang=en"/>
+  </url>
+  
   <!-- Privacy Policy -->
   <url>
     <loc>${BASE_URL}/privacy</loc>

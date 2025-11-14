@@ -55,7 +55,22 @@
   "navigation": {
     "downloads": "Downloads",
     "contact": "Contact",
-    "privacy": "Privacy Policy"
+    "privacy": "Privacy Policy",
+    "about": "About"
+  },
+  "about": {
+    "hero": {
+      "title": "Who We Are",
+      "subtitle": "Kingspan Estonia Bio"
+    },
+    "section1": {
+      "title": "Pioneering Water & Energy Solutions",
+      "content": "We are a people focused business dedicated to the design and manufacture of water and energy solutions that achieve the highest levels of sustainability, quality and innovation."
+    },
+    "section2": {
+      "title": "Industry Leadership",
+      "content": "We strive to be the industry leaders in driving global change in the design and manufacture of sustainable ways of storing and protecting water and energy."
+    }
   },
   "privacy": {
     "title": "Privacy Policy",

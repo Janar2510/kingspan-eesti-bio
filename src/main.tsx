@@ -4,11 +4,19 @@ import './styles.css'
 import App from './App'
 import './utils/i18n'
 import PrivacyPolicy from './pages/PrivacyPolicy'
+import About from './pages/About'
 
-const isPrivacyRoute = window.location.pathname.startsWith('/privacy')
+const path = window.location.pathname
+let Component = App
+
+if (path.startsWith('/privacy')) {
+  Component = PrivacyPolicy
+} else if (path.startsWith('/about')) {
+  Component = About
+}
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    {isPrivacyRoute ? <PrivacyPolicy /> : <App />}
+    <Component />
   </React.StrictMode>,
 )

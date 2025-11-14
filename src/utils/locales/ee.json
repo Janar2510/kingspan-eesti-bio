@@ -55,7 +55,22 @@
   "navigation": {
     "downloads": "Materjalid",
     "contact": "Kontakt",
-    "privacy": "Privaatsustingimused"
+    "privacy": "Privaatsustingimused",
+    "about": "Meist"
+  },
+  "about": {
+    "hero": {
+      "title": "Kes me oleme",
+      "subtitle": "Kingspan Eesti BIO"
+    },
+    "section1": {
+      "title": "Vee- ja energialahenduste pioneerid",
+      "content": "Oleme inimestele keskendunud ettevõte, mis on pühendunud vee- ja energialahenduste kujundamisele ja valmistamisele, mis saavutavad kõrgeima taseme jätkusuutlikkusest, kvaliteedist ja innovatsioonist."
+    },
+    "section2": {
+      "title": "Tööstuse juhtpositsioon",
+      "content": "Püüdleme saada tööstuse liidriteks, suunates globaalset muutust jätkusuutlike viiside kujundamisel ja valmistamisel vee ja energia salvestamiseks ja kaitsmiseks."
+    }
   },
   "privacy": {
     "title": "Privaatsustingimused",
