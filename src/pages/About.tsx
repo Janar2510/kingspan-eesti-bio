@@ -20,11 +20,11 @@ export default function About() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-white px-6">
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">
+          <div className="text-center text-white px-4 md:px-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-3 md:mb-4 drop-shadow-lg">
               {t('about.hero.title')}
             </h1>
-            <p className="text-2xl md:text-3xl font-semibold drop-shadow-md">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold drop-shadow-md">
               {t('about.hero.subtitle')}
             </p>
           </div>
@@ -32,31 +32,31 @@ export default function About() {
       </section>
 
       {/* Main Content */}
-      <main className="max-w-6xl mx-auto px-6 py-16 space-y-16">
+      <main className="max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-12 lg:py-16 space-y-12 md:space-y-16">
         {/* Opening Text */}
-        <section className="space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-kingspan-blue">
+        <section className="space-y-4 md:space-y-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-kingspan-blue">
             {t('about.section1.title')}
           </h2>
-          <p className="text-lg md:text-xl text-kingspan-slate leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-kingspan-slate leading-relaxed">
             {t('about.section1.content')}
           </p>
         </section>
 
         {/* Images Section */}
-        <section className="grid md:grid-cols-2 gap-8">
-          <div className="space-y-4">
+        <section className="grid md:grid-cols-2 gap-6 md:gap-8">
+          <div className="space-y-4 order-2 md:order-1">
             <img 
               src="/About section/About page3 .png" 
               alt="About" 
               className="w-full rounded-2xl shadow-card object-cover"
             />
           </div>
-          <div className="space-y-4 flex flex-col justify-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-kingspan-blue">
+          <div className="space-y-4 flex flex-col justify-center order-1 md:order-2">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-kingspan-blue">
               {t('about.section2.title')}
             </h3>
-            <p className="text-lg text-kingspan-slate leading-relaxed">
+            <p className="text-base sm:text-lg text-kingspan-slate leading-relaxed">
               {t('about.section2.content')}
             </p>
           </div>

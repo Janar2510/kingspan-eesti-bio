@@ -43,24 +43,24 @@ export default function App() {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="h-full flex items-center px-6 relative z-10">
+        <div className="h-full flex items-center px-4 md:px-6 relative z-10">
           <div className="max-w-6xl mx-auto w-full">
             <div className="w-full md:w-1/2">
               <div style={{ transform: `translateY(${offset * 0.5}px)` }}>
-                <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-white drop-shadow-lg">{t('hero.title')}</h1>
-                <p className="mt-4 text-lg text-white drop-shadow-md">{t('hero.sub')}</p>
-                <div className="mt-8 flex flex-wrap gap-4">
-                  <a href="#contact" className="px-6 py-3 rounded-3xl bg-kingspan-blue text-white shadow-card hover:opacity-90">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white drop-shadow-lg">{t('hero.title')}</h1>
+                <p className="mt-3 md:mt-4 text-base sm:text-lg md:text-xl text-white drop-shadow-md">{t('hero.sub')}</p>
+                <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
+                  <a href="#contact" className="px-6 py-3 rounded-3xl bg-kingspan-blue text-white shadow-card hover:opacity-90 text-center sm:text-left text-sm md:text-base">
                     {t('hero.ctaPrimary')}
                   </a>
-                  <a href="#downloads" className="px-6 py-3 rounded-3xl border border-kingspan-gold text-kingspan-blue bg-white/70 hover:bg-white flex items-center gap-2">
+                  <a href="#downloads" className="px-6 py-3 rounded-3xl border border-kingspan-gold text-kingspan-blue bg-white/70 hover:bg-white flex items-center justify-center gap-2 text-sm md:text-base">
                     <Download className="w-4 h-4" /> {t('hero.ctaSecondary')}
                   </a>
                 </div>
-                <div className="mt-8 flex gap-6 text-white drop-shadow-md">
-                  <span className="inline-flex items-center gap-2"><Waves className="w-5 h-5" /> Quiet & odour‑free</span>
-                  <span className="inline-flex items-center gap-2"><Leaf className="w-5 h-5" /> Low energy</span>
-                  <span className="inline-flex items-center gap-2"><Shield className="w-5 h-5" /> Durable GRP/PE</span>
+                <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 text-white drop-shadow-md text-sm md:text-base">
+                  <span className="inline-flex items-center gap-2"><Waves className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" /> <span className="whitespace-nowrap">Quiet & odour‑free</span></span>
+                  <span className="inline-flex items-center gap-2"><Leaf className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" /> Low energy</span>
+                  <span className="inline-flex items-center gap-2"><Shield className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" /> Durable GRP/PE</span>
                 </div>
               </div>
             </div>
@@ -111,15 +111,15 @@ export default function App() {
       />
 
       {/* Downloads */}
-      <section id="downloads" className="py-16 bg-white/60">
-        <div className="max-w-6xl mx-auto px-6">
+      <section id="downloads" className="py-12 md:py-16 bg-white/60">
+        <div className="max-w-6xl mx-auto px-4 md:px-6">
           <DownloadsGrid />
         </div>
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-16">
-        <div className="max-w-3xl mx-auto px-6">
+      <section id="contact" className="py-12 md:py-16">
+        <div className="max-w-3xl mx-auto px-4 md:px-6">
           <ConsultationForm />
         </div>
       </section>

@@ -8,33 +8,33 @@ export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-white text-kingspan-navy">
       <header className="bg-white/80 border-b sticky top-0 z-40 backdrop-blur">
-        <div className="max-w-4xl mx-auto px-6 py-6 flex items-center justify-between">
-          <a href="/" className="font-semibold text-kingspan-blue">Kingspan Eesti BIO</a>
+        <div className="max-w-4xl mx-auto px-4 md:px-6 py-4 md:py-6 flex items-center justify-between">
+          <a href="/" className="font-semibold text-sm sm:text-base text-kingspan-blue">Kingspan Eesti BIO</a>
           <a
             href="/"
-            className="px-4 py-2 rounded-xl border border-kingspan-cloud hover:bg-kingspan-cloud text-sm"
+            className="px-3 sm:px-4 py-2 rounded-xl border border-kingspan-cloud hover:bg-kingspan-cloud text-xs sm:text-sm"
           >
             {t('privacy.back')}
           </a>
         </div>
       </header>
 
-      <main className="max-w-4xl mx-auto px-6 py-16 space-y-10">
+      <main className="max-w-4xl mx-auto px-4 md:px-6 py-8 md:py-12 lg:py-16 space-y-8 md:space-y-10">
         <div>
-          <h1 className="text-4xl md:text-5xl font-bold">{t('privacy.title')}</h1>
-          <p className="mt-4 text-kingspan-slate text-sm uppercase tracking-wide">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">{t('privacy.title')}</h1>
+          <p className="mt-3 md:mt-4 text-kingspan-slate text-xs sm:text-sm uppercase tracking-wide">
             {t('privacy.updated')}
           </p>
-          <p className="mt-6 text-lg text-kingspan-slate leading-relaxed">
+          <p className="mt-4 md:mt-6 text-base sm:text-lg text-kingspan-slate leading-relaxed">
             {t('privacy.intro')}
           </p>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-8 md:space-y-12">
           {sections.map((key) => (
             <section key={key}>
-              <h2 className="text-2xl font-semibold">{t(`privacy.sections.${key}.title`)}</h2>
-              <p className="mt-3 text-kingspan-slate leading-relaxed">
+              <h2 className="text-xl sm:text-2xl font-semibold">{t(`privacy.sections.${key}.title`)}</h2>
+              <p className="mt-3 text-sm sm:text-base text-kingspan-slate leading-relaxed">
                 {t(`privacy.sections.${key}.body`)}
               </p>
             </section>
@@ -42,8 +42,8 @@ export default function PrivacyPolicy() {
         </div>
       </main>
 
-      <footer className="py-10 bg-white/80 border-t">
-        <div className="max-w-4xl mx-auto px-6 text-sm text-kingspan-slate">
+      <footer className="py-8 md:py-10 bg-white/80 border-t">
+        <div className="max-w-4xl mx-auto px-4 md:px-6 text-xs sm:text-sm text-kingspan-slate">
           {t('footer.rights')}
         </div>
       </footer>
