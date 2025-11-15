@@ -34,6 +34,7 @@
     "message": "Message",
     "consent": "I agree to data processing",
     "submit": "Submit",
+    "submitting": "Sending...",
     "type_options": {
       "house": "House",
       "business": "Business",

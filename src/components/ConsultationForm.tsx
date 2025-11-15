@@ -4,15 +4,64 @@ import { useTranslation } from 'react-i18next'
 export default function ConsultationForm() {
   const { t } = useTranslation()
   const [sent, setSent] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setSubmitting(true)
     try {
       const form = e.target as HTMLFormElement
-      const data = Object.fromEntries(new FormData(form).entries())
-      const res = await fetch('/api/submit-lead', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
-      if (res.ok) setSent(true); else alert('Submission failed')
-    } catch { alert('Submission error') }
+      const formData = new FormData(form)
+      
+      // Log form data for debugging
+      console.log('Submitting form data:', Object.fromEntries(formData.entries()))
+      
+      const res = await fetch('https://formspree.io/f/mvgdklpz', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      
+      console.log('Formspree response status:', res.status, res.statusText)
+      
+      // Check if response is JSON
+      const contentType = res.headers.get('content-type')
+      let data: any = {}
+      
+      if (contentType && contentType.includes('application/json')) {
+        data = await res.json()
+      } else {
+        const text = await res.text()
+        console.warn('Non-JSON response from Formspree:', text)
+      }
+      
+      if (res.ok) {
+        setSent(true)
+        form.reset()
+      } else {
+        // Formspree error handling
+        if (data.errors && Array.isArray(data.errors)) {
+          const errorMessages = data.errors.map((error: any) => error.message || error).join(', ')
+          alert(`Submission failed: ${errorMessages}`)
+        } else if (data.error) {
+          alert(`Submission failed: ${data.error}`)
+        } else {
+          console.error('Formspree error response:', data, 'Status:', res.status)
+          alert(`Submission failed. Status: ${res.status}. Please check the browser console for details.`)
+        }
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+      if (error instanceof TypeError && error.message.includes('fetch')) {
+        alert('Network error: Unable to connect to Formspree. Please check your internet connection.')
+      } else {
+        alert(`Submission error: ${error instanceof Error ? error.message : 'Unknown error'}. Please check the browser console for details.`)
+      }
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -21,7 +70,7 @@ export default function ConsultationForm() {
       {sent ? (
         <div className="p-4 rounded-xl bg-green-50 text-green-800 text-sm sm:text-base">Thanks — we will contact you shortly.</div>
       ) : (
-        <form onSubmit={onSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+        <form onSubmit={onSubmit} action="https://formspree.io/f/mvgdklpz" method="POST" className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
           <input name="name" required className="px-4 py-2.5 sm:py-3 rounded-xl border text-sm sm:text-base" placeholder={t('form.name')!} />
           <input name="email" required type="email" className="px-4 py-2.5 sm:py-3 rounded-xl border text-sm sm:text-base" placeholder={t('form.email')!} />
           <input name="phone" className="px-4 py-2.5 sm:py-3 rounded-xl border text-sm sm:text-base" placeholder={t('form.phone')!} />
@@ -37,10 +86,16 @@ export default function ConsultationForm() {
           </select>
           <textarea name="message" className="md:col-span-2 px-4 py-2.5 sm:py-3 rounded-xl border text-sm sm:text-base" rows={5} placeholder={t('form.message')!} />
           <label className="md:col-span-2 flex items-start gap-3 text-xs sm:text-sm text-kingspan-slate">
-            <input required type="checkbox" className="mt-1 flex-shrink-0" /> <span>{t('form.consent')}</span>
+            <input required type="checkbox" name="consent" value="yes" className="mt-1 flex-shrink-0" /> <span>{t('form.consent')}</span>
           </label>
           <div className="md:col-span-2">
-            <button className="w-full sm:w-auto px-6 py-3 rounded-3xl bg-kingspan-blue text-white hover:opacity-90 text-sm sm:text-base">{t('form.submit')}</button>
+            <button 
+              type="submit" 
+              disabled={submitting}
+              className="w-full sm:w-auto px-6 py-3 rounded-3xl bg-kingspan-blue text-white hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base"
+            >
+              {submitting ? t('form.submitting') || 'Sending...' : t('form.submit')}
+            </button>
           </div>
         </form>
       )}
