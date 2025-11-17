@@ -2,6 +2,7 @@
 node_modules/
 .pnp
 .pnp.js
+.pnpm-store/
 
 # Testing
 coverage/
@@ -9,6 +10,7 @@ coverage/
 # Production
 dist/
 build/
+.vite/
 
 # Misc
 .DS_Store
