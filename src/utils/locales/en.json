@@ -27,8 +27,11 @@
   },
   "form": {
     "title": "Get in touch",
-    "name": "Name",
+    "firstName": "First Name",
+    "lastName": "Last Name",
     "email": "Email",
+    "address": "Address",
+    "zipCode": "Zip Code",
     "phone": "Phone",
     "pe": "Population Equivalent (PE)",
     "message": "Message",

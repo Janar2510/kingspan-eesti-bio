@@ -71,8 +71,11 @@ export default function ConsultationForm() {
         <div className="p-4 rounded-xl bg-green-50 text-green-800 text-sm sm:text-base">Thanks — we will contact you shortly.</div>
       ) : (
         <form onSubmit={onSubmit} action="https://formspree.io/f/mvgdklpz" method="POST" className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-          <input name="name" required className="px-4 py-2.5 sm:py-3 rounded-xl border text-sm sm:text-base" placeholder={t('form.name')!} />
+          <input name="firstName" required className="px-4 py-2.5 sm:py-3 rounded-xl border text-sm sm:text-base" placeholder={t('form.firstName')!} />
+          <input name="lastName" required className="px-4 py-2.5 sm:py-3 rounded-xl border text-sm sm:text-base" placeholder={t('form.lastName')!} />
           <input name="email" required type="email" className="px-4 py-2.5 sm:py-3 rounded-xl border text-sm sm:text-base" placeholder={t('form.email')!} />
+          <input name="address" required className="px-4 py-2.5 sm:py-3 rounded-xl border text-sm sm:text-base" placeholder={t('form.address')!} />
+          <input name="zipCode" required className="px-4 py-2.5 sm:py-3 rounded-xl border text-sm sm:text-base" placeholder={t('form.zipCode')!} />
           <input name="phone" className="px-4 py-2.5 sm:py-3 rounded-xl border text-sm sm:text-base" placeholder={t('form.phone')!} />
           <select name="type" className="px-4 py-2.5 sm:py-3 rounded-xl border text-sm sm:text-base">
             <option value="house">{t('form.type_options.house')}</option>

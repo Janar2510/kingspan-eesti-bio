@@ -27,8 +27,11 @@
   },
   "form": {
     "title": "Võta meiega ühendust",
-    "name": "Nimi",
+    "firstName": "Eesnimi",
+    "lastName": "Perekonnanimi",
     "email": "E-post",
+    "address": "Aadress",
+    "zipCode": "Postiindeks",
     "phone": "Telefon",
     "pe": "Inimeste arv (PE)",
     "message": "Sõnum",
