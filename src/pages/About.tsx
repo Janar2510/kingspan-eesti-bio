@@ -1,12 +1,14 @@
 import { useTranslation } from 'react-i18next'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import SEOHead from '../components/SEOHead'
 
 export default function About() {
   const { t } = useTranslation()
 
   return (
     <div className="text-kingspan-navy">
+      <SEOHead />
       <Header />
       
       {/* Hero Section with Mountains */}

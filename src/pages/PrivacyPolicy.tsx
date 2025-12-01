@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import SEOHead from '../components/SEOHead'
 
 const sections = ['overview', 'collection', 'usage', 'sharing', 'rights', 'contact'] as const
 
@@ -7,6 +8,7 @@ export default function PrivacyPolicy() {
 
   return (
     <div className="min-h-screen bg-white text-kingspan-navy">
+      <SEOHead />
       <header className="bg-white/80 border-b sticky top-0 z-40 backdrop-blur">
         <div className="max-w-4xl mx-auto px-4 md:px-6 py-4 md:py-6 flex items-center justify-between">
           <a href="/" className="font-semibold text-sm sm:text-base text-kingspan-blue">Kingspan Eesti BIO</a>

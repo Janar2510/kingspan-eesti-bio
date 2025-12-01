@@ -7,6 +7,7 @@ import DownloadsGrid from './components/DownloadsGrid'
 import ConsultationForm from './components/ConsultationForm'
 import ProductSection from './components/ProductSection'
 import KPIBar from './components/KPIBar'
+import SEOHead from './components/SEOHead'
 
 export default function App() {
   const { t } = useTranslation()
@@ -25,6 +26,7 @@ export default function App() {
 
   return (
     <div className="text-kingspan-navy">
+      <SEOHead />
       <Header />
 
       {/* Hero */}
