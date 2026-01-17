@@ -7,59 +7,9 @@
     <loc>https://kingspaneesti.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ee" href="https://kingspaneesti.com/?lang=ee"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kingspaneesti.com/?lang=en"/>
-  </url>
-
-  <!-- Product Sections -->
-  <url>
-    <loc>https://kingspaneesti.com/#biodisc</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://kingspaneesti.com/#bioficient</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://kingspaneesti.com/#bioair</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://kingspaneesti.com/#biotec</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://kingspaneesti.com/#rainstore</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://kingspaneesti.com/#psd1</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Downloads Section -->
-  <url>
-    <loc>https://kingspaneesti.com/#downloads</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Contact Section -->
-  <url>
-    <loc>https://kingspaneesti.com/#contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="et" href="https://kingspaneesti.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kingspaneesti.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kingspaneesti.com/"/>
   </url>
   
   <!-- About Page -->
@@ -67,8 +17,9 @@
     <loc>https://kingspaneesti.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ee" href="https://kingspaneesti.com/about?lang=ee"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kingspaneesti.com/about?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://kingspaneesti.com/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kingspaneesti.com/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kingspaneesti.com/about"/>
   </url>
   
   <!-- Privacy Policy -->
@@ -76,8 +27,9 @@
     <loc>https://kingspaneesti.com/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="ee" href="https://kingspaneesti.com/privacy?lang=ee"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kingspaneesti.com/privacy?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://kingspaneesti.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kingspaneesti.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kingspaneesti.com/privacy"/>
   </url>
 
 </urlset>

@@ -13,59 +13,9 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <loc>${BASE_URL}/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ee" href="${BASE_URL}/?lang=ee"/>
-    <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/?lang=en"/>
-  </url>
-
-  <!-- Product Sections -->
-  <url>
-    <loc>${BASE_URL}/#biodisc</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>${BASE_URL}/#bioficient</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>${BASE_URL}/#bioair</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>${BASE_URL}/#biotec</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>${BASE_URL}/#rainstore</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>${BASE_URL}/#psd1</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Downloads Section -->
-  <url>
-    <loc>${BASE_URL}/#downloads</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Contact Section -->
-  <url>
-    <loc>${BASE_URL}/#contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="et" href="${BASE_URL}/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/"/>
   </url>
   
   <!-- About Page -->
@@ -73,8 +23,9 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <loc>${BASE_URL}/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ee" href="${BASE_URL}/about?lang=ee"/>
-    <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/about?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="et" href="${BASE_URL}/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/about"/>
   </url>
   
   <!-- Privacy Policy -->
@@ -82,8 +33,9 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <loc>${BASE_URL}/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="ee" href="${BASE_URL}/privacy?lang=ee"/>
-    <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/privacy?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="et" href="${BASE_URL}/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/privacy"/>
   </url>
 
 </urlset>
