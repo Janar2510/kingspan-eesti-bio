@@ -1,2 +1,8 @@
-/*    /index.html   200
+# Redirect trailing slashes to non-trailing (except root)
+/about/        /about        301
+/privacy/      /privacy      301
+/calculator/   /calculator   301
+/kalkulaator/  /calculator   301
 
+# SPA fallback - serve index.html for all other routes
+/*    /index.html   200

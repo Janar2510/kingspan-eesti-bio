@@ -26,9 +26,16 @@ export default function About() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-3 md:mb-4 drop-shadow-lg">
               {t('about.hero.title')}
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold drop-shadow-md">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold drop-shadow-md mb-6 md:mb-8">
               {t('about.hero.subtitle')}
             </p>
+            <div className="flex justify-center">
+              <img 
+                src="/images/kingspan-logo.png" 
+                alt="Kingspan Logo" 
+                className="h-16 md:h-24 lg:h-32 w-auto object-contain drop-shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -67,7 +74,7 @@ export default function About() {
         {/* Additional Image */}
         <section className="w-full">
           <img 
-            src="/About section/About page4.png" 
+            src="/About section/About page5.jpeg" 
             alt="About" 
             className="w-full rounded-2xl shadow-card object-cover max-h-[600px]"
           />

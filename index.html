@@ -5,8 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kingspan Eesti BIO</title>
     <meta name="description" content="Kingspan Estonia BIO – wastewater & rainwater solutions.">
-    <link rel="canonical" href="https://kingspaneesti.com/">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <!-- Server-side canonical tag - set immediately before React loads -->
+    <script>
+      (function() {
+        const BASE_URL = 'https://kingspaneesti.com';
+        const path = window.location.pathname;
+        // Remove trailing slash except for root
+        const cleanPath = path.endsWith('/') && path !== '/' ? path.slice(0, -1) : path;
+        const canonicalUrl = BASE_URL + (cleanPath || '/');
+        
+        // Set canonical tag immediately
+        const canonicalLink = document.createElement('link');
+        canonicalLink.rel = 'canonical';
+        canonicalLink.href = canonicalUrl;
+        document.head.appendChild(canonicalLink);
+        
+        // Add hreflang tags
+        ['et', 'en', 'x-default'].forEach(lang => {
+          const hreflangLink = document.createElement('link');
+          hreflangLink.rel = 'alternate';
+          hreflangLink.hreflang = lang;
+          hreflangLink.href = canonicalUrl;
+          document.head.appendChild(hreflangLink);
+        });
+      })();
+    </script>
   </head>
   <body class="bg-kingspan-cloud">
     <div id="root"></div>

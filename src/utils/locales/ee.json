@@ -1,7 +1,7 @@
 {
   "hero": {
-    "title": "Kvaliteetsed puhastussüsteemid Eestis",
-    "sub": "Kingspan Eesti BIO pakub innovaatilisi biopuhastussüsteeme, mis on vaiksed, energiasäästlikud ja keskkonnasõbralikud.",
+    "title": "Kingspan kvaliteetsed veepuhastussüsteemid Eestis",
+    "sub": "Kingspan Water pakub innovaatilisi biopuhastussüsteeme, mis on vaiksed, energiasäästlikud ja keskkonnasõbralikud.",
     "ctaPrimary": "Võta ühendust",
     "ctaSecondary": "Laadi alla"
   },
@@ -23,7 +23,8 @@
     "rainstore_title": "RainStore",
     "rainstore_desc": "Vihmavee kogumissüsteem, mis võimaldab säästa kuni 50% vett. Madal profiil ja komplektid.",
     "psd1_title": "PSD1",
-    "psd1_desc": "Teleskoopiline pumbajaam A15 luugiga ja Pedrollo pump."
+    "psd1_desc": "Teleskoopiline pumbajaam A15 luugiga ja Pedrollo pump.",
+    "more_products_title": "Veel tooteid"
   },
   "form": {
     "title": "Võta meiega ühendust",
@@ -57,20 +58,21 @@
     "downloads": "Materjalid",
     "contact": "Kontakt",
     "privacy": "Privaatsustingimused",
-    "about": "Meist"
+    "about": "Meist",
+    "calculator": "Kalkulaator"
   },
   "about": {
     "hero": {
       "title": "Kes me oleme",
-      "subtitle": "Kingspan Eesti BIO"
+      "subtitle": "Oleme ametlikud Kingspan biopuhastite edasimüüjad"
     },
     "section1": {
-      "title": "Vee- ja energialahenduste pioneerid",
+      "title": "Veepuhastuse ja energialahendused",
       "content": "Oleme inimestele keskendunud ettevõte, mis on pühendunud vee- ja energialahenduste kujundamisele ja valmistamisele, mis saavutavad kõrgeima taseme jätkusuutlikkusest, kvaliteedist ja innovatsioonist."
     },
     "section2": {
       "title": "Tööstuse juhtpositsioon",
-      "content": "Püüdleme saada tööstuse liidriteks, suunates globaalset muutust jätkusuutlike viiside kujundamisel ja valmistamisel vee ja energia salvestamiseks ja kaitsmiseks."
+      "content": "Kingspan vee ja energia lahendused on liikumas tööstuse liidriteks, suunates globaalset muutust jätkusuutlike viiside kujundamisel ja valmistamisel vee ja energia salvestamiseks ja kaitsmiseks."
     }
   },
   "privacy": {
@@ -103,6 +105,60 @@
         "title": "6. Kontakt",
         "body": "Kui teil tekib privaatsustingimuste või andmetöötluse kohta küsimusi, kirjutage aadressil info@example.ee või helistage numbril +372 5555 5555."
       }
+    }
+  },
+  "calculator": {
+    "title": "Reoveepuhastussüsteemi kalkulaator",
+    "subtitle": "Leidke oma kinnisvarale ideaalne biopuhastussüsteem vastavalt teie konkreetsetele nõuetele.",
+    "inputs": {
+      "title": "Sisestage oma nõuded",
+      "people": "Inimeste arv",
+      "propertyType": "Kinnisvara tüüp",
+      "waterUsage": "Päevane veekulu",
+      "waterUsageHint": "Standard: 150 L/inimene/päevas. Eramajad: 100-200 L, Ärihooned: 200-300 L",
+      "groundwater": "Põhjavee tase"
+    },
+    "calculate": "Arvuta süsteem",
+    "noPower": "Elektrivajadus puudub",
+    "customDimensions": "Kohandatavad mõõdud",
+    "customPower": "Kohandatud võimsus",
+    "systems": {
+      "biodisc": {
+        "desc": "Vaikne ja lõhnavaba biopuhastussüsteem RBC tehnoloogiaga. Ideaalne eramajadele."
+      },
+      "bioficient": {
+        "desc": "Energiasäästlik fluidiseeritud voodiga süsteem automatiseeritud tööga. Sobib keskmise suurusega kinnisvarale."
+      },
+      "bioair": {
+        "desc": "Kõrge efektiivsusega aktiveeritud muda süsteem 97,5% BOD5 eemaldamisega. Sobib suurematele kinnisvaradele ja ärikasutusele."
+      },
+      "biotec": {
+        "desc": "Võrgust sõltumatu süsteem ilma elektrivajaduseta. Töötab raskusjõu või rõhu abil. Ideaalne kaugematele asukohtadele."
+      }
+    },
+    "features": {
+      "quiet": "Vaikne töö",
+      "odourFree": "Lõhnavaba",
+      "lowMaintenance": "Vähene hooldus",
+      "noElectricity": "Elektrivajadus puudub",
+      "gravity": "Raskusjõuline töö",
+      "offGrid": "Võrgust sõltumatu",
+      "energyEfficient": "Energiasäästlik",
+      "automated": "Automaatne töö",
+      "compact": "Kompaktne disain",
+      "highEfficiency": "Kõrge efektiivsus (97,5% BOD5 eemaldamine)",
+      "activatedSludge": "Aktiveeritud muda tehnoloogia",
+      "ipsOption": "IPS valik saadaval",
+      "scalable": "Skaalautatav suurematele projektidele"
+    },
+    "results": {
+      "title": "Soovitatud süsteem",
+      "capacity": "Võimsus",
+      "dimensions": "Mõõdud",
+      "power": "Võimsusvajadus",
+      "features": "Peamised omadused",
+      "note": "See on esialgne soovitus. Täpsema mõõtmete ja üksikasjalike spetsifikatsioonide saamiseks võtke palun meiega ühendust.",
+      "contact": "Võtke ühendust üksikasjaliku pakkumise saamiseks"
     }
   }
 }

@@ -20,19 +20,19 @@ export default function Gallery({ folder, height = 220, fullWidth = false }: Gal
     return <div className="w-full text-sm text-gray-500">Add images to <code>/public/images/{folder}/</code> and a <code>manifest.json</code> file.</div>
   }
 
-      if (fullWidth) {
-        // Display the first image to fill the entire container
-        return (
-          <div className="w-full h-full overflow-hidden min-h-[200px] sm:min-h-[300px] md:min-h-[400px]">
-            <img 
-              src={`/images/${folder}/${images[0]}`} 
-              alt={folder} 
-              className="w-full h-full object-contain rounded-xl border bg-white/70" 
-              style={{ transform: 'translateY(-20px)' }}
-            />
-          </div>
-        )
-      }
+  if (fullWidth) {
+    // Display the first image to fill the entire container
+    return (
+      <div className="w-full h-full overflow-hidden min-h-[200px] sm:min-h-[300px] md:min-h-[400px]">
+        <img 
+          src={`/images/${folder}/${images[0]}`} 
+          alt={folder} 
+          className="w-full h-full object-contain rounded-xl border bg-white/70" 
+          style={{ transform: 'translateY(-20px)' }}
+        />
+      </div>
+    )
+  }
 
   return (
     <div className="relative">

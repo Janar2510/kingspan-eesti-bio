@@ -5,45 +5,32 @@ const BASE_URL = 'https://kingspaneesti.com'
 function updateCanonicalTags() {
   // Get current path without query params and hash
   const path = window.location.pathname
+  // Remove trailing slash except for root
   const cleanPath = path.endsWith('/') && path !== '/' ? path.slice(0, -1) : path
   const canonicalUrl = `${BASE_URL}${cleanPath || '/'}`
   
-  // Remove existing canonical tag if any
-  const existingCanonical = document.querySelector('link[rel="canonical"]')
-  if (existingCanonical) {
-    existingCanonical.remove()
+  // Update or create canonical tag (server-side script may have already created it)
+  let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement
+  if (!canonicalLink) {
+    canonicalLink = document.createElement('link')
+    canonicalLink.rel = 'canonical'
+    document.head.appendChild(canonicalLink)
   }
-  
-  // Remove existing hreflang tags
-  const existingHreflangs = document.querySelectorAll('link[rel="alternate"][hreflang]')
-  existingHreflangs.forEach(tag => tag.remove())
-  
-  // Add canonical tag
-  const canonicalLink = document.createElement('link')
-  canonicalLink.rel = 'canonical'
   canonicalLink.href = canonicalUrl
-  document.head.appendChild(canonicalLink)
   
-  // Add hreflang tags for language variants (Estonian and English)
-  // Both point to the same URL since language is handled client-side
-  const hreflangEe = document.createElement('link')
-  hreflangEe.rel = 'alternate'
-  hreflangEe.hreflang = 'et' // Estonian language code (ISO 639-1)
-  hreflangEe.href = canonicalUrl
-  document.head.appendChild(hreflangEe)
-  
-  const hreflangEn = document.createElement('link')
-  hreflangEn.rel = 'alternate'
-  hreflangEn.hreflang = 'en'
-  hreflangEn.href = canonicalUrl
-  document.head.appendChild(hreflangEn)
-  
-  // Add x-default hreflang (points to the default/preferred version)
-  const hreflangDefault = document.createElement('link')
-  hreflangDefault.rel = 'alternate'
-  hreflangDefault.hreflang = 'x-default'
-  hreflangDefault.href = canonicalUrl
-  document.head.appendChild(hreflangDefault)
+  // Update hreflang tags (server-side script may have already created them)
+  const hreflangTags = ['et', 'en', 'x-default']
+  hreflangTags.forEach(lang => {
+    let hreflangLink = document.querySelector(`link[rel="alternate"][hreflang="${lang}"]`) as HTMLLinkElement
+    if (!hreflangLink) {
+      hreflangLink = document.createElement('link')
+      hreflangLink.rel = 'alternate'
+      hreflangLink.hreflang = lang
+      document.head.appendChild(hreflangLink)
+    }
+    hreflangLink.hreflang = lang
+    hreflangLink.href = canonicalUrl
+  })
   
   // Update og:url if exists, or add it
   let ogUrl = document.querySelector('meta[property="og:url"]')

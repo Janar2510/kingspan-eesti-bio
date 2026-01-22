@@ -37,6 +37,16 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/privacy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/privacy"/>
   </url>
+  
+  <!-- Calculator -->
+  <url>
+    <loc>${BASE_URL}/calculator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="et" href="${BASE_URL}/calculator"/>
+    <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/calculator"/>
+  </url>
 
 </urlset>
 `

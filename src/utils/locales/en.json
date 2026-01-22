@@ -23,7 +23,8 @@
     "rainstore_title": "RainStore",
     "rainstore_desc": "Rainwater collection system that can save up to 50% of water. Low profile and kits available.",
     "psd1_title": "PSD1",
-    "psd1_desc": "Telescopic pumping station with A15 hatch and Pedrollo pump."
+    "psd1_desc": "Telescopic pumping station with A15 hatch and Pedrollo pump.",
+    "more_products_title": "More Products"
   },
   "form": {
     "title": "Get in touch",
@@ -57,7 +58,8 @@
     "downloads": "Downloads",
     "contact": "Contact",
     "privacy": "Privacy Policy",
-    "about": "About"
+    "about": "About",
+    "calculator": "Calculator"
   },
   "about": {
     "hero": {
@@ -103,6 +105,60 @@
         "title": "6. Contact",
         "body": "If you have questions about this policy or our data practices, contact Kingspan Eesti BIO at info@example.ee or call +372 5555 5555."
       }
+    }
+  },
+  "calculator": {
+    "title": "Wastewater Treatment System Calculator",
+    "subtitle": "Find the perfect biological treatment system for your property based on your specific requirements.",
+    "inputs": {
+      "title": "Enter Your Requirements",
+      "people": "Number of People",
+      "propertyType": "Property Type",
+      "waterUsage": "Daily Water Usage",
+      "waterUsageHint": "Standard: 150 L/person/day. Residential: 100-200 L, Commercial: 200-300 L",
+      "groundwater": "Groundwater Level"
+    },
+    "calculate": "Calculate System",
+    "noPower": "No electricity required",
+    "customDimensions": "Custom sizing available",
+    "customPower": "Custom power requirement",
+    "systems": {
+      "biodisc": {
+        "desc": "Quiet and odour-free biological treatment system with RBC technology. Ideal for residential properties."
+      },
+      "bioficient": {
+        "desc": "Energy-efficient fluidised bed system with automated operation. Perfect for medium-sized properties."
+      },
+      "bioair": {
+        "desc": "High-efficiency activated sludge system with 97.5% BOD5 removal. Suitable for larger properties and commercial use."
+      },
+      "biotec": {
+        "desc": "Off-grid system requiring no electricity. Works with gravity or pressure. Ideal for remote locations."
+      }
+    },
+    "features": {
+      "quiet": "Quiet operation",
+      "odourFree": "Odour-free",
+      "lowMaintenance": "Low maintenance",
+      "noElectricity": "No electricity required",
+      "gravity": "Gravity-fed operation",
+      "offGrid": "Off-grid capable",
+      "energyEfficient": "Energy efficient",
+      "automated": "Automated operation",
+      "compact": "Compact design",
+      "highEfficiency": "High efficiency (97.5% BOD5 removal)",
+      "activatedSludge": "Activated sludge technology",
+      "ipsOption": "IPS option available",
+      "scalable": "Scalable for larger projects"
+    },
+    "results": {
+      "title": "Recommended System",
+      "capacity": "Capacity",
+      "dimensions": "Dimensions",
+      "power": "Power Requirement",
+      "features": "Key Features",
+      "note": "This is a preliminary recommendation. For accurate sizing and detailed specifications, please contact our team.",
+      "contact": "Contact Us for Detailed Quote"
     }
   }
 }

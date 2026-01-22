@@ -8,10 +8,12 @@ import ConsultationForm from './components/ConsultationForm'
 import ProductSection from './components/ProductSection'
 import KPIBar from './components/KPIBar'
 import SEOHead from './components/SEOHead'
+import FocusRailGallery from './components/FocusRailGallery'
 
 export default function App() {
   const { t } = useTranslation()
   const heroRef = useRef<HTMLDivElement>(null)
+  const moreProductsRef = useRef<HTMLDivElement>(null)
   const [offset, setOffset] = useState(0)
 
   useEffect(() => {
@@ -22,6 +24,20 @@ export default function App() {
     }
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => {
+    const el = moreProductsRef.current
+    if (!el) return
+    const onMouseMove = (e: MouseEvent) => {
+      const rect = el.getBoundingClientRect()
+      const x = e.clientX - rect.left
+      const y = e.clientY - rect.top
+      el.style.setProperty('--pointer-x', x + 'px')
+      el.style.setProperty('--pointer-y', y + 'px')
+    }
+    el.addEventListener('mousemove', onMouseMove)
+    return () => el.removeEventListener('mousemove', onMouseMove)
   }, [])
 
   return (
@@ -111,6 +127,20 @@ export default function App() {
         descKey="products.psd1_desc"
         pills={['Telescopic','A15 hatch','Pedrollo']}
       />
+
+      {/* Veel tooteid */}
+      <section id="more-products" className="min-h-screen py-12 md:py-16 lg:h-screen lg:flex lg:items-center mb-5">
+        <div className="px-4 md:px-6 w-full h-full">
+          <div ref={moreProductsRef} className="card-spotlight card-border p-4 sm:p-6 md:p-8 bg-white/70 shadow-card rounded-2xl h-full flex flex-col">
+            <div className="mb-6 flex-shrink-0">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">{t('products.more_products_title')}</h2>
+            </div>
+            <div className="flex-1 min-h-0 overflow-hidden">
+              <FocusRailGallery />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Downloads */}
       <section id="downloads" className="py-12 md:py-16 bg-white/60">

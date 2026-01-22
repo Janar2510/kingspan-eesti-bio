@@ -25,6 +25,48 @@
 @media (prefers-reduced-motion: reduce) {
   .parallax { transform: none !important; }
   .animate-shimmer { animation: none !important; }
+  .infinite-scroll { animation: none !important; }
+}
+
+/* Infinite scroll animation */
+@keyframes scroll-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.infinite-scroll {
+  animation: scroll-right 20s linear infinite;
+}
+
+.scroll-container {
+  mask: linear-gradient(
+    90deg,
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
+  overflow: hidden;
+}
+
+.image-item {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.image-item:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
 }
 
 /* Gold gradient border on hover */

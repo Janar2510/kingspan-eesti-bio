@@ -1,4 +1,25 @@
-# Exclude static files from SPA redirect - Netlify serves these directly
+# Redirect trailing slashes to non-trailing (except root) - prevents duplicate URLs
+[[redirects]]
+  from = "/about/"
+  to = "/about"
+  status = 301
+
+[[redirects]]
+  from = "/privacy/"
+  to = "/privacy"
+  status = 301
+
+[[redirects]]
+  from = "/calculator/"
+  to = "/calculator"
+  status = 301
+
+[[redirects]]
+  from = "/kalkulaator/"
+  to = "/calculator"
+  status = 301
+
+# SPA fallback - serve index.html for all other routes
 [[redirects]]
   from = "/*"
   to = "/index.html"
