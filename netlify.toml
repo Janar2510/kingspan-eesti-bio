@@ -2,22 +2,6 @@
   command = "npm run build"
   publish = "dist"
 
-# Redirect trailing slashes to non-trailing (except root) - prevents duplicate URLs
-[[redirects]]
-  from = "/about/"
-  to = "/about"
-  status = 301
-
-[[redirects]]
-  from = "/privacy/"
-  to = "/privacy"
-  status = 301
-
-[[redirects]]
-  from = "/calculator/"
-  to = "/calculator"
-  status = 301
-
 [[redirects]]
   from = "/kalkulaator/"
   to = "/calculator"
@@ -29,4 +13,3 @@
   to = "/index.html"
   status = 200
   force = false  # Don't force redirect if file exists
-
