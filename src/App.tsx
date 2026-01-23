@@ -49,15 +49,15 @@ export default function App() {
       <section ref={heroRef} className="relative overflow-hidden h-screen w-screen">
         <div
           className="absolute inset-0 -z-10 animate-shimmer"
-          style={{ 
+          style={{
             backgroundImage: 'radial-gradient(60% 120% at 20% 10%, rgba(0,58,112,0.18), rgba(255,255,255,0)), radial-gradient(80% 140% at 80% 90%, rgba(198,146,20,0.18), rgba(255,255,255,0))',
             backgroundSize: '200% 100%'
           }}
         />
         <div className="absolute inset-0 -z-10">
-          <img 
-            src="/images/hero/hero-biological.png" 
-            alt="Hero" 
+          <img
+            src="/images/hero/hero-biological.png"
+            alt="Hero"
             className="w-full h-full object-cover"
           />
         </div>
@@ -93,25 +93,25 @@ export default function App() {
         id="biodisc"
         titleKey="products.biodisc_title"
         descKey="products.biodisc_desc"
-        pills={['Quiet','Odour‑free','RBC']}
+        pills={['Quiet', 'Odour‑free', 'RBC']}
       />
       <ProductSection
         id="bioficient"
         titleKey="products.bioficient_title"
         descKey="products.bioficient_desc"
-        pills={['Fluidised bed','Low energy','Automated']}
+        pills={['Fluidised bed', 'Low energy', 'Automated']}
       />
       <ProductSection
         id="bioair"
         titleKey="products.bioair_title"
         descKey="products.bioair_desc"
-        pills={['Activated sludge','97.5% BOD5','IPS (opt.)']}
+        pills={['Activated sludge', '97.5% BOD5', 'IPS (opt.)']}
       />
       <ProductSection
         id="biotec"
         titleKey="products.biotec_title"
         descKey="products.biotec_desc"
-        pills={['Off‑grid','No electricity','Gravity/Pressure']}
+        pills={['Off‑grid', 'No electricity', 'Gravity/Pressure']}
       />
 
       {/* Rainwater & Pumping */}
@@ -119,19 +119,19 @@ export default function App() {
         id="rainstore"
         titleKey="products.rainstore_title"
         descKey="products.rainstore_desc"
-        pills={['Save up to 50%','Low‑profile','Kits']}
+        pills={['Save up to 50%', 'Low‑profile', 'Kits']}
       />
       <ProductSection
         id="psd1"
         titleKey="products.psd1_title"
         descKey="products.psd1_desc"
-        pills={['Telescopic','A15 hatch','Pedrollo']}
+        pills={['Telescopic', 'A15 hatch', 'Pedrollo']}
       />
 
       {/* Veel tooteid */}
       <section id="more-products" className="min-h-screen py-12 md:py-16 lg:h-screen lg:flex lg:items-center mb-5">
-        <div className="px-4 md:px-6 w-full h-full">
-          <div ref={moreProductsRef} className="card-spotlight card-border p-4 sm:p-6 md:p-8 bg-white/70 shadow-card rounded-2xl h-full flex flex-col">
+        <div className="px-4 md:px-6 w-full h-full flex flex-col gap-6 md:gap-8">
+          <div ref={moreProductsRef} className="card-spotlight card-border p-4 sm:p-6 md:p-8 bg-white/70 shadow-card rounded-2xl h-[70vh] flex flex-col">
             <div className="mb-6 flex-shrink-0">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">{t('products.more_products_title')}</h2>
             </div>

@@ -116,9 +116,21 @@
       "propertyType": "Kinnisvara tüüp",
       "waterUsage": "Päevane veekulu",
       "waterUsageHint": "Standard: 150 L/inimene/päevas. Eramajad: 100-200 L, Ärihooned: 200-300 L",
-      "groundwater": "Põhjavee tase"
+      "groundwater": "Põhjavee tase",
+      "groundwaterAuto": "Automaatne (kaardilt)",
+      "groundwaterAutoHint": "Valige kaardil asukoht, et automaatselt tuvastada põhjavee tase"
+    },
+    "map": {
+      "title": "Valige asukoht",
+      "addressInput": "Otsi aadressi",
+      "addressPlaceholder": "Sisestage aadress (nt. Tallinn, Vabaduse väljak 1)",
+      "search": "Otsi",
+      "loading": "Kaart laaditakse...",
+      "hint": "Sisestage aadress ülal või klõpsake kaardil, et valida oma kinnisvara asukoht. Põhjavee tase tuvastatakse automaatselt kaardi kihtidest."
     },
     "calculate": "Arvuta süsteem",
+    "recommended": "Soovituslik",
+    "alternative": "Soodne alternatiiv",
     "noPower": "Elektrivajadus puudub",
     "customDimensions": "Kohandatavad mõõdud",
     "customPower": "Kohandatud võimsus",
@@ -156,10 +168,14 @@
       "capacity": "Võimsus",
       "dimensions": "Mõõdud",
       "power": "Võimsusvajadus",
+      "material": "Materjal",
       "features": "Peamised omadused",
+      "pricing": "Hinnakalkulatsioon",
+      "priceWithoutVat": "Hind (ilma käibemaksuta)",
+      "priceWithVat": "Hind (käibemaksuga)",
+      "priceOnRequest": "Hind küsitav. Palun võtke meiega ühendust üksikasjaliku pakkumise saamiseks.",
       "note": "See on esialgne soovitus. Täpsema mõõtmete ja üksikasjalike spetsifikatsioonide saamiseks võtke palun meiega ühendust.",
       "contact": "Võtke ühendust üksikasjaliku pakkumise saamiseks"
     }
   }
 }
-

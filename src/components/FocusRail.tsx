@@ -139,7 +139,7 @@ export function FocusRail({
   return (
     <div
       className={cn(
-        "group relative flex h-[600px] w-full flex-col overflow-hidden bg-transparent text-kingspan-navy outline-none select-none overflow-x-hidden",
+        "group relative flex h-[650px] w-full flex-col overflow-hidden bg-transparent text-kingspan-navy outline-none select-none overflow-x-hidden",
         className
       )}
       onMouseEnter={() => setIsHovering(true)}
@@ -173,7 +173,7 @@ export function FocusRail({
       <div className="relative z-10 flex flex-1 flex-col justify-center px-4 md:px-8">
         {/* DRAGGABLE RAIL CONTAINER */}
         <motion.div
-          className="relative mx-auto flex h-[400px] w-full max-w-6xl items-center justify-center perspective-[1200px] cursor-grab active:cursor-grabbing"
+          className="relative mx-auto flex h-[450px] w-full max-w-6xl items-center justify-center perspective-[1200px] cursor-grab active:cursor-grabbing"
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           dragElastic={0.2}
@@ -203,7 +203,7 @@ export function FocusRail({
               <motion.div
                 key={absIndex}
                 className={cn(
-                  "absolute w-[500px] h-[350px] rounded-2xl border border-kingspan-cloud bg-white/90 shadow-card transition-shadow duration-300",
+                  "absolute w-[500px] h-[400px] rounded-2xl border border-kingspan-cloud bg-white/90 shadow-card transition-shadow duration-300",
                   isCenter ? "z-20 shadow-lg" : "z-10"
                 )}
                 initial={false}
@@ -214,10 +214,9 @@ export function FocusRail({
                   rotateY: rotateY,
                   opacity: opacity,
                 }}
-                transition={(val) => {
-                    // Use bouncier spring for scale to create the "Tap" effect
-                    if (val === "scale") return TAP_SPRING;
-                    return BASE_SPRING;
+                transition={{
+                  ...BASE_SPRING,
+                  scale: TAP_SPRING
                 }}
                 style={{
                   transformStyle: "preserve-3d",

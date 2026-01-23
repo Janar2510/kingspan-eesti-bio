@@ -116,9 +116,21 @@
       "propertyType": "Property Type",
       "waterUsage": "Daily Water Usage",
       "waterUsageHint": "Standard: 150 L/person/day. Residential: 100-200 L, Commercial: 200-300 L",
-      "groundwater": "Groundwater Level"
+      "groundwater": "Groundwater Level",
+      "groundwaterAuto": "Auto (from map)",
+      "groundwaterAutoHint": "Select location on map to automatically detect groundwater level"
+    },
+    "map": {
+      "title": "Select Location",
+      "addressInput": "Search Address",
+      "addressPlaceholder": "Enter address (e.g., Tallinn, Vabaduse väljak 1)",
+      "search": "Search",
+      "loading": "Loading map...",
+      "hint": "Enter an address above or click on the map to select your property location. The groundwater level will be detected automatically from the map layers."
     },
     "calculate": "Calculate System",
+    "recommended": "Recommended",
+    "alternative": "Low Price Alternative",
     "noPower": "No electricity required",
     "customDimensions": "Custom sizing available",
     "customPower": "Custom power requirement",
@@ -156,10 +168,14 @@
       "capacity": "Capacity",
       "dimensions": "Dimensions",
       "power": "Power Requirement",
+      "material": "Material",
       "features": "Key Features",
+      "pricing": "Pricing",
+      "priceWithoutVat": "Price (without VAT)",
+      "priceWithVat": "Price (with VAT)",
+      "priceOnRequest": "Price available on request. Please contact us for a detailed quote.",
       "note": "This is a preliminary recommendation. For accurate sizing and detailed specifications, please contact our team.",
       "contact": "Contact Us for Detailed Quote"
     }
   }
 }
-

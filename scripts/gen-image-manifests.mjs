@@ -5,7 +5,7 @@ const imagesDir = join(process.cwd(), 'public', 'images')
 const imageExts = ['.png', '.jpg', '.jpeg', '.webp', '.svg', '.gif']
 
 // Product folders that need manifests
-const productFolders = ['biodisc', 'bioficient', 'bioair', 'biotec', 'rainstore', 'psd1', 'hero']
+const productFolders = ['biodisc', 'bioficient', 'bioair', 'biotec', 'rainstore', 'psd1', 'hero', 'infinite scroll animation']
 
 async function generateManifest(folder) {
   const folderPath = join(imagesDir, folder)
