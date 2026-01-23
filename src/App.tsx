@@ -40,6 +40,21 @@ export default function App() {
     return () => el.removeEventListener('mousemove', onMouseMove)
   }, [])
 
+  // Handle hash scrolling on mount
+  useEffect(() => {
+    const hash = window.location.hash
+    if (hash) {
+      // Small timeout to ensure content is rendered
+      const timer = setTimeout(() => {
+        const element = document.querySelector(hash)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 100)
+      return () => clearTimeout(timer)
+    }
+  }, [])
+
   return (
     <div className="text-kingspan-navy">
       <SEOHead />
