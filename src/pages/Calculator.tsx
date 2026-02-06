@@ -456,11 +456,11 @@ export default function Calculator() {
               )}
 
               {/* Map Container */}
-              <div className="rounded-xl overflow-hidden border border-kingspan-cloud bg-kingspan-cloud" style={{ height: '500px', minHeight: '500px' }}>
+              <div className="rounded-xl overflow-hidden border border-kingspan-cloud bg-kingspan-cloud h-[320px] sm:h-[420px] md:h-[500px]">
                 <div
                   ref={mapContainerRef}
                   id="InAadressDiv"
-                  style={{ width: '100%', height: '100%', minHeight: '500px' }}
+                  style={{ width: '100%', height: '100%' }}
                 />
                 {!mapInitialized && (
                   <div className="flex items-center justify-center h-full text-kingspan-slate">

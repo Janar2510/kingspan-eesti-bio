@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kingspaneesti.com/sitemap.xml
+Sitemap: https://biopuhastid.com/sitemap.xml
 

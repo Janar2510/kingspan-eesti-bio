@@ -4,42 +4,42 @@
   
   <!-- Homepage -->
   <url>
-    <loc>https://kingspaneesti.com/</loc>
+    <loc>https://biopuhastid.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="et" href="https://kingspaneesti.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kingspaneesti.com/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kingspaneesti.com/"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://biopuhastid.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://biopuhastid.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biopuhastid.com/"/>
   </url>
   
   <!-- About Page -->
   <url>
-    <loc>https://kingspaneesti.com/about</loc>
+    <loc>https://biopuhastid.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="et" href="https://kingspaneesti.com/about"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kingspaneesti.com/about"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kingspaneesti.com/about"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://biopuhastid.com/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://biopuhastid.com/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biopuhastid.com/about"/>
   </url>
   
   <!-- Privacy Policy -->
   <url>
-    <loc>https://kingspaneesti.com/privacy</loc>
+    <loc>https://biopuhastid.com/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="et" href="https://kingspaneesti.com/privacy"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kingspaneesti.com/privacy"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kingspaneesti.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://biopuhastid.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://biopuhastid.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biopuhastid.com/privacy"/>
   </url>
   
   <!-- Calculator -->
   <url>
-    <loc>https://kingspaneesti.com/calculator</loc>
+    <loc>https://biopuhastid.com/calculator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="et" href="https://kingspaneesti.com/calculator"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kingspaneesti.com/calculator"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kingspaneesti.com/calculator"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://biopuhastid.com/calculator"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://biopuhastid.com/calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biopuhastid.com/calculator"/>
   </url>
 
 </urlset>

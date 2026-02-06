@@ -13,7 +13,7 @@ export default function Footer() {
           <span className="text-xs sm:text-sm">{t('footer.rights')}</span>
           <a
             href="/privacy"
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border border-kingspan-cloud hover:bg-kingspan-cloud text-xs uppercase tracking-wide"
+            className="btn-ghost inline-flex items-center gap-2 text-xs uppercase tracking-wide"
           >
             {t('footer.privacy')}
           </a>

@@ -12,7 +12,7 @@ export default function About() {
       <Header />
       
       {/* Hero Section with Mountains */}
-      <section className="relative h-screen w-full overflow-hidden">
+      <section className="relative min-h-[100svh] w-full overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src="/About section/About page 2.jpg" 
@@ -31,7 +31,7 @@ export default function About() {
             </p>
             <div className="flex justify-center">
               <img 
-                src="/images/kingspan-logo.png" 
+                src="/images/rainstore/Logo.png" 
                 alt="Kingspan Logo" 
                 className="h-16 md:h-24 lg:h-32 w-auto object-contain drop-shadow-lg"
               />

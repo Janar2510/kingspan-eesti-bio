@@ -23,7 +23,7 @@ export default function Gallery({ folder, height = 220, fullWidth = false }: Gal
   if (fullWidth) {
     // Display the first image to fill the entire container
     return (
-      <div className="w-full h-[520px] overflow-hidden rounded-2xl">
+      <div className="w-full h-[320px] sm:h-[420px] md:h-[520px] overflow-hidden rounded-2xl">
         <img 
           src={`/images/${folder}/${images[0]}`} 
           alt={folder} 

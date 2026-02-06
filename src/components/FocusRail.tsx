@@ -65,6 +65,13 @@ export function FocusRail({
   const [active, setActive] = React.useState(initialIndex);
   const [isHovering, setIsHovering] = React.useState(false);
   const lastWheelTime = React.useRef<number>(0);
+  const [viewportWidth, setViewportWidth] = React.useState<number>(typeof window !== "undefined" ? window.innerWidth : 1200);
+
+  React.useEffect(() => {
+    const onResize = () => setViewportWidth(window.innerWidth);
+    window.addEventListener("resize", onResize, { passive: true });
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   const count = items.length;
   const activeIndex = wrap(0, count, active);
@@ -135,13 +142,18 @@ export function FocusRail({
   };
 
   const visibleIndices = [-2, -1, 0, 1, 2];
+  const cardWidth = viewportWidth < 640 ? 260 : viewportWidth < 768 ? 340 : 500;
+  const cardHeight = viewportWidth < 640 ? 220 : viewportWidth < 768 ? 300 : 400;
+  const railHeight = viewportWidth < 640 ? 280 : viewportWidth < 768 ? 360 : 450;
+  const stageHeight = viewportWidth < 640 ? 420 : viewportWidth < 768 ? 520 : 650;
 
   return (
     <div
       className={cn(
-        "group relative flex h-[650px] w-full flex-col overflow-hidden bg-transparent text-kingspan-navy outline-none select-none overflow-x-hidden",
+        "group relative flex w-full flex-col overflow-hidden bg-transparent text-kingspan-navy outline-none select-none overflow-x-hidden",
         className
       )}
+      style={{ height: stageHeight }}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       tabIndex={0}
@@ -170,10 +182,11 @@ export function FocusRail({
       </div>
 
       {/* Main Stage */}
-      <div className="relative z-10 flex flex-1 flex-col justify-center px-4 md:px-8">
+      <div className="relative z-10 flex flex-1 flex-col justify-center px-3 sm:px-4 md:px-8">
         {/* DRAGGABLE RAIL CONTAINER */}
         <motion.div
-          className="relative mx-auto flex h-[450px] w-full max-w-6xl items-center justify-center perspective-[1200px] cursor-grab active:cursor-grabbing"
+          className="relative mx-auto flex w-full max-w-6xl items-center justify-center perspective-[1200px] cursor-grab active:cursor-grabbing"
+          style={{ height: railHeight }}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           dragElastic={0.2}
@@ -190,8 +203,8 @@ export function FocusRail({
             const dist = Math.abs(offset);
 
             // Dynamic transforms
-            const xOffset = offset * 320;
-            const zOffset = -dist * 180;
+            const xOffset = offset * Math.round(cardWidth * 0.65);
+            const zOffset = -dist * (viewportWidth < 768 ? 120 : 180);
             const scale = isCenter ? 1 : 0.85;
             const rotateY = offset * -20;
 
@@ -203,9 +216,15 @@ export function FocusRail({
               <motion.div
                 key={absIndex}
                 className={cn(
-                  "absolute w-[500px] h-[400px] rounded-2xl border border-kingspan-cloud bg-white/90 shadow-card transition-shadow duration-300",
+                  "absolute rounded-2xl border border-kingspan-cloud bg-white/90 shadow-card transition-shadow duration-300",
                   isCenter ? "z-20 shadow-lg" : "z-10"
                 )}
+                style={{
+                  transformStyle: "preserve-3d",
+                  filter: `blur(${blur}px) brightness(${brightness})`,
+                  width: cardWidth,
+                  height: cardHeight,
+                }}
                 initial={false}
                 animate={{
                   x: xOffset,
@@ -217,10 +236,6 @@ export function FocusRail({
                 transition={{
                   ...BASE_SPRING,
                   scale: TAP_SPRING
-                }}
-                style={{
-                  transformStyle: "preserve-3d",
-                  filter: `blur(${blur}px) brightness(${brightness})`,
                 }}
                 onClick={() => {
                   if (offset !== 0) setActive((p) => p + offset);

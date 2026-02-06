@@ -5,10 +5,28 @@
     "ctaPrimary": "Get in touch",
     "ctaSecondary": "Download"
   },
+  "meta": {
+    "home": {
+      "title": "Kingspan wastewater treatment systems in Estonia",
+      "description": "Biological treatment systems, rainwater harvesting, and wastewater solutions. Kingspan Biopuhastid delivers quiet, energy-efficient, and eco-friendly systems."
+    },
+    "about": {
+      "title": "About | Kingspan Biopuhastid",
+      "description": "Learn about Kingspan Biopuhastid and our sustainable water and energy solutions."
+    },
+    "calculator": {
+      "title": "Calculator | Kingspan Biopuhastid",
+      "description": "Find the right biological treatment system based on occupancy, water usage, and groundwater level."
+    },
+    "privacy": {
+      "title": "Privacy Policy | Kingspan Biopuhastid",
+      "description": "How Kingspan Biopuhastid collects, uses, and protects personal data."
+    }
+  },
   "kpi": {
     "a": "15+ years of experience",
     "b": "500+ installations",
-    "c": "24/7 support",
+    "c": "Year‑round support",
     "d": "Quality service"
   },
   "products": {

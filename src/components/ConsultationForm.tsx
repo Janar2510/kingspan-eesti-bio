@@ -65,8 +65,9 @@ export default function ConsultationForm() {
   }
 
   return (
-    <div className="p-4 sm:p-6 rounded-2xl md:rounded-3xl bg-white/80 border shadow-card">
-      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 md:mb-6">{t('form.title')}</h3>
+    <div className="glow-wrap">
+      <div className="glow-card p-4 sm:p-6 rounded-2xl md:rounded-3xl bg-white/80 border shadow-card">
+      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 md:mb-6 tracking-tight">{t('form.title')}</h3>
       {sent ? (
         <div className="p-4 rounded-xl bg-green-50 text-green-800 text-sm sm:text-base">Thanks — we will contact you shortly.</div>
       ) : (
@@ -92,13 +93,14 @@ export default function ConsultationForm() {
             <button 
               type="submit" 
               disabled={submitting}
-              className="w-full sm:w-auto px-6 py-3 rounded-3xl bg-kingspan-blue text-white hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base"
+              className="btn-primary w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base"
             >
               {submitting ? t('form.submitting') || 'Sending...' : t('form.submit')}
             </button>
           </div>
         </form>
       )}
+      </div>
     </div>
   )
 }

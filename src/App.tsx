@@ -9,6 +9,7 @@ import ProductSection from './components/ProductSection'
 import KPIBar from './components/KPIBar'
 import SEOHead from './components/SEOHead'
 import FocusRailGallery from './components/FocusRailGallery'
+import GradualSpacing from './components/GradualSpacing'
 
 export default function App() {
   const { t } = useTranslation()
@@ -43,6 +44,16 @@ export default function App() {
   // Handle hash scrolling on mount
   useEffect(() => {
     const hash = window.location.hash
+    const navEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined
+    const navType = navEntry?.type
+    const legacyNavType = (performance as any).navigation?.type
+    const isReload = navType === 'reload' || legacyNavType === 1
+
+    if (hash && isReload) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+      return
+    }
+
     if (hash) {
       // Small timeout to ensure content is rendered
       const timer = setTimeout(() => {
@@ -56,12 +67,13 @@ export default function App() {
   }, [])
 
   return (
-    <div className="text-kingspan-navy">
+    <div className="text-kingspan-navy relative overflow-hidden">
+      <div className="pointer-events-none fixed inset-0 -z-20 brand-ambient" />
       <SEOHead />
       <Header />
 
       {/* Hero */}
-      <section ref={heroRef} className="relative overflow-hidden h-screen w-screen">
+      <section ref={heroRef} className="relative overflow-hidden min-h-[100svh] w-full">
         <div
           className="absolute inset-0 -z-10 animate-shimmer"
           style={{
@@ -76,17 +88,21 @@ export default function App() {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="h-full flex items-center px-4 md:px-6 relative z-10">
+        <div className="h-full flex items-center px-4 md:px-6 relative z-10 pt-10 sm:pt-12 md:pt-16">
           <div className="max-w-6xl mx-auto w-full">
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2 lg:w-[55%] text-center md:text-left">
               <div style={{ transform: `translateY(${offset * 0.5}px)` }}>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white drop-shadow-lg">{t('hero.title')}</h1>
+                <GradualSpacing
+                  text={t('hero.title')}
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white tracking-tight"
+                  containerClassName="justify-center md:justify-start"
+                />
                 <p className="mt-3 md:mt-4 text-base sm:text-lg md:text-xl text-white drop-shadow-md">{t('hero.sub')}</p>
                 <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
-                  <a href="#contact" className="px-6 py-3 rounded-3xl bg-kingspan-blue text-white shadow-card hover:opacity-90 text-center sm:text-left text-sm md:text-base">
+                  <a href="#contact" className="btn-primary text-center sm:text-left text-sm md:text-base">
                     {t('hero.ctaPrimary')}
                   </a>
-                  <a href="#downloads" className="px-6 py-3 rounded-3xl border border-kingspan-gold text-kingspan-blue bg-white/70 hover:bg-white flex items-center justify-center gap-2 text-sm md:text-base">
+                  <a href="#downloads" className="btn-secondary flex items-center justify-center gap-2 text-sm md:text-base">
                     <Download className="w-4 h-4" /> {t('hero.ctaSecondary')}
                   </a>
                 </div>
@@ -104,6 +120,7 @@ export default function App() {
       <KPIBar />
 
       {/* Products */}
+      <div className="section-gradient-brand">
       <ProductSection
         id="biodisc"
         titleKey="products.biodisc_title"
@@ -142,6 +159,7 @@ export default function App() {
         descKey="products.psd1_desc"
         pills={['Telescopic', 'A15 hatch', 'Pedrollo']}
       />
+      </div>
 
       {/* Veel tooteid */}
       <section id="more-products" className="min-h-screen py-12 md:py-16 lg:h-screen lg:flex lg:items-center mb-5">
@@ -158,7 +176,7 @@ export default function App() {
       </section>
 
       {/* Downloads */}
-      <section id="downloads" className="py-12 md:py-16 bg-white/60">
+      <section id="downloads" className="py-12 md:py-16 section-gradient-light">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <DownloadsGrid />
         </div>

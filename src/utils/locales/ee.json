@@ -5,10 +5,28 @@
     "ctaPrimary": "Võta ühendust",
     "ctaSecondary": "Laadi alla"
   },
+  "meta": {
+    "home": {
+      "title": "Kingspan kvaliteetsed veepuhastussüsteemid Eestis",
+      "description": "Biopuhastid, vihmavee kogumine ja reoveelahendused. Kingspan Biopuhastid pakub vaikseid, energiasäästlikke ja keskkonnasõbralikke süsteeme üle Eesti."
+    },
+    "about": {
+      "title": "Meist | Kingspan Biopuhastid",
+      "description": "Tutvu Kingspan Biopuhastid meeskonna ja lahendustega: jätkusuutlikud veepuhastus- ja energialahendused."
+    },
+    "calculator": {
+      "title": "Kalkulaator | Kingspan Biopuhastid",
+      "description": "Leia oma kinnisvarale sobiv biopuhastussüsteem vastavalt inimeste arvule, veekulule ja põhjavee tasemele."
+    },
+    "privacy": {
+      "title": "Privaatsustingimused | Kingspan Biopuhastid",
+      "description": "Kuidas Kingspan Biopuhastid kogub, kasutab ja kaitseb isikuandmeid."
+    }
+  },
   "kpi": {
     "a": "15+ aastat kogemust",
     "b": "500+ paigaldust",
-    "c": "24/7 tugi",
+    "c": "Aastaringne tugi",
     "d": "Kvaliteetne teenus"
   },
   "products": {
