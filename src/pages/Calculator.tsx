@@ -32,7 +32,7 @@ interface ProductDetail {
 
 interface CalculationResult {
   recommended: ProductDetail
-  alternative?: ProductDetail
+  alternatives?: ProductDetail[]
   address?: string
 }
 
@@ -45,6 +45,7 @@ declare global {
 export default function Calculator() {
   const { t, i18n } = useTranslation()
   const [numberOfPeople, setNumberOfPeople] = useState<number>(4)
+  const [peakPeople, setPeakPeople] = useState<number>(4)
   const [propertyType, setPropertyType] = useState<'house' | 'business' | 'seasonal'>('house')
   const [waterUsage, setWaterUsage] = useState<number>(150)
   const [groundwater, setGroundwater] = useState<'low' | 'high' | 'auto'>('auto')
@@ -211,33 +212,52 @@ export default function Calculator() {
   }
 
   const calculateSystem = () => {
+    const basePeople = numberOfPeople
+    const effectivePeople = Math.max(numberOfPeople, peakPeople)
+    const hasPeak = peakPeople > numberOfPeople
+
     // Calculate PE (Population Equivalent)
-    const pe = Math.ceil((numberOfPeople * waterUsage) / 150)
+    const pe = Math.ceil((effectivePeople * waterUsage) / 150)
 
     // Determine groundwater level if auto
     const gwLevel = groundwater === 'auto' ? 'low' : groundwater
 
     let recommended: ProductDetail | undefined
-    let alternative: ProductDetail | undefined
+    let alternatives: ProductDetail[] = []
 
     if (propertyType === 'seasonal') {
       // Seasonal: Recommend BioTec Flo (no power)
       recommended = getSystemDetails(pe, 'BioTec Flo')
-      alternative = getSystemDetails(pe, 'BioAir')
+      alternatives = [getSystemDetails(pe, 'BioAir')].filter(Boolean) as ProductDetail[]
     } else if (gwLevel === 'high') {
       // High groundwater: Recommend BioDisc (GRP, very stable)
       recommended = getSystemDetails(pe, 'BioDisc')
-      alternative = getSystemDetails(pe, 'BioFicient')
+      alternatives = [getSystemDetails(pe, 'BioFicient')].filter(Boolean) as ProductDetail[]
+    } else if (hasPeak && basePeople <= 4 && peakPeople >= 8) {
+      // Occasional peak load: recommend more robust systems
+      recommended = getSystemDetails(pe, 'BioFicient')
+      alternatives = [getSystemDetails(pe, 'BioDisc')].filter(Boolean) as ProductDetail[]
+    } else if (basePeople >= 2 && basePeople <= 4) {
+      // 2-4 people: BioAir first, BioFicient and BioDisc as alternatives
+      recommended = getSystemDetails(pe, 'BioAir')
+      alternatives = [
+        getSystemDetails(pe, 'BioFicient'),
+        getSystemDetails(pe, 'BioDisc')
+      ].filter(Boolean) as ProductDetail[]
+    } else if (basePeople > 4 && basePeople <= 6) {
+      // 4-6 people: BioFicient first, BioDisc alternative
+      recommended = getSystemDetails(pe, 'BioFicient')
+      alternatives = [getSystemDetails(pe, 'BioDisc')].filter(Boolean) as ProductDetail[]
     } else {
       // Normal: Recommend BioFicient or BioDisc
       recommended = pe <= 6 ? getSystemDetails(pe, 'BioDisc') : getSystemDetails(pe, 'BioFicient')
-      alternative = getSystemDetails(pe, 'BioAir')
+      alternatives = [getSystemDetails(pe, 'BioAir')].filter(Boolean) as ProductDetail[]
     }
 
     if (recommended) {
       setResults({
         recommended,
-        alternative,
+        alternatives,
         address: selectedAddress || undefined
       })
     }
@@ -300,9 +320,30 @@ export default function Calculator() {
                     min="1"
                     max="200"
                     value={numberOfPeople}
-                    onChange={(e) => setNumberOfPeople(parseInt(e.target.value) || 1)}
+                    onChange={(e) => {
+                      const next = parseInt(e.target.value) || 1
+                      setNumberOfPeople(next)
+                      setPeakPeople((prev) => Math.max(prev, next))
+                    }}
                     className="w-full px-4 py-3 rounded-xl border border-kingspan-cloud focus:border-kingspan-blue focus:ring-2 focus:ring-kingspan-blue/20 outline-none transition-all"
                   />
+                </div>
+
+                {/* Peak People */}
+                <div>
+                  <label className="flex items-center gap-2 text-sm font-semibold text-kingspan-navy mb-2">
+                    <Users className="w-4 h-4" />
+                    {t('calculator.inputs.peoplePeak')}
+                  </label>
+                  <input
+                    type="number"
+                    min={numberOfPeople}
+                    max="200"
+                    value={peakPeople}
+                    onChange={(e) => setPeakPeople(Math.max(parseInt(e.target.value) || numberOfPeople, numberOfPeople))}
+                    className="w-full px-4 py-3 rounded-xl border border-kingspan-cloud focus:border-kingspan-blue focus:ring-2 focus:ring-kingspan-blue/20 outline-none transition-all"
+                  />
+                  <p className="text-xs text-kingspan-slate mt-1">{t('calculator.inputs.peoplePeakHint')}</p>
                 </div>
 
                 {/* Property Type */}
@@ -510,44 +551,48 @@ export default function Calculator() {
                   </div>
                 </div>
 
-                {/* Alternative Product */}
-                {results.alternative && (
-                  <div className="card-spotlight card-border p-8 md:p-12 bg-white/60 shadow-card rounded-[2rem] opacity-90 transition-all border-dashed hover:opacity-100 hover:bg-white/70">
-                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-10">
-                      <div>
-                        <span className="px-4 py-1 rounded-full bg-kingspan-slate/10 text-kingspan-navy text-[10px] font-black uppercase tracking-widest mb-4 inline-block">
-                          {t('calculator.alternative') || 'Soodne alternatiiv'}
-                        </span>
-                        <h3 className="text-3xl md:text-4xl font-black text-kingspan-navy">
-                          {results.alternative.systemName}
-                          <span className="text-kingspan-navy/30 ml-3 font-light">{results.alternative.product.model}</span>
-                        </h3>
-                      </div>
-                      <div className="bg-white/80 p-6 rounded-2xl shadow-sm border border-kingspan-cloud text-right min-w-[200px]">
-                        <p className="text-[10px] font-black uppercase tracking-widest text-kingspan-navy/40 mb-2">{t('calculator.results.priceWithVat')} (24%)</p>
-                        <p className="text-3xl font-black text-kingspan-blue">
-                          {results.alternative.priceWithVat.toLocaleString('et-EE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} €
-                        </p>
-                      </div>
-                    </div>
-
-                    <p className="text-lg text-kingspan-slate mb-8 italic leading-relaxed max-w-2xl">{results.alternative.description}</p>
-
-                    <div className="flex flex-wrap gap-8">
-                      {[
-                        { label: t('calculator.results.capacity'), value: results.alternative.capacity },
-                        { label: t('calculator.results.dimensions'), value: results.alternative.dimensions },
-                        { label: t('calculator.results.material'), value: results.alternative.product.material }
-                      ].map((item, i) => (
-                        <div key={i} className="flex gap-3 items-center">
-                          <div className="w-1.5 h-1.5 rounded-full bg-kingspan-blue/40" />
+                {/* Alternative Products */}
+                {results.alternatives && results.alternatives.length > 0 && (
+                  <div className="space-y-6">
+                    {results.alternatives.map((alt, index) => (
+                      <div key={`${alt.systemName}-${index}`} className="card-spotlight card-border p-8 md:p-12 bg-white/60 shadow-card rounded-[2rem] opacity-90 transition-all border-dashed hover:opacity-100 hover:bg-white/70">
+                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-10">
                           <div>
-                            <p className="text-[9px] font-black uppercase tracking-tighter text-kingspan-navy/30">{item.label}</p>
-                            <p className="text-sm font-bold text-kingspan-navy">{item.value}</p>
+                            <span className="px-4 py-1 rounded-full bg-kingspan-slate/10 text-kingspan-navy text-[10px] font-black uppercase tracking-widest mb-4 inline-block">
+                              {t('calculator.alternative') || 'Soodne alternatiiv'}
+                            </span>
+                            <h3 className="text-3xl md:text-4xl font-black text-kingspan-navy">
+                              {alt.systemName}
+                              <span className="text-kingspan-navy/30 ml-3 font-light">{alt.product.model}</span>
+                            </h3>
+                          </div>
+                          <div className="bg-white/80 p-6 rounded-2xl shadow-sm border border-kingspan-cloud text-right min-w-[200px]">
+                            <p className="text-[10px] font-black uppercase tracking-widest text-kingspan-navy/40 mb-2">{t('calculator.results.priceWithVat')} (24%)</p>
+                            <p className="text-3xl font-black text-kingspan-blue">
+                              {alt.priceWithVat.toLocaleString('et-EE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} €
+                            </p>
                           </div>
                         </div>
-                      ))}
-                    </div>
+
+                        <p className="text-lg text-kingspan-slate mb-8 italic leading-relaxed max-w-2xl">{alt.description}</p>
+
+                        <div className="flex flex-wrap gap-8">
+                          {[
+                            { label: t('calculator.results.capacity'), value: alt.capacity },
+                            { label: t('calculator.results.dimensions'), value: alt.dimensions },
+                            { label: t('calculator.results.material'), value: alt.product.material }
+                          ].map((item, i) => (
+                            <div key={i} className="flex gap-3 items-center">
+                              <div className="w-1.5 h-1.5 rounded-full bg-kingspan-blue/40" />
+                              <div>
+                                <p className="text-[9px] font-black uppercase tracking-tighter text-kingspan-navy/30">{item.label}</p>
+                                <p className="text-sm font-bold text-kingspan-navy">{item.value}</p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 )}
 

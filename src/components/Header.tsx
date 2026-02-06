@@ -7,6 +7,7 @@ export default function Header() {
   const { i18n, t } = useTranslation()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [productsOpen, setProductsOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,62 +43,62 @@ export default function Header() {
       }}
     >
       <div className="max-w-6xl mx-auto px-4 md:px-6 h-20 md:h-28 flex items-center justify-between">
-        <a href="/" className="flex items-center h-full">
+        <a href="/" className="flex items-center h-full gap-3 mr-4 md:mr-6 flex-shrink-0 ml-[-60px]">
           <img 
-            src="/images/kingspan-logo.png" 
-            alt="Kingspan Eesti BIO" 
-            className="h-16 md:h-24 w-auto object-contain"
+            src="/Kingspan%20Logo.jpeg" 
+            alt="Kingspan Biopuhastid" 
+            className="h-16 md:h-20 w-auto object-contain block"
+            onError={(e) => {
+              e.currentTarget.style.display = 'none'
+            }}
+          />
+          <img 
+            src="/images/rainstore/Logo.png" 
+            alt="Kingspan Biopuhastid logo" 
+            className="h-12 md:h-16 w-auto object-contain block"
           />
         </a>
         <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-sm">
-          <motion.a 
-            href="/#biodisc" 
-            className="hover:text-kingspan-blue transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <div
+            className="relative"
+            onMouseEnter={() => setProductsOpen(true)}
+            onMouseLeave={() => setProductsOpen(false)}
           >
-            BioDisc
-          </motion.a>
-          <motion.a 
-            href="/#bioficient" 
-            className="hover:text-kingspan-blue transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            BioFicient
-          </motion.a>
-          <motion.a 
-            href="/#bioair" 
-            className="hover:text-kingspan-blue transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            BioAir
-          </motion.a>
-          <motion.a 
-            href="/#biotec" 
-            className="hover:text-kingspan-blue transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            BioTec Flo
-          </motion.a>
-          <motion.a 
-            href="/#rainstore" 
-            className="hover:text-kingspan-blue transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            RainStore
-          </motion.a>
-          <motion.a 
-            href="/#psd1" 
-            className="hover:text-kingspan-blue transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            PSD1
-          </motion.a>
+            <motion.button
+              className="inline-flex items-center gap-2 hover:text-kingspan-blue transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              type="button"
+            >
+              Tooted
+              <motion.span
+                animate={{ rotate: productsOpen ? 180 : 0 }}
+                transition={{ duration: 0.2 }}
+              >
+                ▾
+              </motion.span>
+            </motion.button>
+            <AnimatePresence>
+              {productsOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 8, scale: 0.98 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 6, scale: 0.98 }}
+                  transition={{ duration: 0.2, ease: 'easeOut' }}
+                  className="absolute left-0 top-full mt-3 w-56 rounded-2xl border border-white/40 bg-white/70 shadow-lg backdrop-blur-xl"
+                >
+                  <div className="flex flex-col p-2 text-sm">
+                    <a href="/#biodisc" className="rounded-xl px-3 py-2 hover:bg-white/70">BioDisc</a>
+                    <a href="/#bioficient" className="rounded-xl px-3 py-2 hover:bg-white/70">BioFicient</a>
+                    <a href="/#bioair" className="rounded-xl px-3 py-2 hover:bg-white/70">BioAir</a>
+                    <a href="/#biotec" className="rounded-xl px-3 py-2 hover:bg-white/70">BioTec Flo</a>
+                    <a href="/#rainstore" className="rounded-xl px-3 py-2 hover:bg-white/70">RainStore</a>
+                    <a href="/#psd1" className="rounded-xl px-3 py-2 hover:bg-white/70">PSD1</a>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
           <motion.a 
             href="/#downloads" 
             className="hover:text-kingspan-blue transition-colors"
@@ -180,6 +181,7 @@ export default function Header() {
             }}
           >
             <nav className="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-3">
+              <div className="text-xs uppercase tracking-wide text-kingspan-slate/70">Tooted</div>
               <motion.a 
                 href="/#biodisc" 
                 onClick={() => setMobileMenuOpen(false)} 

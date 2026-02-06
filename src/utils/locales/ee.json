@@ -51,7 +51,7 @@
     "note": "Laadige alla meie tooteinfolehed ja brošüürid."
   },
   "footer": {
-    "rights": "© 2024 Kingspan Eesti BIO. Kõik õigused kaitstud.",
+    "rights": "© 2024 Biopuhastid Kingspan. Kõik õigused kaitstud.",
     "privacy": "Privaatsustingimused"
   },
   "navigation": {
@@ -113,6 +113,8 @@
     "inputs": {
       "title": "Sisestage oma nõuded",
       "people": "Inimeste arv",
+      "peoplePeak": "Maksimaalne inimeste arv (vahel)",
+      "peoplePeakHint": "Kui aeg-ajalt viibib rohkem inimesi, sisesta suurim arv.",
       "propertyType": "Kinnisvara tüüp",
       "waterUsage": "Päevane veekulu",
       "waterUsageHint": "Standard: 150 L/inimene/päevas. Eramajad: 100-200 L, Ärihooned: 200-300 L",

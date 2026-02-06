@@ -43,7 +43,7 @@ export default function ProductSection({ id, titleKey, descKey, pills = [] }: Pr
                 </div>
               )}
             </div>
-            <div className="flex-1 min-h-0 w-full overflow-visible">
+            <div className="flex-1 min-h-0 w-full overflow-hidden rounded-2xl">
               <Gallery folder={id} fullWidth={true} />
             </div>
           </div>

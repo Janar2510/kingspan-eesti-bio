@@ -113,6 +113,8 @@
     "inputs": {
       "title": "Enter Your Requirements",
       "people": "Number of People",
+      "peoplePeak": "Maximum People (sometimes)",
+      "peoplePeakHint": "If more people stay occasionally, enter the highest number.",
       "propertyType": "Property Type",
       "waterUsage": "Daily Water Usage",
       "waterUsageHint": "Standard: 150 L/person/day. Residential: 100-200 L, Commercial: 200-300 L",
