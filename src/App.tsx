@@ -83,7 +83,7 @@ export default function App() {
         />
         <div className="absolute inset-0 -z-10">
           <img
-            src="/images/hero/hero-biological.png"
+            src="/images/hero/hero-biological.webp"
             alt="Hero"
             className="w-full h-full object-cover"
           />
@@ -121,44 +121,44 @@ export default function App() {
 
       {/* Products */}
       <div className="section-gradient-brand">
-      <ProductSection
-        id="biodisc"
-        titleKey="products.biodisc_title"
-        descKey="products.biodisc_desc"
-        pills={['Quiet', 'Odour‑free', 'RBC']}
-      />
-      <ProductSection
-        id="bioficient"
-        titleKey="products.bioficient_title"
-        descKey="products.bioficient_desc"
-        pills={['Fluidised bed', 'Low energy', 'Automated']}
-      />
-      <ProductSection
-        id="bioair"
-        titleKey="products.bioair_title"
-        descKey="products.bioair_desc"
-        pills={['Activated sludge', '97.5% BOD5', 'IPS (opt.)']}
-      />
-      <ProductSection
-        id="biotec"
-        titleKey="products.biotec_title"
-        descKey="products.biotec_desc"
-        pills={['Off‑grid', 'No electricity', 'Gravity/Pressure']}
-      />
+        <ProductSection
+          id="biodisc"
+          titleKey="products.biodisc_title"
+          descKey="products.biodisc_desc"
+          pills={['Quiet', 'Odour‑free', 'RBC']}
+        />
+        <ProductSection
+          id="bioficient"
+          titleKey="products.bioficient_title"
+          descKey="products.bioficient_desc"
+          pills={['Fluidised bed', 'Low energy', 'Automated']}
+        />
+        <ProductSection
+          id="bioair"
+          titleKey="products.bioair_title"
+          descKey="products.bioair_desc"
+          pills={['Activated sludge', '97.5% BOD5', 'IPS (opt.)']}
+        />
+        <ProductSection
+          id="biotec"
+          titleKey="products.biotec_title"
+          descKey="products.biotec_desc"
+          pills={['Off‑grid', 'No electricity', 'Gravity/Pressure']}
+        />
 
-      {/* Rainwater & Pumping */}
-      <ProductSection
-        id="rainstore"
-        titleKey="products.rainstore_title"
-        descKey="products.rainstore_desc"
-        pills={['Save up to 50%', 'Low‑profile', 'Kits']}
-      />
-      <ProductSection
-        id="psd1"
-        titleKey="products.psd1_title"
-        descKey="products.psd1_desc"
-        pills={['Telescopic', 'A15 hatch', 'Pedrollo']}
-      />
+        {/* Rainwater & Pumping */}
+        <ProductSection
+          id="rainstore"
+          titleKey="products.rainstore_title"
+          descKey="products.rainstore_desc"
+          pills={['Save up to 50%', 'Low‑profile', 'Kits']}
+        />
+        <ProductSection
+          id="psd1"
+          titleKey="products.psd1_title"
+          descKey="products.psd1_desc"
+          pills={['Telescopic', 'A15 hatch', 'Pedrollo']}
+        />
       </div>
 
       {/* Veel tooteid */}

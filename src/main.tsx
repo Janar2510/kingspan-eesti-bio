@@ -7,6 +7,8 @@ import PrivacyPolicy from './pages/PrivacyPolicy'
 import About from './pages/About'
 import Calculator from './pages/Calculator'
 
+import Hajaasustus from './pages/Hajaasustus'
+
 const path = window.location.pathname
 let Component = App
 
@@ -16,6 +18,8 @@ if (path.startsWith('/privacy')) {
   Component = About
 } else if (path.startsWith('/calculator') || path.startsWith('/kalkulaator')) {
   Component = Calculator
+} else if (path.startsWith('/hajaasustuse-programm') || path.startsWith('/hajaasustus')) {
+  Component = Hajaasustus
 }
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

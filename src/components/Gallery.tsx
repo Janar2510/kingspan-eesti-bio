@@ -24,10 +24,10 @@ export default function Gallery({ folder, height = 220, fullWidth = false }: Gal
     // Display the first image to fill the entire container
     return (
       <div className="w-full h-[320px] sm:h-[420px] md:h-[520px] overflow-hidden rounded-2xl">
-        <img 
-          src={`/images/${folder}/${images[0]}`} 
-          alt={folder} 
-          className="block w-full h-full object-cover rounded-2xl" 
+        <img
+          src={`/images/${folder}/${images[0]}`}
+          alt={folder}
+          className="block w-full h-full object-cover rounded-2xl"
         />
       </div>
     )
@@ -37,7 +37,7 @@ export default function Gallery({ folder, height = 220, fullWidth = false }: Gal
     <div className="relative">
       <div className="flex gap-3 overflow-x-auto pb-2">
         {images.map((src) => (
-          <img key={src} src={`/images/${folder}/${src}`} alt={folder} style={{height}} className="rounded-2xl border bg-white/70" />
+          <img key={src} src={`/images/${folder}/${src}`} alt={folder} style={{ height }} className="rounded-2xl border bg-white/70" loading="lazy" />
         ))}
       </div>
     </div>

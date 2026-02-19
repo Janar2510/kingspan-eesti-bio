@@ -175,6 +175,7 @@ export function FocusRail({
               src={activeItem.imageSrc}
               alt=""
               className="h-full w-full object-cover blur-3xl saturate-200"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-white/30 to-transparent" />
           </motion.div>
@@ -245,6 +246,7 @@ export function FocusRail({
                   src={item.imageSrc}
                   alt={item.title}
                   className="h-full w-full rounded-2xl object-cover pointer-events-none"
+                  loading="lazy"
                 />
 
                 {/* Lighting layers */}
