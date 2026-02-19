@@ -197,5 +197,149 @@
       "note": "This is a preliminary recommendation. For accurate sizing and detailed specifications, please contact our team.",
       "contact": "Contact Us for Detailed Quote"
     }
+  },
+  "hajaasustus": {
+    "nav_title": "Grant Program 2026",
+    "meta": {
+      "title": "Rural Settlement Program 2026: Application Guide | BioPuhastid",
+      "description": "Clear guide for the 2026 Rural Settlement Program grant: eligibility, documents, deadlines. We help with quotes and the application package."
+    },
+    "hero": {
+      "badge": "Open 02.02.2026 – 02.04.2026",
+      "title_prefix": "Rural Program 2026:",
+      "title_highlight": "Application Guide",
+      "description": "Planning a bio-purifier or water system? Here's a clear guide on how to apply for up to €6,500 in support.",
+      "cta_primary": "Get Free Pre-check",
+      "cta_secondary": "View Steps"
+    },
+    "quick_info": {
+      "round": "Application Round",
+      "max_support": "Max Support",
+      "max_support_sub": "per household",
+      "rate": "Support Rate",
+      "rate_sub": "self-financing min 33%",
+      "project_end": "Project End"
+    },
+    "checklist": {
+      "title": "1. Are you an eligible applicant?",
+      "items": [
+        "You are a natural person and your permanent residence is in the household (as of 01.01.2026).",
+        "Residence is in a <strong>sparsely populated area</strong> (verify with local municipality).",
+        "You have no national or local tax debts (except rescheduled ones).",
+        "Reports for previous grants have been approved by the local municipality."
+      ]
+    },
+    "activities": {
+      "title": "2. What is supported?",
+      "sewerage": {
+        "title": "Sewerage Systems",
+        "desc": "Support for external solutions for proper wastewater collection and treatment.",
+        "list": [
+          "On-site treatment (bio-purifiers, infiltration fields)",
+          "Collection tanks",
+          "Connection to public sewerage"
+        ]
+      },
+      "water": {
+        "title": "Water Supply Systems",
+        "desc": "Construction or cleaning of borewells/dug wells, piping, and water treatment devices."
+      },
+      "road": {
+        "title": "Access Roads",
+        "desc": "Roads between private home and public road."
+      },
+      "electricity": {
+        "title": "Autonomous Electricity",
+        "desc": "If grid connection is missing."
+      },
+      "note": "* Support also available for access roads and autonomous electricity (if off-grid)."
+    },
+    "steps": {
+      "title": "3. Step-by-Step Application",
+      "step1": {
+        "title": "Choose solution & get quotes",
+        "desc": "Think about what you need. Ask us for consultation and <strong>two comparable price quotes</strong>. This is mandatory."
+      },
+      "step2": {
+        "title": "Prepare application package",
+        "desc": "Fill the application form, add budget, description of activities, and self-financing guarantee letter.",
+        "link": "Download forms (RTK) →"
+      },
+      "step3": {
+        "title": "Submit to Municipality (02.04)",
+        "desc": "Submit digitally signed application to your local municipality email by April 2nd."
+      },
+      "step4": {
+        "title": "Decision & Execution",
+        "desc": "Decision is made in ~60 days. After signing the contract, you have until 31.10.2027 for works."
+      }
+    },
+    "errors": {
+      "title": "Common Rejection Reasons",
+      "items": [
+        "<strong>Missing 2 quotes</strong> or they are not comparable.",
+        "<strong>Indoor works:</strong> support is only for external systems.",
+        "<strong>Construction issues:</strong> missing easement or project doesn't meet requirements.",
+        "<strong>Reporting:</strong> previous grant report unconfirmed."
+      ]
+    },
+    "docs": {
+      "title": "Documents & Links",
+      "rtk_page": "RTK Measure Page & Terms",
+      "forms": "Application Forms (RTK Cloud)",
+      "regulation": "Regulation (Riigi Teataja)",
+      "contacts": "Municipality Contacts"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": {
+        "q": "When will I get the money?",
+        "a": "Support is usually paid after signing the grant agreement or after work completion."
+      },
+      "q2": {
+        "q": "Can I do the work myself?",
+        "a": "Generally, a qualified contractor is required. DIY is allowed to a limited extent."
+      },
+      "q3": {
+        "q": "What if the project gets more expensive?",
+        "a": "Support amount is fixed. Additional costs must be covered by the applicant."
+      },
+      "q4": {
+        "q": "Can auxiliary buildings get sewerage?",
+        "a": "Only if crucial for household functioning (e.g., only washing place/toilet is there)."
+      }
+    },
+    "form": {
+      "title": "How can we help?",
+      "intro": "We help put together a technical solution, get price quotes, and compile a correct application package. Fill the form below.",
+      "success_title": "Request sent successfully!",
+      "success_desc": "We will contact you as soon as possible to specify details.",
+      "section1": "Applicant Details",
+      "id_code": "Personal ID Code",
+      "id_code_ph": "Required for background check",
+      "section2": "Household Details",
+      "address": "Address",
+      "cadastral": "Cadastral ID",
+      "field": "Field",
+      "field_options": {
+        "sewerage": "Sewerage Systems",
+        "water": "Water Supply Systems",
+        "road": "Access Roads",
+        "electricity": "Autonomous Electricity"
+      },
+      "residency": "Is residence same as in registry since 01.01.2026?",
+      "yes": "Yes",
+      "no": "No",
+      "section3": "Project Info",
+      "desc_label": "Project description & problem",
+      "desc_ph": "E.g., Old septic tank is depreciated...",
+      "prior_support": "Received support previously (2021-2025)?",
+      "quotes_request": "I want 2 price quotes",
+      "quotes_yes": "Yes, please prepare",
+      "consent": "I agree to data processing and being contacted.",
+      "submit": "Ask for quotes & help",
+      "footer": "We usually allow 1 business day for response. Your data is protected."
+    },
+    "updated": "Last updated: 19.02.2026"
   }
 }

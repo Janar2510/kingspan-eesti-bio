@@ -42,4 +42,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://biopuhastid.com/calculator"/>
   </url>
 
+  <!-- Hajaasustuse Programm 2026 -->
+  <url>
+    <loc>https://biopuhastid.com/hajaasustuse-programm</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="et" href="https://biopuhastid.com/hajaasustuse-programm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://biopuhastid.com/hajaasustuse-programm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biopuhastid.com/hajaasustuse-programm"/>
+  </url>
+
 </urlset>

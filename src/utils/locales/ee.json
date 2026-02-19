@@ -197,5 +197,149 @@
       "note": "See on esialgne soovitus. Täpsema mõõtmete ja üksikasjalike spetsifikatsioonide saamiseks võtke palun meiega ühendust.",
       "contact": "Võtke ühendust üksikasjaliku pakkumise saamiseks"
     }
+  },
+  "hajaasustus": {
+    "nav_title": "Hajaasustus 2026",
+    "meta": {
+      "title": "Hajaasustuse programm 2026: taotlemise juhend | BioPuhastid",
+      "description": "Selge juhend hajaasustuse programmi 2026 taotluseks: tingimused, dokumendid, tähtajad. Aitame hinnapakkumuste ja taotluspaketiga."
+    },
+    "hero": {
+      "badge": "Avatud 02.02.2026 – 02.04.2026",
+      "title_prefix": "Hajaasustuse programm 2026:",
+      "title_highlight": "Taotlemise juhend",
+      "description": "Plaanid rajada biopuhastit või veesüsteemi? Siit leiad selge juhendi, kuidas taotleda kuni 6500 € toetust.",
+      "cta_primary": "Küsi tasuta eelkontrolli",
+      "cta_secondary": "Vaata samme"
+    },
+    "quick_info": {
+      "round": "Taotlusvoor",
+      "max_support": "Max toetus",
+      "max_support_sub": "per majapidamine",
+      "rate": "Toetuse määr",
+      "rate_sub": "omafinantseering min 33%",
+      "project_end": "Projekti lõpp"
+    },
+    "checklist": {
+      "title": "1. Kas sa oled sobiv taotleja?",
+      "items": [
+        "Oled füüsiline isik ja sinu alaline elukoht on rahvastikuregistri järgi taotletavas majapidamises (seisuga 01.01.2026).",
+        "Elukoht asub <strong>hajaasustusega piirkonnas</strong> (veendu KOV-ist, et piirkond ei ole määratud tiheasustusalaks või ühisveevärgialaks).",
+        "Sul ei ole riiklikke ega kohalikke maksuvõlgu (v.a ajatatud).",
+        "Eelnevate toetuste aruanded on KOV-i poolt kinnitatud."
+      ]
+    },
+    "activities": {
+      "title": "2. Milleks saab toetust?",
+      "sewerage": {
+        "title": "Kanalisatsioonisüsteemid",
+        "desc": "Toetatakse hooneväliseid lahendusi reovee nõuetekohaseks kokkukogumiseks ja puhastamiseks.",
+        "list": [
+          "Omapuhastid (biopuhastid, imb- ja filtersüsteemid)",
+          "Kogumiskaevud",
+          "Liitumine ühiskanalisatsiooniga"
+        ]
+      },
+      "water": {
+        "title": "Veevarustussüsteemid",
+        "desc": "Puur- ja salvkaevude rajamine või puhastamine, torustike paigaldamine ja veepuhastusseadmed joogivee kvaliteedi tagamiseks."
+      },
+      "road": {
+        "title": "Juurdepääsuteed",
+        "desc": "Teed eramu ja avaliku tee vahel."
+      },
+      "electricity": {
+        "title": "Autonoomne elekter",
+        "desc": "Kui puudub võrguühendus."
+      },
+      "note": "* Toetust saab taotleda ka juurdepääsuteedele ja autonoomsele elektrile (kui võrguühendus puudub)."
+    },
+    "steps": {
+      "title": "3. Samm-sammuline taotlemine",
+      "step1": {
+        "title": "Vali lahendus ja küsi hinnad",
+        "desc": "Mõtle läbi, mida vajad. Küsi meilt tehniline konsultatsioon ja <strong>kaks võrreldavat hinnapakkumist</strong>. See on kohustuslik dokument."
+      },
+      "step2": {
+        "title": "Koosta taotluspakett",
+        "desc": "Täida taotlusvorm, lisa eelarve, tegevuste kirjeldus ja omafinantseeringu garantiikiri.",
+        "link": "Laadi vormid alla (RTK) →"
+      },
+      "step3": {
+        "title": "Esita KOV-ile (02.04)",
+        "desc": "Esita digiallkirjastatud taotlus oma valla või linnavalitsuse e-postile hiljemalt 2. aprillil."
+      },
+      "step4": {
+        "title": "Otsus ja teostus",
+        "desc": "KOV teeb otsuse ~60 päeva jooksul. Pärast lepingu sõlmimist on sul aega töödeks 31.10.2027-ni."
+      }
+    },
+    "errors": {
+      "title": "Levinud vead, miks taotlus tagasi lükatakse",
+      "items": [
+        "<strong>Puudub 2 hinnapakkumist</strong> või need ei ole võrreldavad.",
+        "<strong>Hoonesisesed tööd:</strong> toetus on mõeldud ainult välistrassidele.",
+        "<strong>Ehituslikud vastuolud:</strong> puudub servituut või projekt ei vasta nõuetele.",
+        "<strong>Aruandlus:</strong> eelmine toetuse aruanne on kinnitamata."
+      ]
+    },
+    "docs": {
+      "title": "Vajalikud dokumendid ja lingid",
+      "rtk_page": "RTK meetme leht ja tingimused",
+      "forms": "Taotlusvormid (RTK pilv)",
+      "regulation": "Määrus (Riigi Teataja)",
+      "contacts": "KOV kontaktisikud"
+    },
+    "faq": {
+      "title": "Korduma kippuvad küsimused",
+      "q1": {
+        "q": "Millal raha kätte saab?",
+        "a": "Toetus makstakse välja üldjuhul pärast toetuslepingu sõlmimist või tööde teostamise järel."
+      },
+      "q2": {
+        "q": "Kas ma võin töid ise teha?",
+        "a": "Üldjuhul nõuab programm kvalifitseeritud ettevõtjat. Isetegemine on lubatud piiratud ulatuses."
+      },
+      "q3": {
+        "q": "Mis saab, kui projekt läheb kallimaks?",
+        "a": "Toetuse summa on fikseeritud. Lisakulu tuleb katta taotlejal endal."
+      },
+      "q4": {
+        "q": "Kas abihoonetele saab kanalisatsiooni?",
+        "a": "Ainult juhul, kui abihoone on oluline majapidamise toimimiseks (nt ainus pesemisvõimalus)."
+      }
+    },
+    "form": {
+      "title": "Kuidas me saame aidata?",
+      "intro": "Aitame kokku panna tehnilise lahenduse, võtta hinnapakkumused ja koostada korrektse taotluspaketi. Täida allolev vorm ja me võtame sinuga ühendust.",
+      "success_title": "Päring edukalt saadetud!",
+      "success_desc": "Võtame sinuga ühendust esimesel võimalusel, et täpsustada detaile.",
+      "section1": "Taotleja andmed",
+      "id_code": "Isikukood",
+      "id_code_ph": "Vajalik taustakontrolliks",
+      "section2": "Majapidamise andmed",
+      "address": "Aadress",
+      "cadastral": "Katastritunnus",
+      "field": "Valdkond",
+      "field_options": {
+        "sewerage": "Kanalisatsioonisüsteemid",
+        "water": "Veevarustussüsteemid",
+        "road": "Juurdepääsuteed",
+        "electricity": "Autonoomne elekter"
+      },
+      "residency": "Kas elukoht on rahvastikuregistri järgi sama alates 01.01.2026?",
+      "yes": "Jah",
+      "no": "Ei",
+      "section3": "Projekti info",
+      "desc_label": "Projekti lühikirjeldus ja probleem",
+      "desc_ph": "Nt: Vana septik on amortiseerunud...",
+      "prior_support": "Kas varasemalt on toetust saadud (2021-2025)?",
+      "quotes_request": "Soovin 2 hinnapakkumist",
+      "quotes_yes": "Jah, palun vormistage",
+      "consent": "Olen nõus, et minu andmeid töödeldakse pakkumise koostamiseks ja minuga võetakse ühendust.",
+      "submit": "Küsi pakkumist ja abi",
+      "footer": "Vastame tavaliselt 1 tööpäeva jooksul. Sinu andmed on kaitstud."
+    },
+    "updated": "Viimati uuendatud: 19.02.2026"
   }
 }

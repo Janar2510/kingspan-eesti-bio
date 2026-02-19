@@ -1,0 +1,126 @@
+<!-- 
+    TRAFFIC FUNNEL SNIPPET FOR KINGSPANEESTI.COM
+    Copy and paste this code into the <head> or <body> of kingspaneesti.com 
+    to drive traffic to biopuhastid.com.
+-->
+
+<style>
+    #biopuhastid-funnel-banner {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(135deg, #005a8c 0%, #002d46 100%);
+        color: white;
+        padding: 16px 24px;
+        z-index: 999999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        border-top: 3px solid #0096d2;
+        animation: slideUpFunnel 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes slideUpFunnel {
+        from {
+            transform: translateY(100%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    .funnel-content {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .funnel-badge {
+        background: #0096d2;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .funnel-text {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    .funnel-button {
+        background: white;
+        color: #005a8c;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 700;
+        text-decoration: none !important;
+        font-size: 14px;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border: 2px solid transparent;
+    }
+
+    .funnel-button:hover {
+        background: #0096d2;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    #close-funnel {
+        background: none;
+        border: none;
+        color: rgba(255, 255, 255, 0.6);
+        cursor: pointer;
+        padding: 5px;
+        font-size: 20px;
+        line-height: 1;
+        transition: color 0.2s;
+    }
+
+    #close-funnel:hover {
+        color: white;
+    }
+
+    @media (max-width: 768px) {
+        #biopuhastid-funnel-banner {
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+            gap: 12px;
+        }
+
+        .funnel-content {
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+</style>
+
+<div id="biopuhastid-funnel-banner">
+    <div class="funnel-content">
+        <span class="funnel-badge">Uus</span>
+        <p class="funnel-text">Kingspan Biopuhastite uus kodu on nüüd avatud!</p>
+    </div>
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <a href="https://biopuhastid.com/?utm_source=kingspaneesti&utm_medium=funnel&utm_campaign=banner"
+            target="_blank" class="funnel-button">
+            Külasta biopuhastid.com &rarr;
+        </a>
+        <button id="close-funnel" onclick="document.getElementById('biopuhastid-funnel-banner').style.display='none'">
+            &times;
+        </button>
+    </div>
+</div>
