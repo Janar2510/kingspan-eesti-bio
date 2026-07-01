@@ -1,0 +1,16 @@
+{
+  "number": "2026-001",
+  "date": "2026-06-30",
+  "client": {
+    "name": "Mari Maa",
+    "address": "Kuuse tee 4, 12345 Harjumaa",
+    "email": "mari@example.ee",
+    "reg": "EE123456789"
+  },
+  "items": [
+    { "product": "BioAir 1, INT", "qty": 1 },
+    { "product": "Paigaldus / Installation", "qty": 1, "price": 850 },
+    { "product": "Transport", "qty": 1, "price": 120 }
+  ],
+  "notes": "Tasumise tähtaeg 14 päeva. Palun märkige maksekorraldusele arve number."
+}

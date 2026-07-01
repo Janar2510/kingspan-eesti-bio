@@ -1,0 +1,15 @@
+{
+  "number": "2026-O-031",
+  "date": "2026-06-30",
+  "client": {
+    "name": "Mari Maa",
+    "address": "Kuuse tee 4, 12345 Harjumaa",
+    "email": "mari@example.ee"
+  },
+  "items": [
+    { "product": "BioAir 1, INT", "qty": 1 },
+    { "product": "Paigaldus / Installation", "qty": 1, "price": 850 }
+  ],
+  "delivery": "Tarne 2–3 nädalat tellimuse kinnitamisest. Paigaldus kokkuleppel.",
+  "notes": "Tellimus on kinnitatud. Saadame arve enne tarnet."
+}

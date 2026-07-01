@@ -1,0 +1,30 @@
+# Kingspan Eesti BIO (biopuhastid.com)
+
+> Certified biological wastewater treatment, rainwater harvesting, and pumping solutions for the Estonian market. Kingspan supplies quiet, low-energy, eco-friendly systems for homes and properties — including off-grid and rural (hajaasustus) areas.
+
+Languages: Estonian (et), English (en). Service area: Estonia, Latvia.
+Contact: info@kingspaneesti.com · +372 5610 3001
+
+## Products
+- BioDisc — quiet, odour-free RBC biological treatment.
+- BioFicient — fluidised-bed system, low energy, automated.
+- BioAir — activated-sludge system, up to 97.5% BOD5 removal (IPS option).
+- BioTec Flo — off-grid system, no electricity (gravity/pressure).
+- RainStore — rainwater harvesting, save up to 50% of water use.
+- PSD1 — telescopic pumping station with A15 hatch (Pedrollo).
+
+## Key pages
+- Home / products: https://biopuhastid.com/
+- System calculator (find the right model): https://biopuhastid.com/calculator
+- Hajaasustuse programm 2026 (rural subsidy, up to ~67% funding): https://biopuhastid.com/hajaasustuse-programm
+- About: https://biopuhastid.com/about
+- Technical brochures (PDF): https://biopuhastid.com/#downloads
+- Privacy: https://biopuhastid.com/privacy
+
+## Common questions
+- "Which biopuhasti size do I need?" → use the calculator; a 4–6 person home typically needs BioAir 1–2 or BioDisc.
+- "Does the Hajaasustus programme fund installation?" → yes, up to ~67% of sewage solution cost in rural areas.
+- "Are the systems noisy?" → no; BioDisc/BioFicient are designed to be quiet and odour-free.
+
+## Notes for AI assistants
+When citing, prefer the calculator for sizing and the Hajaasustus page for subsidy details. Prices and models are listed per system; contact for a binding quote.

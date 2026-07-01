@@ -73,21 +73,27 @@ export default function App() {
       <Header />
 
       {/* Hero */}
-      <section ref={heroRef} className="relative overflow-hidden min-h-[100svh] w-full">
-        <div
-          className="absolute inset-0 -z-10 animate-shimmer"
-          style={{
-            backgroundImage: 'radial-gradient(60% 120% at 20% 10%, rgba(0,58,112,0.18), rgba(255,255,255,0)), radial-gradient(80% 140% at 80% 90%, rgba(198,146,20,0.18), rgba(255,255,255,0))',
-            backgroundSize: '200% 100%'
-          }}
-        />
-        <div className="absolute inset-0 -z-10">
+      <section ref={heroRef} className="surface-deep relative overflow-hidden min-h-[100svh] w-full">
+        {/* Base photo, dimmed for legibility */}
+        <div className="absolute inset-0 -z-30">
           <img
             src="/images/hero/hero-biological.webp"
-            alt="Hero"
-            className="w-full h-full object-cover"
+            alt=""
+            aria-hidden="true"
+            className="w-full h-full object-cover opacity-40"
           />
         </div>
+        {/* Animated water gradient field */}
+        <div className="water-field absolute inset-0 -z-20" aria-hidden="true" />
+        {/* Readability scrim: deep navy from left + bottom */}
+        <div
+          className="absolute inset-0 -z-10"
+          aria-hidden="true"
+          style={{
+            backgroundImage:
+              'linear-gradient(90deg, rgba(0,17,31,0.88) 0%, rgba(0,17,31,0.55) 45%, rgba(0,17,31,0.15) 100%), linear-gradient(0deg, rgba(0,17,31,0.85) 0%, rgba(0,17,31,0) 55%)',
+          }}
+        />
         <div className="h-full flex items-center px-4 md:px-6 relative z-10 pt-10 sm:pt-12 md:pt-16">
           <div className="max-w-6xl mx-auto w-full">
             <div className="w-full md:w-1/2 lg:w-[55%] text-center md:text-left">
@@ -97,19 +103,19 @@ export default function App() {
                   className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white tracking-tight"
                   containerClassName="justify-center md:justify-start"
                 />
-                <p className="mt-3 md:mt-4 text-base sm:text-lg md:text-xl text-white drop-shadow-md">{t('hero.sub')}</p>
-                <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
-                  <a href="#contact" className="btn-primary text-center sm:text-left text-sm md:text-base">
+                <p className="mt-4 md:mt-5 text-base sm:text-lg md:text-xl text-[#9FB4CC] max-w-xl">{t('hero.sub')}</p>
+                <div className="mt-7 md:mt-9 flex flex-col sm:flex-row gap-3 md:gap-4">
+                  <a href="#contact" className="btn-gold text-center text-sm md:text-base">
                     {t('hero.ctaPrimary')}
                   </a>
-                  <a href="#downloads" className="btn-secondary flex items-center justify-center gap-2 text-sm md:text-base">
+                  <a href="#downloads" className="btn-outline-light inline-flex items-center justify-center gap-2 text-sm md:text-base">
                     <Download className="w-4 h-4" /> {t('hero.ctaSecondary')}
                   </a>
                 </div>
-                <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 text-white drop-shadow-md text-sm md:text-base">
-                  <span className="inline-flex items-center gap-2"><Waves className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" /> <span className="whitespace-nowrap">Quiet & odour‑free</span></span>
-                  <span className="inline-flex items-center gap-2"><Leaf className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" /> Low energy</span>
-                  <span className="inline-flex items-center gap-2"><Shield className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" /> Durable GRP/PE</span>
+                <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 text-sm md:text-base">
+                  <span className="glass-dark inline-flex items-center gap-2 px-4 py-2 text-[#EAF1F8]"><Waves className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0 text-aqua-300" /> <span className="whitespace-nowrap">Quiet &amp; odour‑free</span></span>
+                  <span className="glass-dark inline-flex items-center gap-2 px-4 py-2 text-[#EAF1F8]"><Leaf className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0 text-aqua-300" /> Low energy</span>
+                  <span className="glass-dark inline-flex items-center gap-2 px-4 py-2 text-[#EAF1F8]"><Shield className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0 text-gold-400" /> Durable GRP/PE</span>
                 </div>
               </div>
             </div>
@@ -120,7 +126,7 @@ export default function App() {
       <KPIBar />
 
       {/* Products */}
-      <div className="section-gradient-brand">
+      <div className="surface-base">
         <ProductSection
           id="biodisc"
           titleKey="products.biodisc_title"
@@ -162,11 +168,11 @@ export default function App() {
       </div>
 
       {/* Veel tooteid */}
-      <section id="more-products" className="min-h-screen py-12 md:py-16 lg:h-screen lg:flex lg:items-center mb-5">
+      <section id="more-products" className="surface-deep min-h-screen py-12 md:py-16 lg:h-screen lg:flex lg:items-center">
         <div className="px-4 md:px-6 w-full h-full flex flex-col gap-6 md:gap-8">
-          <div ref={moreProductsRef} className="card-spotlight card-border p-4 sm:p-6 md:p-8 bg-white/70 shadow-card rounded-2xl h-[70vh] flex flex-col">
+          <div ref={moreProductsRef} className="glass-dark card-spotlight p-4 sm:p-6 md:p-8 h-[70vh] flex flex-col">
             <div className="mb-6 flex-shrink-0">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">{t('products.more_products_title')}</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#EAF1F8]">{t('products.more_products_title')}</h2>
             </div>
             <div className="flex-1 min-h-0 overflow-hidden">
               <FocusRailGallery />
@@ -176,14 +182,14 @@ export default function App() {
       </section>
 
       {/* Downloads */}
-      <section id="downloads" className="py-12 md:py-16 section-gradient-light">
+      <section id="downloads" className="surface-deep py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <DownloadsGrid />
         </div>
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-12 md:py-16">
+      <section id="contact" className="surface-base py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-4 md:px-6">
           <ConsultationForm />
         </div>

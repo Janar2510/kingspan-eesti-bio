@@ -6,12 +6,17 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:static": "npm run build && node scripts/prerender.mjs",
+    "prerender": "node scripts/prerender.mjs",
     "preview": "vite preview",
     "gen:downloads": "node scripts/gen-downloads.mjs",
     "gen:images": "node scripts/gen-image-manifests.mjs",
-    "gen:sitemap": "node scripts/gen-sitemap.mjs"
+    "gen:sitemap": "node scripts/gen-sitemap.mjs",
+    "gen:doc": "node scripts/gen-doc.mjs",
+    "gen:samples": "node scripts/gen-doc.mjs invoice --data data/sample-invoice.json --out docs/invoice-sample.pdf && node scripts/gen-doc.mjs proposal --data data/sample-proposal.json --out docs/proposal-sample.pdf && node scripts/gen-doc.mjs order --data data/sample-order.json --out docs/order-sample.pdf"
   },
   "dependencies": {
+    "@react-pdf/renderer": "^4.5.1",
     "framer-motion": "^12.26.2",
     "i18next": "^23.11.5",
     "lucide-react": "^0.452.0",

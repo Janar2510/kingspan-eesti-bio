@@ -1,0 +1,17 @@
+{
+  "number": "2026-P-014",
+  "date": "2026-06-30",
+  "client": {
+    "name": "Talu OÜ",
+    "address": "Metsa talu, 45678 Tartumaa",
+    "email": "info@talu.ee"
+  },
+  "intro": "Täname huvi eest. Allpool on pakkumine teie kinnistule sobiva biopuhasti ja paigalduse kohta vastavalt 6 elaniku veekoormusele.",
+  "items": [
+    { "product": "BioAir 2, INT", "qty": 1 },
+    { "product": "Paigaldus ja seadistus", "qty": 1, "price": 1200 },
+    { "product": "Hooldusleping (1 aasta)", "qty": 1, "price": 240 }
+  ],
+  "validUntil": "2026-07-31",
+  "notes": "Hinnad sisaldavad tarnet Eestis. Hajaasustuse programmi toetus võib katta kuni 67% kuludest."
+}

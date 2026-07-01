@@ -11,25 +11,23 @@ export default function KPIBar() {
     { key: 'kpi.d', delay: 0.24, icon: BadgeCheck }
   ]
   return (
-    <section className="py-6 md:py-8 bg-white/70 border-y border-kingspan-cloud/60">
-      <div className="px-4 md:px-6 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 text-center text-xs sm:text-sm md:text-base text-kingspan-slate">
+    <section className="surface-base py-10 md:py-14 border-t border-white/5">
+      <div className="max-w-6xl mx-auto px-4 md:px-6 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 text-center text-xs sm:text-sm md:text-base">
         {items.map((item) => (
           <motion.div
             key={item.key}
-            initial={{ opacity: 0, y: 10, scale: 0.98 }}
+            initial={{ opacity: 0, y: 14, scale: 0.98 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.4, delay: item.delay, ease: 'easeOut' }}
-            whileHover={{ y: -4, scale: 1.02 }}
-            className="kpi-border"
+            whileHover={{ y: -4 }}
+            className="glass-dark p-4 sm:p-5"
           >
-            <div className="kpi-card p-3 sm:p-4 rounded-xl md:rounded-2xl shadow-sm hover:shadow-md">
-              <item.icon className="w-4 h-4 md:w-5 md:h-5 text-kingspan-blue mx-auto mb-2" />
-              <span className="inline-block w-full text-kingspan-navy font-semibold">
-                {t(item.key)}
-              </span>
-              <span className="block mt-1 h-[2px] w-12 mx-auto bg-gradient-to-r from-kingspan-blue/70 to-kingspan-gold/70 rounded-full" />
-            </div>
+            <item.icon className="w-5 h-5 md:w-6 md:h-6 text-aqua-300 mx-auto mb-2" />
+            <span className="inline-block w-full text-[#EAF1F8] font-semibold">
+              {t(item.key)}
+            </span>
+            <span className="block mt-2 h-[2px] w-12 mx-auto rule-gold rounded-full" />
           </motion.div>
         ))}
       </div>

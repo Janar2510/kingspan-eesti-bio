@@ -1,0 +1,68 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-color",
+        "value": "rgba(0,17,31,0.88)",
+        "reason": "ink.950 opacity — Aqua-Tech hero scrim, in src/brand/tokens.js",
+        "createdAt": "2026-06-30T23:57:50.784Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(0,17,31,0.85)",
+        "reason": "ink.950 opacity — Aqua-Tech hero scrim, in src/brand/tokens.js",
+        "createdAt": "2026-06-30T23:57:52.847Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(10, 75, 133, 0.35)",
+        "reason": "blue.600 opacity — surface-deep gradient, in tokens.js",
+        "createdAt": "2026-06-30T23:57:54.847Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(10, 75, 133, 0.55)",
+        "reason": "blue.600 opacity — water-field gradient, in tokens.js",
+        "createdAt": "2026-06-30T23:57:56.866Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(43, 184, 214, 0.30)",
+        "reason": "aqua.400 opacity — water-field gradient, in tokens.js",
+        "createdAt": "2026-06-30T23:57:58.879Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(43, 184, 214, 0.28)",
+        "reason": "aqua.400 opacity — glow-aqua shadow, in tokens.js",
+        "createdAt": "2026-06-30T23:58:00.898Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(198, 146, 20, 0.18)",
+        "reason": "gold.500 opacity — water-field gradient, in tokens.js",
+        "createdAt": "2026-06-30T23:58:03.207Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(255, 255, 255, 0.06)",
+        "reason": "glass-dark bg, in tokens.js glass recipe",
+        "createdAt": "2026-06-30T23:58:05.219Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(255, 255, 255, 0.12)",
+        "reason": "glass-dark border, in tokens.js glass recipe",
+        "createdAt": "2026-06-30T23:58:07.223Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(0, 17, 31, 0.37)",
+        "reason": "glass shadow, in tokens.js boxShadow.glass",
+        "createdAt": "2026-06-30T23:58:09.231Z"
+      }
+    ]
+  }
+}

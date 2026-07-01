@@ -26,24 +26,15 @@ export default function Header() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className={`sticky top-0 z-50 transition-all duration-300 ${scrolled
-        ? 'bg-white/40 backdrop-blur-xl shadow-lg border-b border-white/10'
-        : 'bg-white/30 backdrop-blur-md border-b border-white/5'
-        }`}
+      className={`sticky top-0 z-header transition-colors duration-300 ${scrolled ? 'text-kingspan-navy' : 'text-white'}`}
       style={{
-        background: scrolled
-          ? 'rgba(255, 255, 255, 0.4)'
-          : 'rgba(255, 255, 255, 0.3)',
-        backdropFilter: scrolled ? 'blur(20px) saturate(180%)' : 'blur(12px) saturate(150%)',
-        WebkitBackdropFilter: scrolled ? 'blur(20px) saturate(180%)' : 'blur(12px) saturate(150%)',
-        boxShadow: scrolled
-          ? '0 8px 32px 0 rgba(0, 0, 0, 0.08), inset 0 1px 0 0 rgba(255, 255, 255, 0.3)'
-          : '0 4px 16px 0 rgba(0, 0, 0, 0.03), inset 0 1px 0 0 rgba(255, 255, 255, 0.2)',
+        background: scrolled ? 'rgba(255, 255, 255, 0.72)' : 'rgba(0, 17, 31, 0.38)',
+        backdropFilter: 'blur(20px) saturate(160%)',
+        WebkitBackdropFilter: 'blur(20px) saturate(160%)',
+        borderBottom: scrolled ? '1px solid rgba(0,58,112,0.10)' : '1px solid rgba(255,255,255,0.08)',
+        boxShadow: scrolled ? '0 8px 32px 0 rgba(0, 17, 31, 0.10)' : 'none',
       }}
     >
-      <div className="absolute inset-x-0 top-0 h-full pointer-events-none">
-        <div className="h-full w-full bg-gradient-to-b from-white/40 via-transparent to-transparent" />
-      </div>
       <div className="max-w-6xl mx-auto px-4 md:px-6 h-20 md:h-28 flex items-center justify-between">
         <a href="/" className="flex items-center h-full gap-2 sm:gap-3 mr-3 sm:mr-4 md:mr-6 flex-shrink-0 ml-0 md:ml-[-20px] lg:ml-[-60px]">
           <img
@@ -111,7 +102,7 @@ export default function Header() {
           </motion.a>
           <motion.a
             href="/hajaasustuse-programm"
-            className="hover:text-kingspan-blue transition-colors nav-link font-medium text-kingspan-blue"
+            className="transition-colors nav-link font-semibold"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -127,7 +118,7 @@ export default function Header() {
           </motion.a>
           <motion.a
             href="/calculator"
-            className="btn-ghost text-xs uppercase tracking-wide"
+            className="nav-pill"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -135,7 +126,7 @@ export default function Header() {
           </motion.a>
           <motion.a
             href="/about"
-            className="btn-ghost text-xs uppercase tracking-wide"
+            className="nav-pill"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -143,7 +134,7 @@ export default function Header() {
           </motion.a>
           <motion.button
             onClick={toggle}
-            className="btn-ghost inline-flex items-center gap-2"
+            className="nav-pill inline-flex items-center gap-2"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -156,7 +147,7 @@ export default function Header() {
         <div className="lg:hidden flex items-center gap-2">
           <motion.button
             onClick={toggle}
-            className="btn-ghost inline-flex items-center gap-2"
+            className="nav-pill inline-flex items-center gap-2"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -165,7 +156,7 @@ export default function Header() {
           </motion.button>
           <motion.button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="btn-ghost p-2"
+            className="nav-pill p-2"
             aria-label="Toggle menu"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -183,9 +174,9 @@ export default function Header() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="lg:hidden border-t border-white/20 overflow-hidden"
+            className="lg:hidden border-t border-white/20 overflow-hidden text-kingspan-navy"
             style={{
-              background: 'rgba(255, 255, 255, 0.5)',
+              background: 'rgba(255, 255, 255, 0.92)',
               backdropFilter: 'blur(20px) saturate(180%)',
               WebkitBackdropFilter: 'blur(20px) saturate(180%)',
             }}

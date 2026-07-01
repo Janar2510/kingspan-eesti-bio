@@ -160,6 +160,35 @@ function updateCanonicalTags(t: (key: string) => string) {
       { '@type': 'Country', name: 'Latvia' },
     ],
   })
+
+  // FAQ — strong signal for AI Overviews / ChatGPT / Perplexity citations (GEO)
+  const faq = [
+    {
+      q: 'Mis on biopuhasti ja kuidas see töötab?',
+      a: 'Biopuhasti on omapuhasti, mis puhastab majapidamise reovee bioloogiliselt, kasutades mikroorganisme. Kingspani süsteemid (BioDisc, BioFicient, BioAir) eemaldavad kuni 97,5% reostusest ning on vaiksed ja energiasäästlikud.',
+    },
+    {
+      q: 'Kui suurt biopuhastit ma vajan?',
+      a: 'Süsteemi suurus sõltub elanike arvust ja veekulust. Meie kalkulaator soovitab sobiva mudeli — tüüpiline eramaja (4–6 inimest) vajab BioAir 1–2 või BioDisc süsteemi.',
+    },
+    {
+      q: 'Kas Hajaasustuse programm toetab biopuhasti paigaldust?',
+      a: 'Jah. Hajaasustuse programm võib katta kuni 67% kanalisatsioonilahenduse maksumusest hajaasustusega piirkondades. Aitame taotluse ettevalmistamisel.',
+    },
+    {
+      q: 'Kui kaua biopuhasti paigaldamine võtab?',
+      a: 'Tarne on tavaliselt 2–3 nädalat ja paigaldus kokkuleppel. Pakume ka hoolduslepingut süsteemi pikaajaliseks töökindluseks.',
+    },
+  ]
+  upsertJsonLd('ld-faq', {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  })
 }
 
 export default function SEOHead() {

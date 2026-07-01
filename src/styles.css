@@ -2,6 +2,99 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================================
+   Brand tokens as CSS custom properties (mirror src/brand/tokens.js)
+   ============================================================ */
+:root {
+  --c-blue-700: #003A70;
+  --c-gold-500: #C69214;
+  --c-gold-400: #D5A82A;
+  --c-aqua-300: #5FD0E6;
+  --c-aqua-400: #2BB8D6;
+  --c-ink-800: #002B4A;
+  --c-ink-900: #001A30;
+  --c-ink-950: #00111F;
+  --c-cloud: #F5F7FA;
+
+  --bg-deep: var(--c-ink-950);
+  --bg-base: var(--c-ink-900);
+  --text-on-dark: #EAF1F8;
+  --text-on-dark-muted: #9FB4CC;
+
+  --glass-bg-dark: rgba(255, 255, 255, 0.06);
+  --glass-border-dark: rgba(255, 255, 255, 0.12);
+  --glass-blur: 16px;
+
+  --ease-water: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================================
+   Aqua-Tech immersive surfaces & glass
+   ============================================================ */
+
+/* Dark immersive section background */
+.surface-deep {
+  background:
+    radial-gradient(120% 120% at 50% -10%, rgba(10, 75, 133, 0.35), transparent 60%),
+    var(--bg-deep);
+  color: var(--text-on-dark);
+}
+.surface-base { background: var(--bg-base); color: var(--text-on-dark); }
+
+/* Animated water gradient field (hero) */
+.water-field {
+  background:
+    radial-gradient(60% 120% at 20% 10%, rgba(10, 75, 133, 0.55), rgba(0, 17, 31, 0)),
+    radial-gradient(80% 140% at 80% 90%, rgba(43, 184, 214, 0.30), rgba(0, 17, 31, 0)),
+    radial-gradient(50% 80% at 60% 40%, rgba(198, 146, 20, 0.18), rgba(0, 17, 31, 0));
+  background-size: 180% 180%;
+  animation: water-flow 22s var(--ease-water) infinite;
+}
+@keyframes water-flow {
+  0%   { background-position: 0% 50%, 100% 50%, 50% 50%; }
+  50%  { background-position: 20% 60%, 80% 40%, 60% 45%; }
+  100% { background-position: 0% 50%, 100% 50%, 50% 50%; }
+}
+
+/* Glass card — dark context */
+.glass-dark {
+  background: var(--glass-bg-dark);
+  border: 1px solid var(--glass-border-dark);
+  backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 17, 31, 0.37);
+}
+.glass-dark:hover { border-color: rgba(198, 146, 20, 0.45); }
+
+/* Hairline gold/aqua divider */
+.rule-gold { height: 2px; background: linear-gradient(90deg, var(--c-gold-500), var(--c-gold-400), var(--c-gold-500)); }
+.rule-aqua { height: 2px; background: linear-gradient(90deg, var(--c-aqua-400), var(--c-aqua-300), var(--c-aqua-400)); }
+
+/* Gold ghost button for dark hero */
+.btn-gold {
+  @apply px-8 py-4 rounded-pill font-semibold text-kingspan-navy;
+  background: linear-gradient(135deg, #E0BD4E, #C69214);
+  box-shadow: 0 0 40px rgba(198, 146, 20, 0.25);
+  transition: transform .25s var(--ease-standard), box-shadow .3s ease;
+}
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 0 56px rgba(198, 146, 20, 0.45); }
+.btn-gold:focus-visible { outline: none; box-shadow: 0 0 0 4px rgba(198, 146, 20, 0.4); }
+
+.btn-outline-light {
+  @apply px-8 py-4 rounded-pill font-semibold text-white;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  transition: background .25s var(--ease-standard), border-color .25s ease;
+}
+.btn-outline-light:hover { background: rgba(255, 255, 255, 0.10); border-color: rgba(255, 255, 255, 0.6); }
+
+@media (prefers-reduced-motion: reduce) {
+  .water-field { animation: none !important; }
+}
+
 /* Spotlight hover for cards */
 .card-spotlight {
   position: relative;
@@ -261,6 +354,16 @@
   @apply hover:bg-kingspan-blue/5 hover:border-kingspan-blue/30 hover:text-kingspan-blue;
   @apply focus:outline-none focus:ring-2 focus:ring-kingspan-blue/20;
 }
+
+/* Adaptive nav pill — inherits header text color (light over hero, navy when scrolled) */
+.nav-pill {
+  @apply px-3 py-1.5 rounded-xl font-medium text-xs uppercase tracking-wide;
+  color: currentColor;
+  border: 1px solid color-mix(in srgb, currentColor 32%, transparent);
+  transition: background-color .2s ease, border-color .2s ease;
+}
+.nav-pill:hover { background: color-mix(in srgb, currentColor 12%, transparent); border-color: color-mix(in srgb, currentColor 55%, transparent); }
+.nav-pill:focus-visible { outline: none; box-shadow: 0 0 0 2px color-mix(in srgb, currentColor 40%, transparent); }
 
 /* Header nav underline */
 .nav-link {

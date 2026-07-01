@@ -146,27 +146,23 @@ export default function Hajaasustus() {
             <Header />
 
             {/* Hero Section */}
-            <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden bg-gradient-to-br from-kingspan-blue/5 to-white">
-                <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-kingspan-blue/10 rounded-full blur-3xl" />
-                <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-green-100 rounded-full blur-3xl" />
-
+            <section className="surface-deep water-field relative pt-28 pb-20 md:pt-40 md:pb-32 overflow-hidden">
                 <div className="max-w-4xl mx-auto px-4 relative z-10 text-center">
-                    <span className="inline-block py-1 px-3 rounded-full bg-kingspan-blue/10 text-kingspan-blue font-semibold text-sm mb-4">
+                    <span className="glass-dark inline-block py-1 px-4 rounded-pill text-aqua-300 font-semibold text-sm mb-5">
                         {t('hajaasustus.hero.badge')}
                     </span>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-kingspan-navy leading-tight">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-[#EAF1F8] leading-tight">
                         {t('hajaasustus.hero.title_prefix')} <br />
-                        <span className="text-kingspan-blue">{t('hajaasustus.hero.title_highlight')}</span>
+                        <span className="text-gold-400">{t('hajaasustus.hero.title_highlight')}</span>
                     </h1>
-                    <p className="text-lg md:text-xl text-kingspan-slate mb-8 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-lg md:text-xl text-[#9FB4CC] mb-10 max-w-2xl mx-auto leading-relaxed">
                         {t('hajaasustus.hero.description')}
                     </p>
-
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="#taotlusvorm" className="btn-primary flex items-center justify-center gap-2 px-8 py-3 text-lg">
+                        <a href="#taotlusvorm" className="btn-gold inline-flex items-center justify-center gap-2 px-8 py-3 text-lg">
                             {t('hajaasustus.hero.cta_primary')} <ArrowRight className="w-5 h-5" />
                         </a>
-                        <a href="#sammud" className="btn-secondary flex items-center justify-center px-8 py-3 text-lg bg-white">
+                        <a href="#sammud" className="btn-outline-light inline-flex items-center justify-center px-8 py-3 text-lg">
                             {t('hajaasustus.hero.cta_secondary')}
                         </a>
                     </div>

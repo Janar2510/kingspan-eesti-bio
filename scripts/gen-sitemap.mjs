@@ -1,8 +1,8 @@
 import { writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
 
-// Base URL - update this when deploying to production
-const BASE_URL = process.env.SITE_URL || 'https://kingspaneesti.com'
+// Base URL - must match canonical in index.html / SEOHead.tsx
+const BASE_URL = process.env.SITE_URL || 'https://biopuhastid.com'
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -46,6 +46,16 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <xhtml:link rel="alternate" hreflang="et" href="${BASE_URL}/calculator"/>
     <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/calculator"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/calculator"/>
+  </url>
+
+  <!-- Hajaasustuse programm 2026 -->
+  <url>
+    <loc>${BASE_URL}/hajaasustuse-programm</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="et" href="${BASE_URL}/hajaasustuse-programm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/hajaasustuse-programm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/hajaasustuse-programm"/>
   </url>
 
 </urlset>

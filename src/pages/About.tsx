@@ -41,7 +41,8 @@ export default function About() {
       </section>
 
       {/* Main Content */}
-      <main className="max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-12 lg:py-16 space-y-12 md:space-y-16">
+      <main className="bg-kingspan-cloud max-w-full px-4 md:px-6 py-8 md:py-12 lg:py-16">
+        <div className="max-w-6xl mx-auto space-y-12 md:space-y-16">
         {/* Opening Text */}
         <section className="space-y-4 md:space-y-6">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-kingspan-blue">
@@ -79,6 +80,7 @@ export default function About() {
             className="w-full rounded-2xl shadow-card object-cover max-h-[600px]"
           />
         </section>
+        </div>
       </main>
 
       <Footer />
