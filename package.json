@@ -11,18 +11,24 @@
     "preview": "vite preview",
     "gen:downloads": "node scripts/gen-downloads.mjs",
     "gen:images": "node scripts/gen-image-manifests.mjs",
+    "gen:images:optimize": "node scripts/optimize-images.mjs",
     "gen:sitemap": "node scripts/gen-sitemap.mjs",
     "gen:doc": "node scripts/gen-doc.mjs",
-    "gen:samples": "node scripts/gen-doc.mjs invoice --data data/sample-invoice.json --out docs/invoice-sample.pdf && node scripts/gen-doc.mjs proposal --data data/sample-proposal.json --out docs/proposal-sample.pdf && node scripts/gen-doc.mjs order --data data/sample-order.json --out docs/order-sample.pdf"
+    "gen:samples": "node scripts/gen-doc.mjs invoice --data data/sample-invoice.json --out docs/invoice-sample.pdf && node scripts/gen-doc.mjs proposal --data data/sample-proposal.json --out docs/proposal-sample.pdf && node scripts/gen-doc.mjs order --data data/sample-order.json --out docs/order-sample.pdf",
+    "remotion:studio": "remotion studio remotion/index.ts",
+    "remotion:render": "remotion render remotion/index.ts HeroKenBurns public/videos/hero-kenburns.mp4"
   },
   "dependencies": {
     "@react-pdf/renderer": "^4.5.1",
+    "@remotion/cli": "^4.0.486",
+    "@remotion/player": "^4.0.486",
     "framer-motion": "^12.26.2",
     "i18next": "^23.11.5",
     "lucide-react": "^0.452.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-i18next": "^14.1.3"
+    "react-i18next": "^14.1.3",
+    "remotion": "^4.0.486"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
@@ -31,6 +37,7 @@
     "autoprefixer": "^10.4.21",
     "baseline-browser-mapping": "^2.9.19",
     "postcss": "^8.5.6",
+    "puppeteer": "^25.3.0",
     "sharp": "^0.34.5",
     "tailwindcss": "^3.4.18",
     "typescript": "^5.4.5",

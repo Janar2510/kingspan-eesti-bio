@@ -1,42 +1,48 @@
 [
   {
-    "title": "BioFicient — brochure (EN)",
+    "title": "BIOFICIENT",
     "file": "BIOFICIENT.pdf",
     "lang": "EN",
     "sizeKB": 2932
   },
   {
-    "title": "BioAir — domestic (EST)",
+    "title": "BioAir",
     "file": "BioAir.pdf",
-    "lang": "EE",
+    "lang": "EN",
     "sizeKB": 2446
   },
   {
-    "title": "BioDisc — commercial (EST)",
+    "title": "BioTecFlo",
+    "file": "BioTecFlo.pdf",
+    "lang": "EN",
+    "sizeKB": 2088
+  },
+  {
+    "title": "Kommertsreoveepuhasti BioDisc",
     "file": "Kommertsreoveepuhasti BioDisc.pdf",
-    "lang": "EE",
+    "lang": "EN",
     "sizeKB": 2019
   },
   {
-    "title": "BioFicient — commercial (EST)",
+    "title": "Kommertsreoveepuhasti BioFicient",
     "file": "Kommertsreoveepuhasti BioFicient.pdf",
-    "lang": "EE",
+    "lang": "EN",
     "sizeKB": 1829
   },
   {
-    "title": "BioDisc — domestic (EST)",
+    "title": "Majapidamisreoveepuhasti BioDisc",
     "file": "Majapidamisreoveepuhasti BioDisc.pdf",
-    "lang": "EE",
+    "lang": "EN",
     "sizeKB": 3858
   },
   {
-    "title": "PSD1 — pumping station datasheet (EN)",
+    "title": "PSD1",
     "file": "PSD1.pdf",
     "lang": "EN",
     "sizeKB": 948
   },
   {
-    "title": "RainStore Flat — brochure (EN)",
+    "title": "RainStoreFlat",
     "file": "RainStoreFlat.pdf",
     "lang": "EN",
     "sizeKB": 1515

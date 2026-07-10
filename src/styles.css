@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Satoshi Variable — self-hosted (Fontshare license), weights 300-900 */
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/satoshi/Satoshi-Variable.woff2') format('woff2');
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
 /* ============================================================
    Brand tokens as CSS custom properties (mirror src/brand/tokens.js)
    ============================================================ */
@@ -18,6 +36,7 @@
 
   --bg-deep: var(--c-ink-950);
   --bg-base: var(--c-ink-900);
+  --bg-raised: #002038;
   --text-on-dark: #EAF1F8;
   --text-on-dark-muted: #9FB4CC;
 
@@ -68,9 +87,39 @@
 }
 .glass-dark:hover { border-color: rgba(198, 146, 20, 0.45); }
 
+/* Liquid glass — hero elements, tag cards, secondary CTAs.
+   Wrapped in @layer components so Tailwind's utilities (e.g. `absolute`)
+   always win the cascade tie against this class's `position: relative`,
+   regardless of where in this file the class happens to be declared. */
+@layer components {
+  .liquid-glass {
+    background: rgba(0, 0, 0, 0.4);
+    background-blend-mode: luminosity;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  .liquid-glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.4px;
+    background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 20%,
+      rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 60%,
+      rgba(255, 255, 255, 0.1) 80%, rgba(255, 255, 255, 0.3) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+}
+
 /* Hairline gold/aqua divider */
 .rule-gold { height: 2px; background: linear-gradient(90deg, var(--c-gold-500), var(--c-gold-400), var(--c-gold-500)); }
-.rule-aqua { height: 2px; background: linear-gradient(90deg, var(--c-aqua-400), var(--c-aqua-300), var(--c-aqua-400)); }
 
 /* Gold ghost button for dark hero */
 .btn-gold {
@@ -99,12 +148,13 @@
 .card-spotlight {
   position: relative;
   border-radius: 1rem;
-  background: rgba(255,255,255,0.75);
-  backdrop-filter: blur(16px) saturate(180%);
+  background: rgba(0, 17, 31, 0.72);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
   overflow: hidden;
   transform-style: preserve-3d;
   transition: box-shadow .4s ease, transform .25s ease;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.13);
 }
 .card-spotlight::before {
   content: '';
@@ -121,16 +171,69 @@
     perspective(900px)
     rotateX(calc((0.5 - var(--pointer-yp, 0.5)) * 6deg))
     rotateY(calc((var(--pointer-xp, 0.5) - 0.5) * 8deg));
-  box-shadow: 0 20px 40px rgba(0, 58, 112, 0.12),
-              0 0 0 1px rgba(198, 146, 20, 0.08),
-              inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  box-shadow: 0 20px 60px rgba(0, 17, 31, 0.55),
+              0 0 0 1px rgba(198, 146, 20, 0.25),
+              inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .parallax { transform: none !important; }
-  .animate-shimmer { animation: none !important; }
   .infinite-scroll { animation: none !important; }
   .card-spotlight:hover { transform: none !important; }
+  .product-spotlight:hover { transform: none !important; }
+}
+
+/* ============================================================
+   Quiet surfaces — solid, no blur. Homepage content cards (KPI,
+   downloads, contact, product showcase) so glass stays a hero-only
+   move instead of the default for every card on the page.
+   ============================================================ */
+
+/* Flat content card — KPI stats, download rows, contact form panel */
+.surface-card {
+  background: var(--bg-raised);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 17, 31, 0.30);
+  transition: border-color .25s ease;
+}
+.surface-card:hover { border-color: rgba(198, 146, 20, 0.35); }
+
+/* Product showcase card — solid surface, pointer-tracked spotlight, no backdrop-filter */
+.product-spotlight {
+  position: relative;
+  border-radius: 1.25rem;
+  background: var(--bg-raised);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: box-shadow .4s ease, transform .25s ease, border-color .3s ease;
+}
+.product-spotlight::before {
+  content: '';
+  position: absolute;
+  inset: -200%;
+  background: radial-gradient(220px circle at var(--pointer-x, 50%) var(--pointer-y, 50%), var(--spotlight-color, rgba(198, 146, 20, 0.20)), rgba(198, 146, 20, 0) 60%);
+  pointer-events: none;
+  transition: opacity .2s ease;
+  opacity: 0;
+}
+.product-spotlight:hover::before { opacity: 1; }
+.product-spotlight:hover {
+  border-color: rgba(198, 146, 20, 0.35);
+  transform:
+    perspective(900px)
+    rotateX(calc((0.5 - var(--pointer-yp, 0.5)) * 6deg))
+    rotateY(calc((var(--pointer-xp, 0.5) - 0.5) * 8deg));
+  box-shadow: 0 20px 60px rgba(0, 17, 31, 0.5),
+              0 0 0 1px rgba(198, 146, 20, 0.2),
+              inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+.product-spotlight--aqua {
+  background: radial-gradient(130% 90% at 12% -10%, rgba(43, 184, 214, 0.16), transparent 55%), var(--bg-raised);
+  --spotlight-color: rgba(43, 184, 214, 0.22);
+}
+.product-spotlight--gold {
+  background: radial-gradient(130% 90% at 88% -10%, rgba(198, 146, 20, 0.14), transparent 55%), var(--bg-raised);
 }
 
 /* Infinite scroll animation */
@@ -197,141 +300,6 @@
 }
 .card-border:hover::after { opacity: 1; }
 
-/* Ambient brand background */
-@keyframes brand-float {
-  0% {
-    transform: translate3d(0, 0, 0);
-    opacity: 0.7;
-  }
-  50% {
-    transform: translate3d(0, -20px, 0);
-    opacity: 0.9;
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-    opacity: 0.7;
-  }
-}
-
-.brand-ambient {
-  background:
-    radial-gradient(45% 40% at 12% 18%, rgba(0, 58, 112, 0.28), transparent 60%),
-    radial-gradient(40% 35% at 88% 22%, rgba(198, 146, 20, 0.30), transparent 55%),
-    radial-gradient(55% 45% at 70% 85%, rgba(0, 58, 112, 0.22), transparent 60%);
-  animation: brand-float 10s ease-in-out infinite;
-  filter: saturate(135%) blur(0.5px);
-}
-
-/* Section-specific backgrounds */
-.section-gradient-light {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 247, 250, 0.98) 100%);
-}
-
-.section-gradient-brand {
-  background:
-    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(0, 58, 112, 0.06), transparent),
-    radial-gradient(ellipse 60% 40% at 50% 100%, rgba(198, 146, 20, 0.05), transparent);
-}
-
-/* Logo color border for KPIs */
-@keyframes logo-border-spin {
-  to {
-    transform: rotate(1turn);
-  }
-}
-
-.kpi-border {
-  position: relative;
-  border-radius: 1.25rem;
-  overflow: hidden;
-  padding: 1px;
-  background: linear-gradient(120deg, rgba(0, 58, 112, 0.25), rgba(198, 146, 20, 0.25));
-}
-
-.kpi-border::before {
-  content: '';
-  position: absolute;
-  inset: -150%;
-  background: conic-gradient(
-    rgba(0, 58, 112, 0.0),
-    rgba(0, 58, 112, 0.55),
-    rgba(198, 146, 20, 0.65),
-    rgba(0, 58, 112, 0.0)
-  );
-  animation: logo-border-spin 6s linear infinite;
-  opacity: 0.7;
-}
-
-.kpi-border::after {
-  content: '';
-  position: absolute;
-  inset: 2px;
-  border-radius: 1.1rem;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(8px);
-}
-
-.kpi-card {
-  position: relative;
-  z-index: 1;
-  border-radius: 1.1rem;
-}
-
-.kpi-border:hover::before {
-  opacity: 1;
-}
-
-/* Contact glow card */
-@keyframes glow-orbit {
-  to {
-    transform: rotate(1turn);
-  }
-}
-
-.glow-wrap {
-  position: relative;
-  border-radius: 1.75rem;
-  padding: 2px;
-  display: inline-block;
-  width: 100%;
-  overflow: hidden;
-}
-
-.glow-wrap::before {
-  content: '';
-  position: absolute;
-  inset: -30%;
-  background: conic-gradient(
-    rgba(0, 58, 112, 0),
-    rgba(0, 58, 112, 0.45),
-    rgba(198, 146, 20, 0.65),
-    rgba(0, 58, 112, 0)
-  );
-  animation: glow-orbit 8s linear infinite;
-  filter: blur(8px);
-  opacity: 0.55;
-  pointer-events: none;
-}
-
-.glow-wrap::after {
-  content: '';
-  position: absolute;
-  inset: 2px;
-  border-radius: 1.6rem;
-  background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(12px);
-}
-
-.glow-card {
-  position: relative;
-  z-index: 1;
-  border-radius: 1.6rem;
-}
-
-.glow-wrap:hover::before {
-  opacity: 0.85;
-}
-
 /* Premium buttons */
 .btn-primary {
   @apply px-8 py-4 rounded-3xl bg-gradient-to-r from-kingspan-blue to-kingspan-blue/90 text-white font-semibold shadow-lg shadow-kingspan-blue/20;
@@ -364,6 +332,42 @@
 }
 .nav-pill:hover { background: color-mix(in srgb, currentColor 12%, transparent); border-color: color-mix(in srgb, currentColor 55%, transparent); }
 .nav-pill:focus-visible { outline: none; box-shadow: 0 0 0 2px color-mix(in srgb, currentColor 40%, transparent); }
+
+/* ============================================================
+   Hero cloud drift animation
+   ============================================================ */
+@keyframes cloud-drift {
+  from { transform: translateX(-120%) translateY(0px); }
+  to   { transform: translateX(120%) translateY(-20px); }
+}
+
+/* Skip paint/layout work once the hero scrolls fully out of view */
+.cloud-layer {
+  content-visibility: auto;
+  contain-intrinsic-size: 100% 100%;
+}
+
+.cloud {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center,
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(255, 255, 255, 0.10) 45%,
+    transparent 70%
+  );
+  filter: blur(55px);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cloud { animation: cloud-drift linear infinite; }
+}
+
+.cloud-1 { width: 900px;  height: 380px; top:  8%; animation-duration: 100s; animation-delay:   0s; }
+.cloud-2 { width: 650px;  height: 260px; top: 35%; animation-duration:  72s; animation-delay: -25s; }
+.cloud-3 { width: 780px;  height: 320px; top: 55%; animation-duration:  88s; animation-delay: -55s; }
+.cloud-4 { width: 500px;  height: 210px; top: 18%; animation-duration:  62s; animation-delay: -40s; }
+.cloud-5 { width: 1060px; height: 420px; top: 70%; animation-duration: 118s; animation-delay: -80s; }
 
 /* Header nav underline */
 .nav-link {

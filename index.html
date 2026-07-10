@@ -10,12 +10,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
   <meta name="description" content="Kingspan Biopuhastid – biopuhastid, vihmavee kogumine ja reoveelahendused Eestis.">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <!-- InAadress map script - load early for calculator page -->
-  <script type="text/javascript" src="https://inaadress.maaamet.ee/inaadress/js/inaadress.min.js?d=20220510"
-    async></script>
+  <link rel="preload" href="/fonts/satoshi/Satoshi-Variable.woff2" as="font" type="font/woff2" crossorigin>
   <!-- Server-side canonical tag - set immediately before React loads -->
   <script>
     (function () {
@@ -63,7 +58,7 @@
     </script>
 </head>
 
-<body class="bg-kingspan-cloud font-sans">
+<body class="bg-ink-950 font-sans">
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
 </body>

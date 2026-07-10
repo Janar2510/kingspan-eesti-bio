@@ -63,6 +63,20 @@ for (const route of ROUTES) {
   const page = await browser.newPage()
   await page.goto(`http://localhost:${PORT}${route}`, { waitUntil: 'networkidle0', timeout: 30000 })
   await page.waitForFunction(() => document.querySelector('#root')?.children.length > 0, { timeout: 15000 }).catch(() => {})
+
+  // Scroll through the full page so framer-motion whileInView reveals fire,
+  // then let timer-based fades (hero FadeIn/AnimatedHeading) finish settling.
+  await page.evaluate(async () => {
+    const step = window.innerHeight
+    const height = document.body.scrollHeight
+    for (let y = 0; y < height; y += step) {
+      window.scrollTo(0, y)
+      await new Promise((r) => setTimeout(r, 150))
+    }
+    window.scrollTo(0, 0)
+  })
+  await new Promise((r) => setTimeout(r, 2500))
+
   const html = await page.content()
   const outDir = route === '/' ? DIST : join(DIST, route)
   await mkdir(outDir, { recursive: true })

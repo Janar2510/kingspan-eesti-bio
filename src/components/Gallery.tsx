@@ -21,13 +21,37 @@ export default function Gallery({ folder, height = 220, fullWidth = false }: Gal
   }
 
   if (fullWidth) {
-    // Display the first image to fill the entire container
+    // Prefer the generated `.opt.webp` (native-resolution, ~85-95% smaller —
+    // see scripts/optimize-images.mjs) over the full-resolution .png/.jpg,
+    // and prefer both of those over the pre-existing .webp thumbnails that
+    // ship alongside them — those are ~800px derivatives and blur badly
+    // when stretched full-card-width. Skip standalone logo/watermark assets.
+    const isOptimized = (f: string) => /\.opt\.webp$/i.test(f)
+    const isRaster = (f: string) => /\.(png|jpe?g)$/i.test(f)
+    const isLogo = (f: string) => /logo/i.test(f)
+    const hero =
+      images.find((f) => isOptimized(f) && !isLogo(f)) ??
+      images.find((f) => isRaster(f) && !isLogo(f)) ??
+      images.find((f) => isRaster(f)) ??
+      images[0]
+    const heroSrc = `/images/${folder}/${hero}`
     return (
-      <div className="w-full h-[320px] sm:h-[420px] md:h-[520px] overflow-hidden rounded-2xl">
+      <div className="relative w-full aspect-video overflow-hidden rounded-2xl bg-[var(--bg-raised)]">
+        {/* Blurred fill so the frame never looks empty around a contained image */}
         <img
-          src={`/images/${folder}/${images[0]}`}
+          src={heroSrc}
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl opacity-40"
+        />
+        {/* object-contain: the whole product photo stays visible, never cropped */}
+        <img
+          src={heroSrc}
           alt={folder}
-          className="block w-full h-full object-cover rounded-2xl"
+          loading="lazy"
+          decoding="async"
+          className="relative block w-full h-full object-contain"
         />
       </div>
     )

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Languages, Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -6,16 +6,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 export default function Header() {
   const { i18n, t } = useTranslation()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
   const [productsOpen, setProductsOpen] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-    }
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  const productsMenuId = 'products-submenu'
 
   const toggle = () => {
     i18n.changeLanguage(i18n.language === 'ee' ? 'en' : 'ee')
@@ -26,21 +18,14 @@ export default function Header() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className={`sticky top-0 z-header transition-colors duration-300 ${scrolled ? 'text-kingspan-navy' : 'text-white'}`}
-      style={{
-        background: scrolled ? 'rgba(255, 255, 255, 0.72)' : 'rgba(0, 17, 31, 0.38)',
-        backdropFilter: 'blur(20px) saturate(160%)',
-        WebkitBackdropFilter: 'blur(20px) saturate(160%)',
-        borderBottom: scrolled ? '1px solid rgba(0,58,112,0.10)' : '1px solid rgba(255,255,255,0.08)',
-        boxShadow: scrolled ? '0 8px 32px 0 rgba(0, 17, 31, 0.10)' : 'none',
-      }}
+      className="fixed top-0 left-0 right-0 z-header px-4 md:px-12 lg:px-16 pt-4 md:pt-6 text-white"
     >
-      <div className="max-w-6xl mx-auto px-4 md:px-6 h-20 md:h-28 flex items-center justify-between">
-        <a href="/" className="flex items-center h-full gap-2 sm:gap-3 mr-3 sm:mr-4 md:mr-6 flex-shrink-0 ml-0 md:ml-[-20px] lg:ml-[-60px]">
+      <div className="liquid-glass overflow-visible rounded-xl px-4 py-2 md:py-3 flex items-center justify-between max-w-6xl mx-auto">
+        <a href="/" className="flex items-center h-full gap-2 sm:gap-3 mr-3 sm:mr-4 md:mr-6 flex-shrink-0">
           <img
             src="/Kingspan%20Logo.jpeg"
             alt="Kingspan Biopuhastid"
-            className="h-12 sm:h-14 md:h-16 w-auto object-contain block"
+            className="h-9 sm:h-10 md:h-12 w-auto object-contain block"
             onError={(e) => {
               e.currentTarget.style.display = 'none'
             }}
@@ -48,7 +33,7 @@ export default function Header() {
           <img
             src="/images/rainstore/Logo.png"
             alt="Kingspan Biopuhastid logo"
-            className="h-10 sm:h-12 md:h-14 w-auto object-contain block"
+            className="h-8 sm:h-9 md:h-10 w-auto object-contain block"
           />
         </a>
         <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-sm">
@@ -58,12 +43,20 @@ export default function Header() {
             onMouseLeave={() => setProductsOpen(false)}
           >
             <motion.button
-              className="inline-flex items-center gap-2 hover:text-kingspan-blue transition-colors nav-link"
+              className="inline-flex items-center gap-2 hover:text-aqua-300 transition-colors nav-link"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               type="button"
+              aria-haspopup="true"
+              aria-expanded={productsOpen}
+              aria-controls={productsMenuId}
+              onClick={() => setProductsOpen((v) => !v)}
+              onFocus={() => setProductsOpen(true)}
+              onKeyDown={(e) => {
+                if (e.key === 'Escape') setProductsOpen(false)
+              }}
             >
-              Tooted
+              {t('navigation.products')}
               <motion.span
                 animate={{ rotate: productsOpen ? 180 : 0 }}
                 transition={{ duration: 0.2 }}
@@ -74,19 +67,25 @@ export default function Header() {
             <AnimatePresence>
               {productsOpen && (
                 <motion.div
+                  id={productsMenuId}
+                  role="menu"
                   initial={{ opacity: 0, y: 8, scale: 0.98 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 6, scale: 0.98 }}
                   transition={{ duration: 0.2, ease: 'easeOut' }}
-                  className="absolute left-0 top-full mt-3 w-56 rounded-2xl border border-white/40 bg-white/70 shadow-lg backdrop-blur-xl"
+                  onFocus={() => setProductsOpen(true)}
+                  onBlur={(e) => {
+                    if (!e.currentTarget.contains(e.relatedTarget as Node)) setProductsOpen(false)
+                  }}
+                  className="liquid-glass absolute left-0 top-full mt-3 w-56 rounded-2xl border border-white/20 shadow-lg"
                 >
                   <div className="flex flex-col p-2 text-sm">
-                    <a href="/#biodisc" className="rounded-xl px-3 py-2 hover:bg-white/70 nav-link">BioDisc</a>
-                    <a href="/#bioficient" className="rounded-xl px-3 py-2 hover:bg-white/70 nav-link">BioFicient</a>
-                    <a href="/#bioair" className="rounded-xl px-3 py-2 hover:bg-white/70 nav-link">BioAir</a>
-                    <a href="/#biotec" className="rounded-xl px-3 py-2 hover:bg-white/70 nav-link">BioTec Flo</a>
-                    <a href="/#rainstore" className="rounded-xl px-3 py-2 hover:bg-white/70 nav-link">RainStore</a>
-                    <a href="/#psd1" className="rounded-xl px-3 py-2 hover:bg-white/70 nav-link">PSD1</a>
+                    <a href="/#biodisc" role="menuitem" className="rounded-xl px-3 py-2 hover:bg-white/10 nav-link">BioDisc</a>
+                    <a href="/#bioficient" role="menuitem" className="rounded-xl px-3 py-2 hover:bg-white/10 nav-link">BioFicient</a>
+                    <a href="/#bioair" role="menuitem" className="rounded-xl px-3 py-2 hover:bg-white/10 nav-link">BioAir</a>
+                    <a href="/#biotec" role="menuitem" className="rounded-xl px-3 py-2 hover:bg-white/10 nav-link">BioTec Flo</a>
+                    <a href="/#rainstore" role="menuitem" className="rounded-xl px-3 py-2 hover:bg-white/10 nav-link">RainStore</a>
+                    <a href="/#psd1" role="menuitem" className="rounded-xl px-3 py-2 hover:bg-white/10 nav-link">PSD1</a>
                   </div>
                 </motion.div>
               )}
@@ -94,7 +93,7 @@ export default function Header() {
           </div>
           <motion.a
             href="/#downloads"
-            className="hover:text-kingspan-blue transition-colors nav-link"
+            className="hover:text-aqua-300 transition-colors nav-link"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -109,8 +108,16 @@ export default function Header() {
             Hajaasustus 2026
           </motion.a>
           <motion.a
+            href="/blog"
+            className="hover:text-aqua-300 transition-colors nav-link"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Blogi
+          </motion.a>
+          <motion.a
             href="/#contact"
-            className="hover:text-kingspan-blue transition-colors nav-link"
+            className="hover:text-aqua-300 transition-colors nav-link"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -147,7 +154,7 @@ export default function Header() {
         <div className="lg:hidden flex items-center gap-2">
           <motion.button
             onClick={toggle}
-            className="nav-pill inline-flex items-center gap-2"
+            className="nav-pill inline-flex items-center gap-2 min-h-[44px] min-w-[44px] justify-center"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -156,7 +163,7 @@ export default function Header() {
           </motion.button>
           <motion.button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="nav-pill p-2"
+            className="nav-pill p-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
             aria-label="Toggle menu"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -174,19 +181,14 @@ export default function Header() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="lg:hidden border-t border-white/20 overflow-hidden text-kingspan-navy"
-            style={{
-              background: 'rgba(255, 255, 255, 0.92)',
-              backdropFilter: 'blur(20px) saturate(180%)',
-              WebkitBackdropFilter: 'blur(20px) saturate(180%)',
-            }}
+            className="liquid-glass lg:hidden mx-4 mt-3 rounded-xl overflow-hidden text-white"
           >
-            <nav className="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-3">
-              <div className="text-xs uppercase tracking-wide text-kingspan-slate/70">Tooted</div>
+            <nav className="px-4 py-4 flex flex-col gap-3">
+              <div className="text-xs uppercase tracking-wide text-white/50">{t('navigation.products')}</div>
               <motion.a
                 href="/#biodisc"
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-2 hover:text-kingspan-blue transition-colors"
+                className="py-2 hover:text-aqua-300 transition-colors"
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.1 }}
@@ -196,7 +198,7 @@ export default function Header() {
               <motion.a
                 href="/#bioficient"
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-2 hover:text-kingspan-blue transition-colors"
+                className="py-2 hover:text-aqua-300 transition-colors"
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.15 }}
@@ -206,7 +208,7 @@ export default function Header() {
               <motion.a
                 href="/#bioair"
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-2 hover:text-kingspan-blue transition-colors"
+                className="py-2 hover:text-aqua-300 transition-colors"
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.2 }}
@@ -216,7 +218,7 @@ export default function Header() {
               <motion.a
                 href="/#biotec"
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-2 hover:text-kingspan-blue transition-colors"
+                className="py-2 hover:text-aqua-300 transition-colors"
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.25 }}
@@ -226,7 +228,7 @@ export default function Header() {
               <motion.a
                 href="/#rainstore"
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-2 hover:text-kingspan-blue transition-colors"
+                className="py-2 hover:text-aqua-300 transition-colors"
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.3 }}
@@ -236,7 +238,7 @@ export default function Header() {
               <motion.a
                 href="/#psd1"
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-2 hover:text-kingspan-blue transition-colors"
+                className="py-2 hover:text-aqua-300 transition-colors"
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.35 }}
@@ -246,7 +248,7 @@ export default function Header() {
               <motion.a
                 href="/#downloads"
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-2 hover:text-kingspan-blue transition-colors"
+                className="py-2 hover:text-aqua-300 transition-colors"
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.4 }}
@@ -256,7 +258,7 @@ export default function Header() {
               <motion.a
                 href="/hajaasustuse-programm"
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-2 hover:text-kingspan-blue transition-colors text-kingspan-blue font-medium"
+                className="py-2 hover:text-aqua-300 transition-colors text-gold-400 font-medium"
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.42 }}
@@ -264,9 +266,19 @@ export default function Header() {
                 Hajaasustus 2026
               </motion.a>
               <motion.a
+                href="/blog"
+                onClick={() => setMobileMenuOpen(false)}
+                className="py-2 hover:text-aqua-300 transition-colors"
+                initial={{ x: -20, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.44 }}
+              >
+                Blogi
+              </motion.a>
+              <motion.a
                 href="/#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-2 hover:text-kingspan-blue transition-colors"
+                className="py-2 hover:text-aqua-300 transition-colors"
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.45 }}

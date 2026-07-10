@@ -131,8 +131,8 @@ export const semantic = {
  * ------------------------------------------------------------------ */
 
 export const fontFamily = {
-  sans: ['Inter', 'system-ui', 'sans-serif'],
-  display: ['Inter', 'system-ui', 'sans-serif'],
+  sans: ['Satoshi', 'system-ui', 'sans-serif'],
+  display: ['Satoshi', 'system-ui', 'sans-serif'],
 }
 
 /** Fluid type scale. Tailwind-shaped: [size, { lineHeight, letterSpacing }]. */
@@ -156,6 +156,7 @@ export const fontWeight = {
   medium: 500,
   semibold: 600,
   bold: 700,
+  black: 900,
 }
 
 /* ------------------------------------------------------------------ *

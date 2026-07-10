@@ -19,9 +19,9 @@ export default function DownloadsGrid() {
     <div>
       <div className="mb-8 md:mb-10">
         <span className="overline text-gold-500 tracking-[0.18em] uppercase text-xs font-medium block mb-3">
-          Brochures & Specs
+          {t('downloads.eyebrow')}
         </span>
-        <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#EAF1F8] tracking-tight">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#EAF1F8] tracking-tight">
           {t('downloads.title')}
         </h3>
         <p className="mt-2 text-sm sm:text-base text-[#9FB4CC] max-w-xl">
@@ -42,7 +42,7 @@ export default function DownloadsGrid() {
             key={file.title}
             variants={item}
             whileHover={{ y: -4 }}
-            className="glass-dark group flex items-center gap-3 p-4 cursor-pointer transition-colors"
+            className="surface-card group flex items-center gap-3 p-4 cursor-pointer transition-colors"
             href={`/downloads/${file.file}`}
             target="_blank"
             rel="noopener noreferrer"

@@ -7,8 +7,28 @@
       "maxFlow": 600,
       "pe": 4,
       "inletHeight": "500-800",
-      "priceExw": 1456.34,
-      "priceEndUser": 2437.91
+      "priceExw": 1558.40,
+      "priceEndUser": 2608.56
+    },
+    {
+      "productName": "BioAir 1, OUT",
+      "model": "1",
+      "material": "PE",
+      "maxFlow": 600,
+      "pe": 4,
+      "inletHeight": "500-800",
+      "priceExw": 1617.70,
+      "priceEndUser": 2707.62
+    },
+    {
+      "productName": "BioAir 1, OUT, IPS",
+      "model": "1",
+      "material": "PE",
+      "maxFlow": 600,
+      "pe": 4,
+      "inletHeight": "500-800",
+      "priceExw": 1946.80,
+      "priceEndUser": 3257.95
     },
     {
       "productName": "BioAir 2, INT",
@@ -17,8 +37,28 @@
       "maxFlow": 900,
       "pe": 6,
       "inletHeight": "500-800",
-      "priceExw": 1662.81,
-      "priceEndUser": 2783.54
+      "priceExw": 1779.33,
+      "priceEndUser": 2978.39
+    },
+    {
+      "productName": "BioAir 2, OUT",
+      "model": "2",
+      "material": "PE",
+      "maxFlow": 900,
+      "pe": 6,
+      "inletHeight": "500-800",
+      "priceExw": 1838.55,
+      "priceEndUser": 3077.44
+    },
+    {
+      "productName": "BioAir 2, OUT, IPS",
+      "model": "2",
+      "material": "PE",
+      "maxFlow": 900,
+      "pe": 6,
+      "inletHeight": "500-800",
+      "priceExw": 2164.57,
+      "priceEndUser": 3622.49
     },
     {
       "productName": "BioAir 3, INT",
@@ -27,48 +67,28 @@
       "maxFlow": 1350,
       "pe": 9,
       "inletHeight": "500-800",
-      "priceExw": 2101.55,
-      "priceEndUser": 3518.00
+      "priceExw": 2249.26,
+      "priceEndUser": 3764.26
     },
     {
-      "productName": "BioAir 5, OUT",
-      "model": "5",
-      "material": "GRP",
-      "maxFlow": 2250,
-      "pe": 15,
-      "inletHeight": "645-975",
-      "priceExw": 3564.03,
-      "priceEndUser": 5966.19
+      "productName": "BioAir 3, OUT",
+      "model": "3",
+      "material": "PE",
+      "maxFlow": 1350,
+      "pe": 9,
+      "inletHeight": "500-800",
+      "priceExw": 2308.43,
+      "priceEndUser": 3863.32
     },
     {
-      "productName": "BioAir 6, OUT",
-      "model": "6",
-      "material": "GRP",
-      "maxFlow": 3000,
-      "pe": 20,
-      "inletHeight": "500",
-      "priceExw": 4694.69,
-      "priceEndUser": 7858.92
-    },
-    {
-      "productName": "BioAir 7, OUT",
-      "model": "7",
-      "material": "GRP",
-      "maxFlow": 3750,
-      "pe": 25,
-      "inletHeight": "500",
-      "priceExw": 6292.36,
-      "priceEndUser": 10533.42
-    },
-    {
-      "productName": "BioAir 8, OUT",
-      "model": "8",
-      "material": "GRP",
-      "maxFlow": 5250,
-      "pe": 35,
-      "inletHeight": "500",
-      "priceExw": 7988.35,
-      "priceEndUser": 13372.50
+      "productName": "BioAir 3, OUT, IPS",
+      "model": "3",
+      "material": "PE",
+      "maxFlow": 1350,
+      "pe": 9,
+      "inletHeight": "500-800",
+      "priceExw": 2603.72,
+      "priceEndUser": 4358.61
     }
   ],
   "biodisc": [
@@ -79,18 +99,18 @@
       "maxFlow": 1200,
       "pe": 6,
       "inletHeight": "450, 750, 1000, 1250",
-      "priceExw": 3683.74,
-      "priceEndUser": 6166.57
+      "priceExw": 3867.93,
+      "priceEndUser": 6474.90
     },
     {
-      "productName": "BioDisc IPS BA",
+      "productName": "BioDisc BA, IPS",
       "model": "BA",
       "material": "GRP",
       "maxFlow": 1200,
       "pe": 6,
       "inletHeight": "450, 750, 1000, 1250",
-      "priceExw": 4215.39,
-      "priceEndUser": 7056.57
+      "priceExw": 4427.35,
+      "priceEndUser": 7409.39
     },
     {
       "productName": "BioDisc BB",
@@ -99,18 +119,38 @@
       "maxFlow": 2400,
       "pe": 12,
       "inletHeight": "450, 750, 1000, 1250",
-      "priceExw": 4353.04,
-      "priceEndUser": 7286.98
+      "priceExw": 4571.89,
+      "priceEndUser": 7651.33
     },
     {
-      "productName": "BioDisc IPS BB",
+      "productName": "BioDisc BB, IPS",
       "model": "BB",
       "material": "GRP",
       "maxFlow": 2400,
       "pe": 12,
       "inletHeight": "450, 750, 1000, 1250",
-      "priceExw": 4783.18,
-      "priceEndUser": 8007.04
+      "priceExw": 5023.53,
+      "priceEndUser": 8407.39
+    },
+    {
+      "productName": "BioDisc 5, OUT",
+      "model": "5",
+      "material": "GRP",
+      "maxFlow": 2250,
+      "pe": 15,
+      "inletHeight": "645-975",
+      "priceExw": 3742.53,
+      "priceEndUser": 6264.50
+    },
+    {
+      "productName": "BioDisc 5, OUT, IPS",
+      "model": "5",
+      "material": "GRP",
+      "maxFlow": 2250,
+      "pe": 15,
+      "inletHeight": "645-975",
+      "priceExw": 4129.96,
+      "priceEndUser": 6912.55
     },
     {
       "productName": "BioDisc BC",
@@ -119,8 +159,8 @@
       "maxFlow": 3600,
       "pe": 18,
       "inletHeight": "600",
-      "priceExw": 8529.10,
-      "priceEndUser": 14277.72
+      "priceExw": 8956.27,
+      "priceEndUser": 14991.60
     },
     {
       "productName": "BioDisc BD",
@@ -129,20 +169,20 @@
       "maxFlow": 5000,
       "pe": 25,
       "inletHeight": "600",
-      "priceExw": 11060.80,
-      "priceEndUser": 18515.77
+      "priceExw": 11614.74,
+      "priceEndUser": 19441.56
     }
   ],
   "bioficient": [
     {
-      "productName": "BioFicient A, INT",
+      "productName": "BioFicient A, OUT",
       "model": "A",
       "material": "PE",
       "maxFlow": 600,
       "pe": 4,
       "inletHeight": "500-800",
-      "priceExw": 1940.80,
-      "priceEndUser": 3248.90
+      "priceExw": 2128.26,
+      "priceEndUser": 3562.62
     },
     {
       "productName": "BioFicient 1, INT",
@@ -151,8 +191,28 @@
       "maxFlow": 900,
       "pe": 6,
       "inletHeight": "500-800",
-      "priceExw": 2217.81,
-      "priceEndUser": 3712.62
+      "priceExw": 2373.06,
+      "priceEndUser": 3972.50
+    },
+    {
+      "productName": "BioFicient 1, OUT",
+      "model": "1",
+      "material": "PE",
+      "maxFlow": 900,
+      "pe": 6,
+      "inletHeight": "500-800",
+      "priceExw": 2476.15,
+      "priceEndUser": 4145.08
+    },
+    {
+      "productName": "BioFicient 1, OUT, IPS",
+      "model": "1 IPS",
+      "material": "PE",
+      "maxFlow": 900,
+      "pe": 6,
+      "inletHeight": "500-800",
+      "priceExw": 2884.86,
+      "priceEndUser": 4829.25
     },
     {
       "productName": "BioFicient 3",
@@ -161,8 +221,8 @@
       "maxFlow": 1500,
       "pe": 10,
       "inletHeight": "500",
-      "priceExw": 3441.14,
-      "priceEndUser": 5760.46
+      "priceExw": 3613.19,
+      "priceEndUser": 6048.49
     },
     {
       "productName": "BioFicient 4",
@@ -171,8 +231,8 @@
       "maxFlow": 2250,
       "pe": 15,
       "inletHeight": "500",
-      "priceExw": 5038.81,
-      "priceEndUser": 8434.96
+      "priceExw": 5292.54,
+      "priceEndUser": 8856.71
     },
     {
       "productName": "BioFicient 5",
@@ -181,20 +241,20 @@
       "maxFlow": 3000,
       "pe": 20,
       "inletHeight": "500",
-      "priceExw": 6341.52,
-      "priceEndUser": 10615.71
+      "priceExw": 6659.08,
+      "priceEndUser": 11146.49
     }
   ],
   "biotec": [
     {
-      "productName": "BioTec Flo 6 G",
-      "model": "6 G",
+      "productName": "BioTec Flo 6 R, IPS",
+      "model": "6 R",
       "material": "PE",
       "maxFlow": 2800,
       "pe": 6,
       "inletHeight": "500, 1000",
-      "priceExw": 3348.45,
-      "priceEndUser": 5605.31
+      "priceExw": 3997.49,
+      "priceEndUser": 6689.79
     },
     {
       "productName": "BioTec Flo 8 G",
@@ -203,8 +263,18 @@
       "maxFlow": 3800,
       "pe": 8,
       "inletHeight": "500, 1000",
-      "priceExw": 3734.85,
-      "priceEndUser": 6252.14
+      "priceExw": 3997.49,
+      "priceEndUser": 6689.79
+    },
+    {
+      "productName": "BioTec Flo 8 R, IPS",
+      "model": "8 R",
+      "material": "PE",
+      "maxFlow": 3800,
+      "pe": 8,
+      "inletHeight": "500, 1000",
+      "priceExw": 4410.93,
+      "priceEndUser": 7381.90
     }
   ]
 }

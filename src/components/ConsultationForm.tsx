@@ -47,14 +47,14 @@ export default function ConsultationForm() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, ease: [0.65, 0, 0.35, 1] as [number, number, number, number] }}
-      className="glass-dark rounded-4xl p-6 sm:p-8 md:p-10"
+      className="surface-card rounded-4xl p-6 sm:p-8 md:p-10"
     >
       {/* Header */}
       <div className="mb-6 md:mb-8">
         <span className="block text-xs font-medium tracking-[0.18em] uppercase text-gold-500 mb-3">
-          Konsultatsioon
+          {t('form.eyebrow')}
         </span>
-        <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#EAF1F8] tracking-tight">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#EAF1F8] tracking-tight">
           {t('form.title')}
         </h3>
         <div className="mt-3 rule-gold w-10 rounded-full" />

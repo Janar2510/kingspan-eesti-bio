@@ -62,6 +62,24 @@
         "value": "rgba(0, 17, 31, 0.37)",
         "reason": "glass shadow, in tokens.js boxShadow.glass",
         "createdAt": "2026-06-30T23:58:09.231Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(0, 17, 31, 0.72)",
+        "reason": "card-spotlight dark navy glass — Aqua-Tech token",
+        "createdAt": "2026-07-01T07:20:53.376Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(0, 17, 31, 0.55)",
+        "reason": "card-spotlight hover shadow — Aqua-Tech token",
+        "createdAt": "2026-07-01T07:20:56.110Z"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(0, 0, 0, 0.4)",
+        "reason": "liquid-glass spec color — user-requested VEX reference implementation",
+        "createdAt": "2026-07-01T08:44:56.740Z"
       }
     ]
   }

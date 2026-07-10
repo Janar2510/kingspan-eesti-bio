@@ -2,23 +2,20 @@ import { useTranslation } from 'react-i18next'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import SEOHead from '../components/SEOHead'
+import VideoFadeBackground from '../components/motion/VideoFadeBackground'
 
 export default function About() {
   const { t } = useTranslation()
 
   return (
-    <div className="text-kingspan-navy">
+    <div>
       <SEOHead />
       <Header />
       
-      {/* Hero Section with Mountains */}
+      {/* Hero Section — looping fade-crossfaded video background */}
       <section className="relative min-h-[100svh] w-full overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src="/About section/About page 2.jpg" 
-            alt="Mountains" 
-            className="w-full h-full object-cover"
-          />
+          <VideoFadeBackground src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260520_133010_cb9c806d-bc9d-47f1-ac4c-b1759134ec8b.mp4" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
@@ -41,14 +38,14 @@ export default function About() {
       </section>
 
       {/* Main Content */}
-      <main className="bg-kingspan-cloud max-w-full px-4 md:px-6 py-8 md:py-12 lg:py-16">
+      <main className="surface-base max-w-full px-4 md:px-6 py-8 md:py-12 lg:py-16">
         <div className="max-w-6xl mx-auto space-y-12 md:space-y-16">
         {/* Opening Text */}
         <section className="space-y-4 md:space-y-6">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-kingspan-blue">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#EAF1F8]">
             {t('about.section1.title')}
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-kingspan-slate leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-[#9FB4CC] leading-relaxed">
             {t('about.section1.content')}
           </p>
         </section>
@@ -63,10 +60,10 @@ export default function About() {
             />
           </div>
           <div className="space-y-4 flex flex-col justify-center order-1 md:order-2">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-kingspan-blue">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#EAF1F8]">
               {t('about.section2.title')}
             </h3>
-            <p className="text-base sm:text-lg text-kingspan-slate leading-relaxed">
+            <p className="text-base sm:text-lg text-[#9FB4CC] leading-relaxed">
               {t('about.section2.content')}
             </p>
           </div>

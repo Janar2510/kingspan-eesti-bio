@@ -1,9 +1,10 @@
 {
   "hero": {
-    "title": "Kingspan kvaliteetsed veepuhastussüsteemid Eestis",
+    "title": "Kingspan kvaliteetsed\nveepuhastussüsteemid Eestis",
     "sub": "Kingspan Water pakub innovaatilisi biopuhastussüsteeme, mis on vaiksed, energiasäästlikud ja keskkonnasõbralikud.",
     "ctaPrimary": "Võta ühendust",
-    "ctaSecondary": "Laadi alla"
+    "ctaSecondary": "Laadi alla",
+    "ctaProducts": "Tutvu toodetega"
   },
   "meta": {
     "home": {
@@ -42,9 +43,17 @@
     "rainstore_desc": "Vihmavee kogumissüsteem, mis võimaldab säästa kuni 50% vett. Madal profiil ja komplektid.",
     "psd1_title": "PSD1",
     "psd1_desc": "Teleskoopiline pumbajaam A15 luugiga ja Pedrollo pump.",
-    "more_products_title": "Veel tooteid"
+    "more_products_title": "Veel tooteid",
+    "cta_more": "Uuri lähemalt",
+    "biodisc_pills": ["Vaikne", "Lõhnavaba", "RBC"],
+    "bioficient_pills": ["Fluidiseeritud voodi", "Madal energiakulu", "Automatiseeritud"],
+    "bioair_pills": ["Aktiveeritud muda", "97,5% BOD5", "IPS (valikuline)"],
+    "biotec_pills": ["Võrgust sõltumatu", "Elektrivajadus puudub", "Raskusjõud/rõhk"],
+    "rainstore_pills": ["Kuni 50% kokkuhoidu", "Madal profiil", "Komplektid"],
+    "psd1_pills": ["Teleskoopiline", "A15 luuk", "Pedrollo"]
   },
   "form": {
+    "eyebrow": "Konsultatsioon",
     "title": "Võta meiega ühendust",
     "name": "Nimi",
     "email": "E-post",
@@ -64,15 +73,42 @@
       "high": "Kõrge põhjavesi"
     }
   },
+  "trust": {
+    "statement": "Üle 15 aasta oleme aidanud Eesti kodudel puhastada reovett loodust säästvalt — sertifitseeritud süsteemid, paigaldus ja hooldus ühest kohast.",
+    "cert": "Sertifitseeritud EN 12566-3 järgi",
+    "installs": "500+ paigaldust üle Eesti",
+    "gallery_label": "Paigaldiste galerii",
+    "gallery_alt": "Kingspan biopuhasti paigaldus Eestis"
+  },
+  "process": {
+    "title": "Kuidas see käib",
+    "sub": "Neli sammu konsultatsioonist töötava süsteemini.",
+    "step1": { "title": "Konsultatsioon", "desc": "Räägime läbi sinu vajadused, asukoha ja põhjavee eripärad. Tasuta ja kohustusteta." },
+    "step2": { "title": "Sobiv lahendus", "desc": "Kalkulaator ja meie insenerid valivad õige süsteemi tüübi ja suuruse." },
+    "step3": { "title": "Paigaldus", "desc": "Sertifitseeritud partnerid paigaldavad süsteemi kiirelt ja korrektselt." },
+    "step4": { "title": "Hooldus", "desc": "Aastaringne tugi, varuosad ja hooldusleping — süsteem töötab aastakümneid." }
+  },
   "downloads": {
+    "eyebrow": "Brošüürid ja spetsifikatsioonid",
     "title": "Materjalid",
     "note": "Laadige alla meie tooteinfolehed ja brošüürid."
   },
+  "finale": {
+    "title": "Küsi tasuta konsultatsiooni",
+    "sub": "Vastame ühe tööpäeva jooksul. Aitame valida õige süsteemi ja koostame hinnapakkumise.",
+    "cta": "Täida vorm",
+    "call": "Või helista"
+  },
   "footer": {
     "rights": "© 2024 Biopuhastid Kingspan. Kõik õigused kaitstud.",
-    "privacy": "Privaatsustingimused"
+    "privacy": "Privaatsustingimused",
+    "products": "Tooted",
+    "pages": "Lehed",
+    "contact": "Kontakt",
+    "tagline": "Kingspan sertifitseeritud biopuhastite ametlik edasimüüja Eestis."
   },
   "navigation": {
+    "products": "Tooted",
     "downloads": "Materjalid",
     "contact": "Kontakt",
     "privacy": "Privaatsustingimused",
@@ -82,7 +118,7 @@
   "about": {
     "hero": {
       "title": "Kes me oleme",
-      "subtitle": "Oleme ametlikud Kingspan biopuhastite edasimüüjad"
+      "subtitle": "Kingspan Wateri ametlik esindaja Eestis — üleilmne kogemus, kohalik hoolitsus"
     },
     "section1": {
       "title": "Veepuhastuse ja energialahendused",
@@ -96,12 +132,12 @@
   "privacy": {
     "title": "Privaatsustingimused",
     "updated": "Uuendatud: november 2024",
-    "intro": "Käesolevad tingimused selgitavad, kuidas Kingspan Eesti BIO kogub, kasutab ja kaitseb isikuandmeid, mida saame kodulehe, kontaktivormide ja seotud teenuste kaudu.",
+    "intro": "Käesolevad tingimused selgitavad, kuidas Biopuhastid kogub, kasutab ja kaitseb isikuandmeid, mida saame kodulehe, kontaktivormide ja seotud teenuste kaudu.",
     "back": "Tagasi avalehele",
     "sections": {
       "overview": {
         "title": "1. Kes me oleme",
-        "body": "Kingspan Eesti BIO haldab seda veebilehte, et tutvustada reoveelahendusi ja võtta vastu päringuid. Oleme isikuandmete vastutav töötleja kogu siin saidil kogutud info osas."
+        "body": "Biopuhastid haldab seda veebilehte, et tutvustada reoveelahendusi ja võtta vastu päringuid. Oleme isikuandmete vastutav töötleja kogu siin saidil kogutud info osas."
       },
       "collection": {
         "title": "2. Milliseid andmeid kogume",

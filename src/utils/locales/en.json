@@ -1,9 +1,10 @@
 {
   "hero": {
-    "title": "Quality Treatment Systems in Estonia",
+    "title": "Quality Treatment\nSystems in Estonia",
     "sub": "Kingspan Eesti BIO offers innovative biological treatment systems that are quiet, energy-efficient, and environmentally friendly.",
     "ctaPrimary": "Get in touch",
-    "ctaSecondary": "Download"
+    "ctaSecondary": "Download",
+    "ctaProducts": "Explore Products"
   },
   "meta": {
     "home": {
@@ -42,9 +43,17 @@
     "rainstore_desc": "Rainwater collection system that can save up to 50% of water. Low profile and kits available.",
     "psd1_title": "PSD1",
     "psd1_desc": "Telescopic pumping station with A15 hatch and Pedrollo pump.",
-    "more_products_title": "More Products"
+    "more_products_title": "More Products",
+    "cta_more": "Learn more",
+    "biodisc_pills": ["Quiet", "Odour-free", "RBC"],
+    "bioficient_pills": ["Fluidised bed", "Low energy", "Automated"],
+    "bioair_pills": ["Activated sludge", "97.5% BOD5", "IPS (opt.)"],
+    "biotec_pills": ["Off-grid", "No electricity", "Gravity/Pressure"],
+    "rainstore_pills": ["Save up to 50%", "Low-profile", "Kits"],
+    "psd1_pills": ["Telescopic", "A15 hatch", "Pedrollo"]
   },
   "form": {
+    "eyebrow": "Consultation",
     "title": "Get in touch",
     "name": "Name",
     "email": "Email",
@@ -64,15 +73,42 @@
       "high": "High groundwater"
     }
   },
+  "trust": {
+    "statement": "For over 15 years we have helped Estonian homes treat wastewater responsibly — certified systems, installation and service from a single partner.",
+    "cert": "Certified to EN 12566-3",
+    "installs": "500+ installations across Estonia",
+    "gallery_label": "Installation gallery",
+    "gallery_alt": "Kingspan wastewater treatment plant installation in Estonia"
+  },
+  "process": {
+    "title": "How it works",
+    "sub": "Four steps from consultation to a working system.",
+    "step1": { "title": "Consultation", "desc": "We talk through your needs, site and groundwater conditions. Free, no obligation." },
+    "step2": { "title": "Right system", "desc": "The calculator and our engineers pick the correct system type and size." },
+    "step3": { "title": "Installation", "desc": "Certified partners install the system quickly and correctly." },
+    "step4": { "title": "Maintenance", "desc": "Year-round support, spare parts and service plans — the system runs for decades." }
+  },
   "downloads": {
+    "eyebrow": "Brochures & Specs",
     "title": "Downloads",
     "note": "Download our product information sheets and brochures."
   },
+  "finale": {
+    "title": "Get a free consultation",
+    "sub": "We reply within one business day. We help you choose the right system and prepare a quote.",
+    "cta": "Fill in the form",
+    "call": "Or call us"
+  },
   "footer": {
     "rights": "© 2024 Kingspan Eesti BIO. All rights reserved.",
-    "privacy": "Privacy Policy"
+    "privacy": "Privacy Policy",
+    "products": "Products",
+    "pages": "Pages",
+    "contact": "Contact",
+    "tagline": "Official reseller of Kingspan certified wastewater treatment systems in Estonia."
   },
   "navigation": {
+    "products": "Products",
     "downloads": "Downloads",
     "contact": "Contact",
     "privacy": "Privacy Policy",
@@ -82,7 +118,7 @@
   "about": {
     "hero": {
       "title": "Who We Are",
-      "subtitle": "Kingspan Estonia Bio"
+      "subtitle": "Kingspan Water's official representative in Estonia — global expertise, local care"
     },
     "section1": {
       "title": "Pioneering Water & Energy Solutions",
@@ -96,12 +132,12 @@
   "privacy": {
     "title": "Privacy Policy",
     "updated": "Last updated: November 2024",
-    "intro": "This Privacy Policy explains how Kingspan Eesti BIO collects, uses, and protects personal information gathered through our website, contact forms, and related services.",
+    "intro": "This Privacy Policy explains how Biopuhastid collects, uses, and protects personal information gathered through our website, contact forms, and related services.",
     "back": "Back to site",
     "sections": {
       "overview": {
         "title": "1. Who we are",
-        "body": "Kingspan Eesti BIO operates this website to present our wastewater solutions and collect enquiries. We are the data controller responsible for handling personal information received through this site."
+        "body": "Biopuhastid operates this website to present our wastewater solutions and collect enquiries. We are the data controller responsible for handling personal information received through this site."
       },
       "collection": {
         "title": "2. Information we collect",
@@ -121,7 +157,7 @@
       },
       "contact": {
         "title": "6. Contact",
-        "body": "If you have questions about this policy or our data practices, contact Kingspan Eesti BIO at info@example.ee or call +372 5555 5555."
+        "body": "If you have questions about this policy or our data practices, contact Biopuhastid at info@example.ee or call +372 5555 5555."
       }
     }
   },
