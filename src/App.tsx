@@ -117,6 +117,9 @@ export default function App() {
   const setVideoRef = (el: HTMLVideoElement | null) => {
     videoRef.current = el
     if (!el) return
+    // setAttribute sets the HTML attribute (needed by iOS Safari autoplay policy);
+    // el.muted = true only sets the JS property which iOS ignores for eligibility.
+    el.setAttribute('muted', '')
     el.muted = true
     el.play().catch(() => {})
   }
@@ -178,7 +181,7 @@ export default function App() {
               playsInline
               poster="/images/hero/hero-main.webp"
               onError={() => setVideoFailed(true)}
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover object-[center_30%] sm:object-center"
               aria-hidden="true"
             >
               <source src="/videos/hero-kenburns.mp4" type="video/mp4" />
