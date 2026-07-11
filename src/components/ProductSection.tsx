@@ -61,12 +61,12 @@ export default function ProductSection({ id, titleKey, descKey, pills = [], acce
       </video>
       <div className="absolute inset-0 bg-ink-950/55" aria-hidden="true" />
 
-      <div className="relative z-10 px-4 md:px-6 w-full h-full max-w-6xl mx-auto">
+      <div className="relative z-10 px-4 md:px-6 w-full lg:h-full max-w-6xl mx-auto">
         <div
           ref={ref}
-          className={`product-spotlight product-spotlight--${accent} p-4 sm:p-6 md:p-8 h-full flex flex-col`}
+          className={`product-spotlight product-spotlight--${accent} p-4 sm:p-6 md:p-8 flex flex-col lg:h-full`}
         >
-          <div className="flex flex-col h-full gap-4 md:gap-6">
+          <div className="flex flex-col gap-4 md:gap-6 lg:h-full">
             <div className="flex-shrink-0">
               <motion.h2
                 initial={{ opacity: 0, x: -16 }}
@@ -112,7 +112,7 @@ export default function ProductSection({ id, titleKey, descKey, pills = [], acce
               whileInView={reduce ? { opacity: 1 } : { clipPath: 'inset(0 0 0% 0 round 1rem)' }}
               viewport={{ once: true, amount: 0.25 }}
               transition={{ duration: 0.9, ease: [0.65, 0, 0.35, 1] as [number, number, number, number] }}
-              className="flex-1 min-h-0 w-full overflow-hidden rounded-2xl"
+              className="min-h-[220px] sm:min-h-[300px] lg:flex-1 lg:min-h-0 w-full overflow-hidden rounded-2xl"
             >
               <Gallery folder={id} fullWidth={true} />
             </motion.div>

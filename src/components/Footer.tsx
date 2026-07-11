@@ -19,7 +19,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="surface-deep py-16 md:py-20 border-t border-white/5">
+    <footer className="site-footer surface-deep py-16 md:py-20 border-t border-white/5">
       <div className="max-w-6xl mx-auto px-4 md:px-6 text-sm text-[#9FB4CC]">
         <div className="rule-gold w-16 rounded-full mb-10" />
 

@@ -45,7 +45,7 @@ export default function FocusRailGallery() {
   }
 
   return (
-    <div className="w-full h-full flex flex-col overflow-hidden rounded-2xl">
+    <div className="w-full flex flex-col overflow-hidden rounded-2xl">
       <FocusRail
         items={items}
         autoPlay={true}

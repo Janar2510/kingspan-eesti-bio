@@ -142,10 +142,10 @@ export function FocusRail({
   };
 
   const visibleIndices = [-2, -1, 0, 1, 2];
-  const cardWidth = viewportWidth < 640 ? 260 : viewportWidth < 768 ? 340 : 500;
-  const cardHeight = viewportWidth < 640 ? 220 : viewportWidth < 768 ? 300 : 400;
-  const railHeight = viewportWidth < 640 ? 280 : viewportWidth < 768 ? 360 : 450;
-  const stageHeight = viewportWidth < 640 ? 420 : viewportWidth < 768 ? 520 : 650;
+  const cardWidth = viewportWidth < 400 ? 200 : viewportWidth < 640 ? 260 : viewportWidth < 768 ? 340 : 500;
+  const cardHeight = viewportWidth < 400 ? 160 : viewportWidth < 640 ? 220 : viewportWidth < 768 ? 300 : 400;
+  const railHeight = viewportWidth < 400 ? 210 : viewportWidth < 640 ? 280 : viewportWidth < 768 ? 360 : 450;
+  const stageHeight = viewportWidth < 400 ? 330 : viewportWidth < 640 ? 400 : viewportWidth < 768 ? 500 : 650;
 
   return (
     <div

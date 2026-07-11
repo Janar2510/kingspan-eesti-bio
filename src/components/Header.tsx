@@ -18,7 +18,7 @@ export default function Header() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-header px-4 md:px-12 lg:px-16 pt-4 md:pt-6 text-white"
+      className="fixed-header fixed top-0 left-0 right-0 z-header px-4 md:px-12 lg:px-16 pt-4 md:pt-6 text-white"
     >
       <div className="liquid-glass overflow-visible rounded-xl px-4 py-2 md:py-3 flex items-center justify-between max-w-6xl mx-auto">
         <a href="/" className="flex items-center h-full gap-2 sm:gap-3 mr-3 sm:mr-4 md:mr-6 flex-shrink-0">

@@ -311,11 +311,11 @@ export default function App() {
       <section id="more-products" className="surface-deep lg:h-[180vh]">
         <div className="min-h-screen py-12 md:py-16 lg:sticky lg:top-0 lg:h-screen lg:flex lg:items-center lg:py-0">
           <div className="px-4 md:px-6 w-full max-w-6xl mx-auto">
-            <div ref={moreProductsRef} className="product-spotlight product-spotlight--gold p-4 sm:p-6 md:p-8 h-[70vh] flex flex-col">
-              <div className="mb-6 flex-shrink-0">
+            <div ref={moreProductsRef} className="product-spotlight product-spotlight--gold p-4 sm:p-6 md:p-8 flex flex-col sm:h-[70vh]">
+              <div className="mb-4 md:mb-6 flex-shrink-0">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#EAF1F8]">{t('products.more_products_title')}</h2>
               </div>
-              <div className="flex-1 min-h-0 overflow-hidden">
+              <div className="min-h-[410px] sm:flex-1 sm:min-h-0 overflow-hidden">
                 <FocusRailGallery />
               </div>
             </div>

@@ -500,7 +500,7 @@ export default function Calculator() {
 
               <div className="grid gap-12">
                 {/* Recommended Product */}
-                <div className="glass-dark p-8 md:p-12 rounded-[2rem] relative overflow-hidden">
+                <div className="glass-dark p-5 sm:p-8 md:p-12 rounded-[2rem] relative overflow-hidden">
                   <div className="absolute top-0 right-0 p-6">
                     <span className="px-5 py-2 rounded-full bg-gold-500 text-ink-950 text-xs font-black uppercase tracking-[0.2em] shadow-xl">
                       {t('calculator.recommended') || 'Soovituslik'}
@@ -508,9 +508,9 @@ export default function Calculator() {
                   </div>
 
                   <div className="mb-10">
-                    <h3 className="text-4xl md:text-5xl font-black text-aqua-300 mb-4 tracking-tight">
+                    <h3 className="text-2xl sm:text-4xl md:text-5xl font-black text-aqua-300 mb-4 tracking-tight">
                       {results.recommended.systemName}
-                      <span className="text-[#9FB4CC]/60 ml-4 font-light">{results.recommended.product.model}</span>
+                      <span className="text-[#9FB4CC]/60 sm:ml-4 ml-2 font-light text-xl sm:text-4xl md:text-5xl">{results.recommended.product.model}</span>
                     </h3>
                     <p className="text-xl text-[#9FB4CC] leading-relaxed max-w-3xl">
                       {results.recommended.description}
@@ -531,12 +531,12 @@ export default function Calculator() {
                     ))}
                   </div>
 
-                  <div className="p-10 rounded-[1.5rem] bg-gradient-to-br from-kingspan-blue via-kingspan-blue to-kingspan-navy text-white shadow-2xl relative overflow-hidden group">
+                  <div className="p-5 sm:p-8 md:p-10 rounded-[1.5rem] bg-gradient-to-br from-kingspan-blue via-kingspan-blue to-kingspan-navy text-white shadow-2xl relative overflow-hidden group">
                     <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
                     <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center gap-8">
                       <div className="text-center lg:text-left">
                         <p className="text-xs font-black uppercase tracking-[0.3em] opacity-60 mb-2">{t('calculator.results.priceWithVat')} (24%)</p>
-                        <p className="text-5xl md:text-7xl font-black tracking-tighter">
+                        <p className="text-3xl sm:text-5xl md:text-7xl font-black tracking-tighter">
                           {results.recommended.priceWithVat.toLocaleString('et-EE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} €
                         </p>
                       </div>
@@ -566,8 +566,8 @@ export default function Calculator() {
                 {results.alternatives && results.alternatives.length > 0 && (
                   <div className="space-y-6">
                     {results.alternatives.map((alt, index) => (
-                      <div key={`${alt.systemName}-${index}`} className="glass-dark p-8 md:p-12 rounded-[2rem] opacity-90 transition-all border-dashed hover:opacity-100">
-                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-10">
+                      <div key={`${alt.systemName}-${index}`} className="glass-dark p-5 sm:p-8 md:p-12 rounded-[2rem] opacity-90 transition-all border-dashed hover:opacity-100">
+                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-8 mb-8 md:mb-10">
                           <div>
                             <span className="px-4 py-1 rounded-full bg-white/10 text-[#EAF1F8] text-[10px] font-black uppercase tracking-widest mb-4 inline-block">
                               {t('calculator.alternative') || 'Soodne alternatiiv'}
@@ -577,7 +577,7 @@ export default function Calculator() {
                               <span className="text-[#9FB4CC]/60 ml-3 font-light">{alt.product.model}</span>
                             </h3>
                           </div>
-                          <div className="glass-dark p-6 rounded-2xl text-right min-w-[200px]">
+                          <div className="glass-dark p-4 sm:p-6 rounded-2xl text-right w-full sm:w-auto sm:min-w-[200px]">
                             <p className="text-[10px] font-black uppercase tracking-widest text-[#9FB4CC]/60 mb-2">{t('calculator.results.priceWithVat')} (24%)</p>
                             <p className="text-3xl font-black text-gold-400">
                               {alt.priceWithVat.toLocaleString('et-EE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} €
